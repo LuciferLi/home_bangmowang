@@ -1,0 +1,97 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	
+}
+/*公共样式*/
+.mainColor{
+	color: #fe0000;
+}
+.gray_ccc{
+	color: #CCCCCC;
+}
+.black{
+	color: #333333;
+}
+.gray_666{
+	color: #666666;
+}
+.gray_666_hover:hover{
+	
+}
+.gray_999{
+	color: #999999;
+}
+.font10{
+	font-size: 10px;
+}
+.font11{
+	font-size: 11px;
+}
+.font12{
+	font-size: 12px;
+}
+.font13{
+	font-size: 13px;
+}
+.font14{
+	font-size: 14px;
+}
+.font15{
+	font-size: 15px;
+}
+.font16{
+	font-size: 16px;
+}
+.font17{
+	font-size: 17px;
+}
+.font18{
+	font-size: 18px;
+}
+.font19{
+	font-size: 19px;
+}
+.font20{
+	font-size: 20px;
+}
+.font21{
+	font-size: 21px;
+}
+.font22{
+	font-size: 22px;
+}
+
+
+/*head*/
+
+body{ text-align:center}
+.head{
+	width: 100%;
+	background-color: #ededed;
+}
+.lc_head{
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	height: 23px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 23px;
+}
+.lc_head_span{
+	margin-right: 10px;
+}
+.lc_head_span:nth-child(4){
+	margin-left: 20px;
+}
+.lc_head_span_right{
+	float: right;
+	margin-right: 10px;
+}
+/*index*/
+iframe{
+	border: none;
+	
+}
+

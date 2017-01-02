@@ -124,7 +124,19 @@ a{
 	background-color: #FFFFFF;
     display: none;
 }
-.shuff_s{
+.shuff_rit{
+	float: right;
+	width: 390px;
+	height: 220px;
+	background-color: #FFFFFF;
+    display: none;
+}
+.shuff_ris{
+	float: right;
+	width: 390px;
+	height: 220px;
+	background-color: #FFFFFF;
+    display: none;
 }
 .shuff_nr{
 	width: 300px;

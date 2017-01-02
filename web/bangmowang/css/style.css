@@ -4,12 +4,16 @@
 	margin: 0px;
 
 }
+a{
+	color: #333333;
+}
 /*lishuo写的修改的css*/
 
 /*公共样式*/
 .mainColor{
 	color: #fe0000;
 }
+
 .gray_ccc{
 	color: #CCCCCC;
 }
@@ -20,7 +24,7 @@
 	color: #666666;
 }
 .gray_666_hover:hover{
-
+	color: #141414;
 }
 .gray_999{
 	color: #999999;
@@ -73,6 +77,9 @@ body{ text-align:center}
 	width: 100%;
 	background-color: #ededed;
 }
+.foot{
+	width: 100%;
+}
 .lc_head{
 	margin:0 auto;
 	width: 830px;
@@ -95,5 +102,100 @@ body{ text-align:center}
 /*index*/
 iframe{
 	border: none;
+}
+.foot_tag{
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 23px;
+	text-align: center;
+	margin-top: 15px;
+	overflow: hidden;
+}
+.foot_friend{
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 23px;
+	text-align: center;
+	margin-top: 60px;
+	overflow: hidden;
+	
+}
+.foot_friend_left{
+	width: 98%;
+	margin-left: 2%;
+}
+.foot_banner{
+	width: 100%;
+	height: 120px;
+	background-color: #ededed;
+}
+.foot_banner_content{
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	text-align: left;
+	line-height: 120px;
+}
+.foot_banner_content_item{
+	width: 25%;
+	font-size: 18px;
+	float: left;
+	text-align: center;
+}
+.itemColor{
+	color: #b82424;
+	border: 2px solid #b82424;
+	padding: 10px;
+	border-radius: 27px;
+	margin: 10px;
+}
+.lc_foot_item{
+	width: 20%;
+	color: #666666;
+	line-height: 15px;
+	font-size: 12px;
+	float: left;
+	
+}
+.foot_friend_left_item{
+	
+	color: #666666;
+	line-height: 40px;
+	font-size: 12px;
+	float: left;
+}
+.foot_tips{
+	clear: both;
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	text-align: left;
+	font-size: 10px;
+	line-height: 23px;
+	text-align: center;
+	margin-top: 40px;
+}
 
+.foot_tips_tab{
+	
+	margin:0 auto;
+	width: 830px;
+	min-width: 830px;
+	line-height: 120px;
+}
+.foot_tips_tab_item{
+	
+	width: 120px;
+	height: 40px;
+	font-size: 18px;
+	text-align: center;
+}
+.foot_tips_tab img{
+	border: 1px solid #000000;
 }

@@ -13,18 +13,24 @@
 		$(function(){
 			$(".shuff_s").mousemove(function(){
 				$(".shuff_ri").css("display","block");
+				$(".shuff_rit").css("display","none");
+				$(".shuff_ris").css("display","none");
 				$(".shuff_s").css("background-color","#FFFFFF");
 				$(".shuff_z").css("background-color","#b2b2b2");
 				$(".shuff_x").css("background-color","#b2b2b2");
 			});
 			$(".shuff_z").mousemove(function(){
-				$(".shuff_ri").css("display","block");
+				$(".shuff_rit").css("display","block");
+				$(".shuff_ri").css("display","none");
+				$(".shuff_ris").css("display","none");
 				$(".shuff_s").css("background-color","#b2b2b2");
 				$(".shuff_z").css("background-color","#FFFFFF");
 				$(".shuff_x").css("background-color","#b2b2b2");
 			});
 			$(".shuff_x").mousemove(function(){
-				$(".shuff_ri").css("display","block");
+				$(".shuff_ris").css("display","block");
+				$(".shuff_rit").css("display","none");
+				$(".shuff_ri").css("display","none");
 				$(".shuff_s").css("background-color","#b2b2b2");
 				$(".shuff_z").css("background-color","#b2b2b2");
 				$(".shuff_x").css("background-color","#FFFFFF");
@@ -73,7 +79,31 @@
 					<div class="shuff_ri">
 						<div class="shuff_nr">
 							<ul>
-								<li><label>类型：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>类型1：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
+								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
+								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>
+								<li></li>
+							</ul>
+							<span class="shuff_kk">搜索</span>
+						</div>
+					</div>
+					<div class="shuff_rit">
+						<div class="shuff_nr">
+							<ul>
+								<li><label>类型2：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
+								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
+								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>
+								<li></li>
+							</ul>
+							<span class="shuff_kk">搜索</span>
+						</div>
+					</div>
+					<div class="shuff_ris">
+						<div class="shuff_nr">
+							<ul>
+								<li><label>类型3：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
 								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
 								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
 								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>

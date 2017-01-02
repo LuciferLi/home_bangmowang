@@ -1,0 +1,377 @@
+﻿@charset "utf-8";
+
+/*
+ * Copyright 2005-2015 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Review
+ * Version: 4.0
+ */
+
+/* ---------- Review ---------- */
+
+ul, li {
+	list-style:none;
+}
+.tiangong_shop {
+	width:1210px;
+	margin:0 auto;
+}
+.tiangong_shop span.tg_lg {
+	text-align:center;
+	display:block;
+	margin:50px 0 30px;
+}
+#tabspotGroup {
+	margin-top:12px;
+}
+.steel_fl {
+	border-bottom:#e3e3e3 1px solid;
+	border-top:#e3e3e3 1px solid;
+	height:auto;
+	position:relative;
+	overflow:hidden;
+	line-height:20px;
+	padding:10px 0 0px;
+}
+.steel_fl h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_fl ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_fl ul li {
+	float:left;
+	margin-right:28px;
+	height:36px;
+}
+.steel_fl ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_fl ul li a:hover {
+	color:#fff;
+	background:#c00;
+}
+.steel_fl_other {
+	border-bottom:#e3e3e3 1px solid;
+	border-top:#e3e3e3 1px solid;
+	height:auto;
+	position:relative;
+	overflow:hidden;
+	line-height:20px;
+	padding:10px 0 0px;
+}
+.steel_fl_other h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_fl_other ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_fl_other ul li {
+	float:left;
+	margin-right:28px;
+	height:36px;
+}
+.steel_fl_other ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_fl_other ul li a:hover {
+	color:#fff;
+	background:#c00;
+}
+.steel_mill ,.steel_shape {
+	border-top:#e3e3e3 1px solid;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 16px;
+}
+.steel_mill h3 ,.steel_shape h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_mill ul ,.steel_shape ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_mill ul li ,.steel_shape ul li {
+	float:left;
+	margin-right:25px;
+}
+.steel_mill ul li a ,.steel_shape ul li a{
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_mill ul li a:hover ,.steel_shape ul li a:hover {
+	color:#fff;
+	background:#c00;
+}
+.steel_mill_other {
+	border-top:#e3e3e3 1px solid;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 16px;
+}
+.steel_mill_other h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_mill_other ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_mill_other ul li {
+	float:left;
+	margin-right:25px;
+}
+.steel_mill_other ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_mill_other ul li a:hover{
+	color:#fff;
+	background:#c00;
+}
+.steel_depot {
+	border-top:#e3e3e3 1px solid;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 16px;
+}
+.steel_depot h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_depot ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_depot ul li {
+	float:left;
+	margin-right:25px;
+}
+.steel_depot ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_depot ul li a:hover{
+	color:#fff;
+	background:#c00;
+}
+.steel_depot_other {
+	border-top:#e3e3e3 1px solid;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 16px;
+} 	
+.steel_depot_other h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.steel_depot_other ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.steel_depot_other ul li {
+	float:left;
+	margin-right:25px;
+}
+.steel_depot_other ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.steel_depot_other ul li a:hover{
+	color:#fff;
+	background:#c00;
+}
+.thick {
+	border-bottom:#e3e3e3 1px solid;
+	height:20px;
+	line-height:20px;
+	padding:10px 0 16px;
+}
+.thick h3 {
+	float:left;
+	width:9%;
+	font-size:14px;
+	font-weight:normal;
+	color:#555;
+	padding-top:3px;
+	text-indent:5px;
+}
+.thick ul {
+	float:right;
+	display:block;
+	width:91%;
+}
+.thick ul li {
+	float:left;
+	margin-right:25px;
+}
+.thick ul li a {
+	font-size:14px;
+	color:#005aa0;
+	text-decoration:none;
+	display:block;
+	padding:3px 10px;
+	border-radius:2px;
+}
+.thick ul li a:hover {
+	color:#fff;
+	background:#c00;
+}
+.steel_det {
+	float:left;
+	width:900px;
+}
+.steel_gou {
+	float:right;
+	width:294px;
+	border:#f00 3px solid;
+	position:relative; overflow:hidden;
+	margin-top:12px;
+}
+.steel_det table{ width:900px; display:block; margin-top:12px;}
+.steel_det thead {
+	height:40px;
+	line-height:38px;
+	
+	background:#f9f9f9;
+	
+	padding:0 5px;
+	
+	
+}
+.steel_det thead th {
+	font-size:14px;
+	color:#666;
+	font-weight:normal;
+	border-top:#e3e3e3 2px solid;
+	border-bottom:#e3e3e3 1px solid;
+	text-indent:5px;
+	text-align:left;
+}
+.steel_det tr td {
+	font-size:14px;
+	color:#333;
+	font-weight:normal;
+	text-indent:5px;
+	text-align:left;
+	line-height:40px;
+}
+.steel_det tbody{ width:890px; padding:0 5px;}
+.steel_det tbody tr:hover{ background:#fff0ee;}
+.steel_det tbody tr td{ border-bottom:#ddd 1px dotted; height:40px; padding:5px 0;}
+.steel_det .red{ color:#f00; font-weight:bold;}
+.steel_det .blue{ color:#317ee7; }
+.steel_det .gou{ display:block; width:48px; height:24px; border:#0176da 1px solid;
+				line-height:24px; color:#fff; text-align:center; text-decoration:none; text-indent:0; font-size:13px;
+				background:#0176da;}
+.steel_det .gou:hover{
+	background:#f50; border:#f50 1px solid; color:#fff;}
+.steel_mill ul li.one a ,.steel_shape ul li.one a ,.steel_depot ul li.one a ,.steel_depot_other ul li.one a{
+	color:#fff;
+	background:#c00; border-radius:2px;}
+.steel_mill_other ul li.one a {
+	color:#fff;
+	background:#c00; border-radius:2px;}
+.steel_fl ul li.one a{
+	color:#fff;
+	background:#c00; border-radius:2px;}
+.steel_fl_other ul li.one a{
+	color:#fff;
+	background:#c00; border-radius:2px;}
+.thick ul li.one a{
+	color:#fff;
+	background:#c00; border-radius:2px;}
+.steel_gou h3{
+	font-size:18px; font-weight:normal; text-indent:10px; line-height:40px; margin-bottom:5px;
+	color:#f00;}
+.steel_gou h4{ font-size:12px; line-height:20px; padding-left:10px;}
+.steel_gou p{ font-size:12px; color:#555; padding-left:10px; line-height:20px;}
+.steel_gou ul li{  border-bottom:#e3e3e3 1px solid; padding:12px 0; position:relative;}
+.steel_gou{ }
+.option{ position:absolute; right:0; top:12px;}
+.option input{ display:block; height:14px; line-height:10px; margin:2px 0; 
+float:left; padding:0; width:52px; background:#e6e6e6; border:#e3e3e3 1px solid; text-align:center; font-family:Arial;}
+.steel_gou .option p{ text-align:right; padding-right:10px;}
+.steel_gou .option h4{ text-align:right; padding-right:10px; font-size:14px;}
+.steel_gou .option a{ color:#317ee7; text-decoration:none; float:right; width:52px; }
+.steel_gou .cartlist{border-top:#e3e3e3 1px solid;}
+.empty{ height:30px; line-height:30px; background:#e9e9e9;  border-bottom:#e3e3e3 1px solid; text-align:center; margin-bottom:12px;}
+.empty a{ font-size:14px; color:#317ee7; text-decoration:none;}
+.btnLock a{ display:block; height:36px; line-height:36px; background:#c00; margin:0 20px 20px; color:#fff; font-weight:bold; font-size:16px; text-align:center; text-decoration:none;}
+.totalPrice{ text-align:center; font-size:12px; margin-bottom:12px;}
+.totalPrice b{ color:#f00;}
+
+.none{  height:300px; line-height:300px; font-size:20px; text-align:center; color:#555; border-top:#e3e3e3 1px solid;}
+.steel_r{float:right; width:300px;}
+.steel_prompt{ width:296px; border:#e3e3e3 2px solid; float:right; margin-top:10px;}
+.steel_prompt ul{ padding:15px 12px 0;}
+.steel_prompt ul li{line-height:20px; color:#555; margin-bottom:15px;}

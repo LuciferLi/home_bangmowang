@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		<link rel="stylesheet" href="css/leili.css" />
+		<link rel="stylesheet" href="css/demo.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+	</head>
+	<script>
+		$(function(){
+			$(".shuff_s").mousemove(function(){
+				$(".shuff_ri").css("display","block");
+				$(".shuff_rit").css("display","none");
+				$(".shuff_ris").css("display","none");
+				$(".shuff_s").css("background-color","#FFFFFF");
+				$(".shuff_z").css("background-color","#b2b2b2");
+				$(".shuff_x").css("background-color","#b2b2b2");
+			});
+			$(".shuff_z").mousemove(function(){
+				$(".shuff_rit").css("display","block");
+				$(".shuff_ri").css("display","none");
+				$(".shuff_ris").css("display","none");
+				$(".shuff_s").css("background-color","#b2b2b2");
+				$(".shuff_z").css("background-color","#FFFFFF");
+				$(".shuff_x").css("background-color","#b2b2b2");
+			});
+			$(".shuff_x").mousemove(function(){
+				$(".shuff_ris").css("display","block");
+				$(".shuff_rit").css("display","none");
+				$(".shuff_ri").css("display","none");
+				$(".shuff_s").css("background-color","#b2b2b2");
+				$(".shuff_z").css("background-color","#b2b2b2");
+				$(".shuff_x").css("background-color","#FFFFFF");
+			});
+		});
+	</script>
+	<body>
+		<div class="heard">
+			<div class="heard_le">
+				<img src="img/logo.jpg" />
+			</div>
+			<div class="heard_zh">
+				<ul>
+					<li><a href="#" class="heard_sy">首页</a></li>
+					<li><a href="#" class="heard_sy">商城</a></li>
+					<li><a href="#" class="heard_sy">找加工</a></li>
+					<li><a href="#" class="heard_sy">接加工</a></li>
+					<li><a href="#" class="heard_st">供应链管理</a></li>
+					<li><a href="#" class="heard_st">供应链管理</a></li>
+					<li><a href="#" class="heard_sh">帮模金融</a></li>
+					<li><a href="#" class="heard_sh">行业信息</a></li>
+				</ul>
+			</div>
+			<div class="heard_ri">
+				<div class="heard_right">
+					<img src="img/shopping_03.jpg"/><a>购物车</a>
+				</div>
+				
+			</div>
+		</div><!--导航栏结尾-->
+		<div class="shuff">
+			<div class="shuff_zh">
+				<div class="shuff_ff">
+					<div class="shuff_le">
+						<div class="shuff_s shuff_t"><!--<img src="img/jiag.jpg" />-->
+							<img src="img/jiag.jpg" /><a>找加工</a>
+						</div>
+						<div class="shuff_z shuff_t">
+							<img src="img/jiag.jpg" /><a>接加工</a>
+						</div>
+						<div class="shuff_x shuff_t">
+							<img src="img/jiag.jpg" /><span>&nbsp;询价</span>
+						</div>
+					</div>
+					<div class="shuff_ri">
+						<div class="shuff_nr">
+							<ul>
+								<li><label>类型1：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
+								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
+								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>
+								<li></li>
+							</ul>
+							<span class="shuff_kk">搜索</span>
+						</div>
+					</div>
+					<div class="shuff_rit">
+						<div class="shuff_nr">
+							<ul>
+								<li><label>类型2：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
+								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
+								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>
+								<li></li>
+							</ul>
+							<span class="shuff_kk">搜索</span>
+						</div>
+					</div>
+					<div class="shuff_ris">
+						<div class="shuff_nr">
+							<ul>
+								<li><label>类型3：</label><span>EDM&nbsp;</span><span>CNC精加工&nbsp;</span><span>CNC粗加工&nbsp;</span><span>电火花&nbsp;></span></li>
+								<li><label>距离：</label><span>10KM&nbsp;</span><span>50KM&nbsp;</span><span>150KM&nbsp;></span></li>
+								<li><label>精度：</label><span>0.02mm&nbsp;</span><span>0.002mm&nbsp;></span></li>
+								<li><span>海量现存货</span><span>&nbsp;供求精准匹配</span></li>
+								<li></li>
+							</ul>
+							<span class="shuff_kk">搜索</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--找加工结束-->
+		<div class="mall">
+			<div class="mall_le">
+				<div class="mall_z">商城</div>
+				<div class="mall_y">阳光采购，一站式服务</div>
+			</div>
+			<div class="mall_ri">
+				<span>供应商入住&nbsp;></span>
+			</div>
+		</div><!--商城结束-->
+		<div class="picture">
+			<div class="picture_s">
+				<ul>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+				</ul>
+			</div>
+			<div class="picture_s">
+				<ul>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+					<li><a href="#"><img src="img/login_03.jpg"/></a></li>
+				</ul>
+			</div>
+			<a><img class="zolub" src="img/zolub_03.jpg"/></a>
+			<a><img class="yolub" src="img/yolub_03.jpg"/></a>
+		</div><!--结尾-->
+		<div class="search">
+			<div class="search_z">
+				<ul>
+					<li class="search_no">
+						<i></i><span>为您推荐</span>
+					</li>
+					<li class="search_to">
+						<div class="search_tole">
+							<span>唐山燕钢</span><span>普碳开平板</span><span>Q235B</span>
+						    <span style="color: #b5c3e0;">2.75*1500*6000</span>	
+						</div>
+						<div class="search_tori"><span class="search_tosp">2030</span></div>
+					</li>
+					<li class="search_to">
+						<div class="search_tole">
+							<span>唐山燕钢</span><span>普碳开平板</span><span>Q235B</span>
+						    <span style="color: #b5c3e0;">2.75*1500*6000</span>	
+						</div>
+						<div class="search_tori"><span class="search_tosp">2680</span></div>
+					</li>
+					<li class="search_to">
+						<div class="search_tole">
+							<span>唐山燕钢</span><span>普碳开平板</span><span>Q235B</span>
+						    <span style="color: #b5c3e0;">2.75*1500*6000</span>	
+						</div>
+						<div class="search_tori"><span class="search_tosp">2920</span></div>
+					</li>
+					<li class="search_to">
+						<div class="search_tole">
+							<span>唐山燕钢</span><span>普碳开平板</span><span>Q235B</span>
+						    <span style="color: #b5c3e0;">2.75*1500*6000</span>	
+						</div>
+						<div class="search_tori"><span class="search_tosp">2150</span></div>
+					</li>
+					<li class="search_to">
+						<div class="search_tole">
+							<span>唐山燕钢</span><span>普碳开平板</span><span>Q235B</span>
+						    <span style="color: #b5c3e0;">2.75*1500*6000</span>	
+						</div>
+						<div class="search_tori"><span class="search_tosp">2170</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="search_y">
+				<div class="search_yto">
+					<div class="search_ytoz">
+						<img src="img/mianfei_07.jpg" />
+					</div>
+					<div class="search_ytoy">
+						<textarea>写下您真实的需求，包括规格材料等，收到后我们会立即给您回电话确认，剩下的就交给我们把。</textarea><button></button>
+					</div>
+				</div>
+				<div class="search_yxx">
+					<ul>
+						<li>
+							<img src="img/peijian_03.jpg" />
+							<div class="search_jiage">
+								<span class="search_pan">￥5.00</span><span class="search_pant">180天成交3077</span>
+							</div>
+							<div class="search_xinx">
+								<span>厂家模具配件SKO6165Mn顶针<br />规格齐全批发</span>
+							</div>
+						</li>
+						<li>
+							<img src="img/peijian_03.jpg" />
+							<div class="search_jiage">
+								<span class="search_pan">￥5.00</span><span class="search_pant">180天成交3077</span>
+							</div>
+							<div class="search_xinx">
+								<span>厂家模具配件SKO6165Mn顶针<br />规格齐全批发</span>
+							</div>
+						</li>
+						<li>
+							<img src="img/peijian_03.jpg" />
+							<div class="search_jiage">
+								<span class="search_pan">￥5.00</span><span class="search_pant">180天成交3077</span>
+							</div>
+							<div class="search_xinx">
+								<span>厂家模具配件SKO6165Mn顶针<br />规格齐全批发</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div><!--结尾-->
+		<div class="shing">
+			<div class="shing_title">
+				<div class="shing_z">找加工&nbsp;<span>|</span></div>
+				<div class="shing_y">CNC精加工</div>
+			</div>
+		</div><!--结束-->
+		<div class="demand">
+			<img class="imgs" src="img/demand.jpg" />
+			<div class="demand_zj">
+				<div class="demand_z">
+					<div class="biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+					<div class="bianx biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="demand_y">
+					<div class="biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+					<div class="bianx biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="demand_zh">
+					<img src="img/mojud_03.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="reles">
+			<span>发布需求</span>
+		</div><!--结尾-->
+		<div class="exhibit">
+			<div class="exhibit_z">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>苏州某某加工</span>
+				</div>
+			</div>
+			<div class="exhibit_y">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>苏州某某加工</span>
+				</div>			
+			</div>
+			<div class="exhibit_xz">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>苏州某某加工</span>
+				</div>
+			</div>
+			<div class="exhibit_xy">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>苏州某某加工</span>
+				</div>			
+			</div>
+		</div><!--结尾-->
+		<div class="shing2">
+			<div class="shing_title">
+				<div class="shing_z">接加工&nbsp;<span>|</span></div>
+				<div class="shing_y">CNC精加工</div>
+			</div>
+		</div><!--结束-->
+		<div class="demand2">
+			<img class="imgs" src="img/demand.jpg" />
+			<div class="demand_zj">
+				<div class="demand_z">
+					<div class="biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+					<div class="bianx biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="demand_y">
+					<div class="biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+					<div class="bianx biank">
+						<div class="biank_t">
+							<img src="img/moju_03.jpg" />
+						</div>
+					</div>
+				</div>
+				<div class="demand_zh">
+					<img src="img/mojud_03.jpg" />
+				</div>
+			</div>
+		</div>
+		<div class="reles">
+			<span>接加工</span>
+		</div><!--结尾-->
+		<div class="exhibit">
+			<div class="exhibit_z">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>报价</span>
+				</div>
+			</div>
+			<div class="exhibit_y">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>报价</span>
+				</div>			
+			</div>
+			<div class="exhibit_xz">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>报价</span>
+				</div>
+			</div>
+			<div class="exhibit_xy">
+				<div class="exhibit_tp">
+					<img src="img/tupianzs_03.jpg"/>
+					<span>报价</span>
+				</div>			
+			</div>
+		</div><!--结尾-->
+		<div class="ment">
+			<div class="ment_z">
+				<div class="ment_zs">
+					<span>供应链管理</span>
+				</div>
+				<div class="ment_zx">
+					<img src="img/ment_03.jpg"/>
+					<button>了解更多</button>
+				</div>
+			</div>
+			<div class="ment_y">
+				<div class="ment_ys">
+					<span>帮摸金融</span>
+				</div>
+				<div class="ment_yx">
+					<img src="img/mentbt_03.jpg" />
+					<button>了解更多</button>
+				</div>
+			</div>
+		</div><!--结尾-->
+		<div class="informan">
+			<span>资讯头条</span>
+		</div>
+		<div class="infor">
+			<div class="infor_z">
+				<img src="img/info_03.jpg" />
+				<button>点击进入</button>
+			</div>
+			<div class="infor_y">
+				<button>资讯中心</button>
+				<img src="img/zxgul_07.jpg" />
+			
+			</div>
+			<div class="infor_xx">
+				<button>查看更多</button>
+			</div>
+		</div><!--结尾-->
+	</body>
+</html>

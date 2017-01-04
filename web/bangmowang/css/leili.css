@@ -103,11 +103,11 @@ a{
 }
 .shuff_t{
 	height: 55px;
-	width: 100%;
 	line-height: 55px;
-	text-align: center;
+	text-align: left;
 	font-size: 12px;
 	border-bottom: 2px solid #9c9c9c;
+	padding-left: 20px;
 }
 /*.shuff_s{
 	background-color: #FFFFFF;

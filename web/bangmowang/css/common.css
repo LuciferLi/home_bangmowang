@@ -269,7 +269,7 @@ del {
 }
 
 .container .span12{ position:relative;}
-.index_kd{ position:absolute; right:0px; top:2px; z-index:50;}
+.index_kd{ position:absolute; right:170px; top:2px; z-index:50;font-size: 20px;}
 .index_zx{ position:absolute; right:109px; top:2px; z-index:50;}
 
 .container .offset1 {
@@ -944,7 +944,7 @@ span.loadingBar {
 	border: 1px solid #ccc;
 	border-right: 1px solid transparent;
 	background: none;
-	border:#b61d1d 2px solid;
+	border:#646464 2px solid;
 	border-right:none;
 }
 

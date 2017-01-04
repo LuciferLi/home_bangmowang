@@ -566,7 +566,6 @@
 	margin-left:10px;
 	margin-top:10px;
 	height:443px;
-	border:#e4e4e4 1px solid;
 	}
 .dynamic h3{ height:40px; line-height:40px;
              font-size:16px;
@@ -816,3 +815,123 @@
 .header .row .span3{
 	padding-left:5px;
 }
+/*帮模小助手*/
+.small_box1{
+	width: 192px;
+	height: 75px;
+	margin-right: 16px;
+	display: inline-block;
+	background: #ccc;
+	margin-top: 10px;
+	vertical-align: top;
+}
+.small_box2{
+	height: 75px;
+	display: inline-block;
+	width: 519px;
+	background: #ccc;
+	margin-top: 10px;
+	box-sizing: border-box;
+	padding-top: 7px;
+	padding-left: 60px;
+	position: relative;
+}
+.small_box_text{
+	background: #fff;
+	height: 60px;
+	width: 330px;
+	border: none;
+	vertical-align: top;
+	font-size: 10px;
+	line-height: 20px;
+	padding-left: 10px;
+}
+.jiao{
+	position: absolute;
+	background: #fff;
+	left: 50px;
+	top: 20px;
+	border-top:2px solid #ccc;   
+border-bottom:9px solid #ccc;   
+border-right:10px solid #fff;
+}
+.big_box{
+	width: 100%;
+	height: 360px;
+	margin-top: 10px;
+	box-sizing: border-box;
+	border-left: 30px solid #ccc;
+	border-right: 30px solid #ccc;
+	
+	
+}
+.box_top{
+	background: #ccc;
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	color: #323232;
+}
+.box_content{
+	width: 100%;
+	height:265px;
+	text-indent: 24px;
+	border: none;
+	line-height: 24px;
+}
+.box_bottom{
+	width: 100%;
+	height: 45px;
+	background: #ccc;
+	padding-top: 8px;
+}
+.box_bottom button{
+	background: red;
+	margin: 0 auto;
+	width: 100px;
+	height: 25px;
+	border: none;
+	display: block;
+	color: #fff;
+}
+.index_kd a{
+	color: red!important;
+	
+}
+.dynamic_content{
+	font-size: 15px;
+	color: indianred;
+	line-height: 40px;
+}
+.dynamic h3{
+	font-weight: 900!important;
+	margin-bottom: 36px;
+}
+.characteristic input{
+	width: 100%;
+	height: 80px;
+}
+.characteristic button{
+	height:40px;
+	width: 80px;
+	background: orange;
+	color: #fff;
+	border: none;
+	float: right;
+}
+.characteristic button:after{
+	clear: both;
+}
+.box2_box{
+	    height: 60px;
+    	background: #fff;
+    width: 425px;
+    }
+  .box2_box button{
+  	color: #fff;
+  	background: #ccc;
+  	border: none;
+  	height: 40px;
+  	width: 60px;
+  	margin-top: 10px;
+  }

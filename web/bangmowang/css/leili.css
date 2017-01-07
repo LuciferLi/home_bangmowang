@@ -29,6 +29,7 @@ a{
 	margin-left: 100px;
 	font-size: 12px;
 	font-weight: 100;
+	font-family: "黑体",Verdana;
 }
 .heard_zh li{
 	margin-top: 17px;
@@ -178,6 +179,7 @@ a{
 }
 .mall_le{
 	float: left;
+	position: relative;
 }
 .mall_z{
 	display: inline-block;
@@ -189,6 +191,12 @@ a{
 .mall_y{
 	display: inline-block;
 	font-size: 12px;
+	margin-left: 10px;
+}
+.mall_y img{
+	position: relative;
+    top: 3px;
+    left: 2px;
 }
 .mall_ri{
 	float: right;
@@ -212,7 +220,7 @@ a{
 }
 .zolub{
 	position: relative;
-	left: 0px;
+	right: : 192px;
 	top: -65px;
 }
 .yolub{
@@ -275,6 +283,10 @@ a{
 }
 .search_ytoz{
 	float: left;
+}
+.search_ytoz img{
+	width: 160px;
+	height: 82px
 }
 .search_ytoy{
 	float: right;

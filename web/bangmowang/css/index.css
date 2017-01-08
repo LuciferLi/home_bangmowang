@@ -659,20 +659,14 @@
     position: relative;
 }
 
-.characteristic img{ width:30px; height:30px; padding:0 12px 0 15px; margin-top:-3px;}
-.characteristic .ser1{ border-right:#ededed 1px solid; border-bottom:#ededed 1px solid;}
-.characteristic .ser2{ border-bottom:#ededed 1px solid;}
-.characteristic .ser3{ border-right:#ededed 1px solid; }
-.characteristic .ser4{}
-.characteristic span{ display:block; float:left;width:123px;
-                      height:77px;
-                      line-height:77px;
-
-                      font-size:13px;
-                      font-weight:bold;
-                      color:#777;
+.characteristic_btn{
+	width:115px;
+	height:85px ;
+	background:#ccc;
+	
+	
 }
-/*改*/
+
 
 /*品牌专区*/
 .a1 {
@@ -844,10 +838,7 @@ border-right:10px solid #fff;
 	font-weight: 900!important;
 	margin-bottom: 36px;
 }
-.characteristic input{
-	width: 100%;
-	height: 80px;
-}
+
 .characteristic button{
 	height:40px;
 	width: 80px;

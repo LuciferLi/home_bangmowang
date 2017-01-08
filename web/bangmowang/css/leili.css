@@ -590,6 +590,10 @@ a{
 	padding-right: 16px;
 	position: relative;
 }
+a:hover {
+	cursor: pointer
+}
+
 .infor_z button{
 	width: 83px;
 	height: 21px;

@@ -1,112 +1,158 @@
 /*body*/
-*{
+
+* {
 	padding: 0px;
 	margin: 0px;
-
 }
-a{
+
+a {
 	color: #333333;
 }
+
+
 /*lishuo写的修改的css*/
 
+
 /*公共样式*/
-.mainColor{
+
+.mainColor {
 	color: #fe0000;
 }
 
-.gray_ccc{
+input {
+	outline: none;
+}
+
+.gray_ccc {
 	color: #CCCCCC;
 }
-.black{
+
+.black {
 	color: #333333;
 }
-.gray_666{
+
+.gray_666 {
 	color: #666666;
 }
-.gray_666_hover:hover{
+
+.gray_666_hover:hover {
 	color: #141414;
 }
-.gray_999{
+
+.gray_999 {
 	color: #999999;
 }
-.font10{
+
+.font8 {
+	font-size: 8px;
+}
+
+.font9 {
+	font-size: 9px;
+}
+
+.font10 {
 	font-size: 10px;
 }
-.font11{
+
+.font11 {
 	font-size: 11px;
 }
-.font12{
+
+.font12 {
 	font-size: 12px;
 }
-.font13{
+
+.font13 {
 	font-size: 13px;
 }
-.font14{
+
+.font14 {
 	font-size: 14px;
 }
-.font15{
+
+.font15 {
 	font-size: 15px;
 }
-.font16{
+
+.font16 {
 	font-size: 16px;
 }
-.font17{
+
+.font17 {
 	font-size: 17px;
 }
-.font18{
+
+.font18 {
 	font-size: 18px;
 }
-.font19{
+
+.font19 {
 	font-size: 19px;
 }
-.font20{
+
+.font20 {
 	font-size: 20px;
 }
-.font21{
+
+.font21 {
 	font-size: 21px;
 }
-.font22{
+
+.font22 {
 	font-size: 22px;
 }
 
 
 /*head*/
 
-body{ text-align:center}
-.head{
+body {
+	text-align: center
+}
+
+.head {
 	width: 100%;
 	background-color: #ededed;
 }
-.foot{
+
+.foot {
 	width: 100%;
 }
-.lc_head{
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+
+.lc_head {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	height: 23px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
 }
-.lc_head_span{
+
+.lc_head_span {
 	margin-right: 10px;
 }
-.lc_head_span:nth-child(4){
+
+.lc_head_span:nth-child(4) {
 	margin-left: 20px;
 }
-.lc_head_span_right{
+
+.lc_head_span_right {
 	float: right;
 	margin-right: 10px;
 }
+
+
 /*index*/
-iframe{
+
+iframe {
 	border: none;
 }
-.foot_tag{
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+
+.foot_tag {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
@@ -114,74 +160,80 @@ iframe{
 	margin-top: 15px;
 	overflow: hidden;
 }
-.foot_friend{
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+
+.foot_friend {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
 	text-align: center;
 	margin-top: 60px;
 	overflow: hidden;
-	
 }
-.foot_friend_left{
+
+.foot_friend_left {
 	width: 98%;
 	margin-left: 2%;
 }
-.foot_banner{
+
+.foot_banner {
 	width: 100%;
 	height: 120px;
 	background-color: #ededed;
 }
 
-.foot_banner_content{
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+.foot_banner_content {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 	line-height: 120px;
 }
-.login_banner_content{
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+
+.login_banner_content {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 }
-.foot_banner_content_item{
+
+.foot_banner_content_item {
 	width: 25%;
 	font-size: 18px;
 	float: left;
 	text-align: center;
 }
-.itemColor{
+
+.itemColor {
 	color: #b82424;
 	border: 2px solid #b82424;
 	padding: 10px;
 	border-radius: 27px;
 	margin: 10px;
 }
-.lc_foot_item{
+
+.lc_foot_item {
 	width: 20%;
 	color: #666666;
 	line-height: 15px;
 	font-size: 12px;
 	float: left;
-	
 }
-.foot_friend_left_item{
-	
+
+.foot_friend_left_item {
 	color: #666666;
 	line-height: 40px;
 	font-size: 12px;
 	float: left;
 }
-.foot_tips{
+
+.foot_tips {
 	clear: both;
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
@@ -189,87 +241,105 @@ iframe{
 	margin-top: 40px;
 }
 
-.foot_tips_tab{
-	
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+.foot_tips_tab {
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	line-height: 120px;
 }
-.foot_tips_tab_item{
-	
+
+.foot_tips_tab_item {
 	width: 120px;
 	height: 40px;
 	font-size: 18px;
 	text-align: center;
 }
-.foot_tips_tab img{
+
+.foot_tips_tab img {
 	border: 1px solid #000000;
 }
-.login_body{
+
+.login_body {
 	clear: both;
-	margin:0 auto;
-	width: 830px;
-	min-width: 830px;
+	margin: 0 auto;
+	width: 860px;
+	min-width: 860px;
 	text-align: left;
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
-.login_banner{
+
+.login_banner {
 	width: 100%;
 	min-width: 860px;
-    height: auto;
-    background:url(../images/ad111.jpg) center 0 no-repeat;
-    background-size:100% 470px;
-    position: relative;
-    height: 470px;
-    text-align: left;
+	height: auto;
+	background: url(../images/ad111.jpg) center 0 no-repeat;
+	background-size: 100% 470px;
+	position: relative;
+	height: 470px;
+	text-align: left;
 }
-.login_input{
+
+.login_input {
 	float: right;
 	width: 315px;
 	height: 315px;
-	background: #FFFFFF;
+	background-image: url(../img/img_back.png);
 	padding: 30px;
 	margin-top: 60px;
 }
 
-.login_input_border{
-	border: 1px solid #333333;
+.login_input_border {
+	border: 1px solid #CCCCCC;
 	margin-bottom: 5px;
 }
-.login_input p{
+
+.login_input p {
 	margin-bottom: 35px;
 	font-size: 17px;
 }
-.login_input_border input{
+
+.login_input_border input {
 	background: none;
 	border: none;
 	color: #333333;
 	width: 275px;
 	height: 30px;
-	
 }
-.login_input_border input:focus{
+
+.login_input_border input:focus {
 	border: none;
 }
-.login_font{
+
+.login_font {
 	font-size: 13px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
-.check{
+
+.check {
 	margin-top: 15px;
 	margin-bottom: 15px;
+	margin-right: 5px;
 }
-.sub{
-	width: 100%;
+
+.active_hand:hover {
+	cursor: pointer
+}
+
+a:hover {
+	cursor: pointer
+}
+
+.sub1 {
+	width: 315px;
 	background: #fe0000;
 	border: none;
 	color: #FFFFFF;
-	padding: 5px 0px 5px ;
+	padding: 5px 0px 5px;
 }
-.register_input{
+
+.register_input {
 	float: left;
 	width: 444px;
 	height: 311px;
@@ -277,53 +347,86 @@ iframe{
 	padding: 30px;
 	margin-top: 15px;
 }
-.register_input_lable{
+
+.register_input_lable {
 	font-size: 14px;
 }
-.register_input input{
+
+.register_input input {
 	width: 222px;
 	padding-left: 5px;
 	padding-right: 5px;
 	height: 28px;
 	border: 1px solid #909090;
-	
 }
-.register_input div{
+
+.register_input div {
 	margin-bottom: 15px;
 }
-.register_input img{
+
+.register_input img {
 	border: 1px solid #FFF0EE;
 	vertical-align: middle;
 	height: 28px;
 	width: 83px;
 	position: relative;
-    top:-2px;
-    margin-right: 5px;
+	top: -2px;
+	margin-right: 5px;
 }
-.phonecode{
+
+.phonecode {
 	border: 1px solid #FFF0EE;
 	height: 28px;
 	width: 83px;
-    margin-right: 5px;
+	margin-right: 5px;
 }
-.sub{
+
+.sub {
 	width: 235px;
 	background: #fe0000;
 	border: none;
 	color: #FFFFFF;
-	padding: 5px 0px 5px ;
+	padding: 5px 0px 5px;
 }
-.register_banner_right{
+
+.register_banner_right {
 	float: left;
 	text-align: left;
-	margin-top:45px ;
+	margin-top: 45px;
 	margin-left: 40px;
 }
-.login_btn{
+
+.login_btn {
 	height: 28px;
 	width: 72px;
 	color: #FFFFFF;
 	background: #3b6892;
 	border: none;
 	margin-top: 20px;
+}
+
+.register_logo {
+	height: 27px;
+	width: 90px;
+	vertical-align: middle
+}
+
+.register_logo1 {
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 100;
+}
+
+.register_logo2 {
+	font-size: 15px;
+	line-height: 20px;
+	font-weight: 100;
+	color: #b3b3b3;
+	font-size: 14px;
+}
+
+.register_banner_right1 {
+	width: 270px;
+	color: #9c9c9c;
+	font-size: 9px;
 }

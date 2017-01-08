@@ -62,7 +62,9 @@ a{
 	color: #fff;
 	background-color: #f50100;
 	border-radius:4px;
+	text-decoration: none;
 }
+
 .heard_ri{
 	float: right;
 }
@@ -211,17 +213,21 @@ a{
 	margin: 0 auto;
 	margin-top:20px ;
 	padding-left: 1px;
-	position: relative;
+	
 }
+
 .picture_s li{
 	width: 105px;
     height: 45px;
     border: 1px dashed #a1a1a1;
+    
 }
 .zolub{
+	float: left;
 	position: relative;
-	right: : 192px;
+	overflow: hidden;
 	top: -65px;
+	
 }
 .yolub{
 	float: right;
@@ -235,9 +241,11 @@ a{
 	margin: 0 auto;
 }
 .search_z{
+	
 	width: 192px;
 	height: 300px;
 	float: left;
+	clear: both;
 }
 .search_z li{
 	display: block;
@@ -268,7 +276,6 @@ a{
 	float: right;
 	height: 50px;
 	line-height: 50px;
-	margin-right: 5px;
 	color: red;
 	font-size: 14px;
 }
@@ -276,10 +283,10 @@ a{
 	margin-right: 5px;
 }
 .search_y{
+	margin-top: 10px;
 	width: 640px;
 	height: 300px;
 	float: right;
-	margin-right: -11px;
 }
 .search_ytoz{
 	float: left;
@@ -622,4 +629,15 @@ a{
     margin-right: 37px;
     float: right;
     font-family: simhei;
+}
+a:hover {
+	
+}
+.nodecoration:hover{
+	text-decoration: none;
+	cursor: pointer
+}
+textarea{
+	outline: none;
+	resize: none;
 }

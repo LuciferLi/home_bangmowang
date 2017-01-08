@@ -3,24 +3,19 @@
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>模材商城</title>
+<title>帮模商城</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <link href="/favicon.ico" rel="icon" type="image/x-icon" />
-<link href="css/slider.css" rel="stylesheet" type="text/css" />
 <link href="css/common.css" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" href="css/jquery-ui-1.9.2.custom.css"  type="text/css">
-
 <link href="css/index.css" rel="stylesheet" type="text/css" />
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery-uimin.js"></script>
-<script type="text/javascript" src="js/base_ui.js"></script>
 <script type="text/javascript" src="js/jquery.tools.js"></script>
 <script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+
 <style type="text/css">
 .header {
 	margin-bottom: 0px;
@@ -60,11 +55,7 @@ $().ready(function() {
 		event: "mouseover"
 	});
 
-	$hotGoodsImage.lazyload({
-		threshold: 100,
-		effect: "fadeIn",
-		skip_invisible: false
-	});
+	
 
 
 
@@ -80,9 +71,9 @@ $().ready(function(){
 
 
 	$(this).addClass('one').siblings().removeClass('one');
-	$(this).parents('.hotGoods').find('ul').addClass('ul_one').siblings().removeClass('one');
-	$(this).parents('.hotGoods').find('ul').hide();
-	$(this).parents('.hotGoods').find('ul').eq($(this).index()).show();
+	$(this).parents('.hotGoods').find('.list').addClass('ul_one').siblings().removeClass('one');
+	$(this).parents('.hotGoods').find('.list').hide();
+	$(this).parents('.hotGoods').find('.list').eq($(this).index()).show();
 
 
 
@@ -99,8 +90,6 @@ $().ready(function(){
 </head><body>
 
 
-<script type="text/javascript" src="js/togglebox.js"></script>
-
 
 
 <div class="header" style="height:152px;">
@@ -109,13 +98,13 @@ $().ready(function(){
 		<div class="row">
 			<div class="span3">
 				<a href="/">
-					<img src="img/logo.jpg" width="210px" height="70px" alt="51模材网" />
+					<img src="picture/319cc045-2f73-480a-80a1-a872d1304fcc.png" alt="51模材网" />
 				</a>
 			</div>
 			<div class="span6">
 				<div class="search">
 					<form id="goodsSearchForm" action="/goods/search.jhtml" method="get">
-						<input name="keyword" class="keyword" placeholder="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
+						<input name="keyword" class="keyword" value="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
 						<button type="submit">搜索</button>
 					</form>
 				</div>
@@ -199,7 +188,7 @@ $().ready(function(){
 
 
     <div class="container index">
-  <div class="row category_left">
+  <div class="category_left" >
         <div class="span2">
       <div id="productCategoryMenu" class="productCategoryMenu">
             <ul>
@@ -207,10 +196,6 @@ $().ready(function(){
                 <p><a href="javascript:void(0)" target="_blank">国产模具钢</a></p>
                 <div class="item last">
                 		<a href="javascript:void(0)" target="_blank"> 塑料模具钢 定制规格 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 冷作模具钢 定制规格 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 热作模具钢 定制规格 </a>
 
 		              </div>
                 <div class="menu">
@@ -647,1916 +632,335 @@ $().ready(function(){
 
 	      <h3>上传 BOM</h3>
 	      <form class="characteristic" method="post">
-	    		<p><button  style="line-height: 20px;background: #CCCCCC;">浏览</button><button class="btn2"  style="line-height: 20px;background: #CCCCCC;"></button></p>
-	    		
-	    		<button style="float: right;margin-top: 20px;">上传</button>
+	    		<input type="file"  value="浏览" />
+	    		<button>上传</button>
 	      </form>
 	    </div>
       </div>
-  <script>
-			$(".menu dl").find("dd:first").css("margin-left","0px");
-		</script>
  
-  <div class="row">
-        <div class="selected">
-      <h3>模材精选</h3>
-      <ul>
-
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/acabf4c0-a174-4b4e-af1a-12c110abe6d1.jpg"  alt="Cr12MoV标准冲模板" title="Cr12MoV标准冲模板" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/0b23e7cd-5d3f-466b-869f-826a2af3a006.jpg"  alt="sp2738mod." title="sp2738mod." />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/16af67fc-8be3-4d95-bf2f-057bb8674ce3.jpg"  alt="P20" title="P20" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/3aeba999-9c17-4716-8b65-22af6d179614.jpg"  alt="738H" title="738H" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/fc6ec539-c3b0-4787-ba5d-bd6034f5bc85.jpg"  alt="模架" title="模架" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/73d2bf30-8712-44b8-8c82-8b2e0c32fdf7.jpg"  alt="p20标准内模件" title="p20标准内模件" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/8c2b0b25-bb04-4295-9092-7265e5d0a150.jpg"  alt="SP2738mod.HH" title="SP2738mod.HH" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/b4ca30cd-9784-41ae-82d0-ffdc7824f537.jpg"  alt="Cr12MoV" title="Cr12MoV" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/643331d1-b211-48c3-8d83-57a86f6c9a5b.jpg"  alt="O1" title="O1" />
-				</a></li>
-				<li><a href="javascript:void(0)" target="_blank">
-					<img src="img/d6f6ea3e-e837-41e6-8b6d-3b0c4d0de7de.jpg"  alt="SKD61顶针" title="SKD61顶针" />
-				</a></li>
-
-          </ul>
-    </div>
-
-      </div>
 
 
 
 
 
 
-  <div class="row">
-        <div class="span12"> <div class="middleAd">
-					<a href="javascript:void(0)" target="_blank">
-					<img src="img/c54ced01-d208-4533-8395-c5d0c189a272.jpg" width="1210" height="90" alt="模架全场低至3折起" title="模架全场低至3折起" />
-				</a>
-</div> </div>
-      </div>
 
   	<div class="row" id="row_">
-        <div class="span12">
+       
+       
+       <div class="span12">
       <div class="hotGoods">
             <dl class="title1">
           <div class="goods_title_l">
                 <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
               </div>
           <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">塑料模具钢 定制规格</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">冷作模具钢 定制规格</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">热作模具钢 定制规格</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">标准规格模具钢</a> </dd>
+                <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
+                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
+               
           </div>
         </dl>
-            <div>
-           <img src="img/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="国产模具钢" title="国产模具钢" />
+            <div class="title_img">
+           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
            </div>
 
-          <ul  class="ul_one" >
+          <ul  class="ul_one list" >
+					<ul>
+						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+					</ul>
+				        <ul>
+				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        </ul>
 
-				          <li> <a href="javascript:void(0)" title="S50C" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/5906d560-59c4-41cc-8df5-3b57a6e7b197-thumbnail.jpg" /></div>
-				            <div>  <span title="S50C">S50C</span> <em title="高级优质中碳钢">高级优质中碳钢</em> 				              </div>
-				            <strong>￥7.30</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="P20" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/6d3bbf20-b956-4702-9851-1b5128c1beda.jpg" /></div>
-				            <div>  <span title="P20">P20</span> <em title="热销正品 硬度HRC28-34 通用型塑料模具钢">热销正品 硬度HRC28-34 通</em> 				              </div>
-				            <strong>￥8.85</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="P20H" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201610/9641f7c7-77d2-429d-b95c-5a31ca4903b9-thumbnail.jpg" /></div>
-				            <div>  <span title="P20H">P20H</span> <em title="HRC33-38 适合半硬模 通用型塑料模具钢">HRC33-38 适合半硬模 通用</em> 				              </div>
-				            <strong>￥9.85</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="718" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201603/6aeba913-0c8a-4906-a125-2420217fe276.jpg" /></div>
-				            <div>  <span title="718">718</span> <em title="抛光、耐腐蚀性优于P20 硬度更均匀 加工性能好">抛光、耐腐蚀性优于P20 硬</em> 				              </div>
-				            <strong>￥11.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="718H" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201603/55c4770b-a759-4399-8422-6c30903f771c.jpg" /></div>
-				            <div>  <span title="718H">718H</span> <em title="HRC34-38 适合半硬模 硬度更均匀 加工性能好">HRC34-38 适合半硬模 硬度</em> 				              </div>
-				            <strong>￥12.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="738H模块(抚钢)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/d0bd2cef-301c-4a48-a8a5-b4fb9208649b.png" /></div>
-				            <div>  <span title="738H模块(抚钢)">738H模块(抚钢)</span> <em title="抚钢 国产名牌 HRC33-38 组织致密 硬度均匀 适合大型、长寿命模具">抚钢 国产名牌 HRC33-38 </em> 				              </div>
-				            <strong>￥17.55</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="738H模块(天工)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/73c8e77a-feb1-445b-99d6-64621461742b.png" /></div>
-				            <div>  <span title="738H模块(天工)">738H模块(天工)</span> <em title="比进口同级产品便宜50%  相对于欧洲模块质量，性价比高">比进口同级产品便宜50%  </em> 				              </div>
-				            <strong>￥15.88</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S136" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201604/a55ca404-092b-4d6c-b6ce-a05b21ff9276.jpg" /></div>
-				            <div>  <span title="S136">S136</span> <em title="国标4Cr13 耐酸高抛光 效果优于718 退火态 可调质做HRC46硬模 适合PC、PVC、POM、PBT等酸性塑料">国标4Cr13 耐酸高抛光 效</em> 				              </div>
-				            <strong>￥15.29</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S136H" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201604/b8fc7a19-13db-4239-8ee5-525a2bf35bbb.jpg" /></div>
-				            <div>  <span title="S136H">S136H</span> <em title="国标4Cr13 HRC30-36 适合PC PE等酸性塑料 抛光效果优于718 适合PC、PVC、POM、PBT等酸性塑料">国标4Cr13 HRC30-36 适合P</em> 				              </div>
-				            <strong>￥16.99</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S136 ESR" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201604/6762b6f4-a62a-4d69-9d59-8f0ad565cd6e.jpg" /></div>
-				            <div>  <span title="S136 ESR">S136 ESR</span> <em title="大连出厂，抛光保1万目 电渣退火态 可调质做HRC50以上硬模 适合PC、PVC等酸性塑料">大连出厂，抛光保1万目 电</em> 				              </div>
-				            <strong>￥24.00</strong> </a> </li>
+				          
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="A3" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/3447a17c-9902-4f5a-9239-988b8e0f9065.jpg" /></div>
-				            <div>  <span title="A3">A3</span> <em title="含碳适中，综合性能较好">含碳适中，综合性能较好</em> 				              </div>
-				            <strong>￥7.30</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="O1" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/5856c1fe-4ded-4f4a-bcb4-8cc74696c87f.jpg" /></div>
-				            <div>  <span title="O1">O1</span> <em title="O1美国标准不变形油钢 耐磨性佳 O1热处理性能稳定 尺寸变形小 用于冲裁模,冲压模,弯曲模等">O1美国标准不变形油钢 耐</em> 				              </div>
-				            <strong>￥16.72</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr8(D3M)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/c2a68b52-3259-47c5-881e-06515a2fb853.jpg" /></div>
-				            <div>  <span title="Cr8(D3M)">Cr8(D3M)</span> <em title="淬火后硬度可达HRC58">淬火后硬度可达HRC58</em> 				              </div>
-				            <strong>￥15.38</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/0456b5df-2fca-42c8-9d9d-013e1f60deda-thumbnail.jpg" /></div>
-				            <div>  <span title="Cr12">Cr12</span> <em title="抚钢,高强度,较好的淬透性耐磨性">抚钢,高强度,较好的淬透性</em> 				              </div>
-				            <strong>￥16.88</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12MoV" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/347f1584-ec25-4773-ac07-f07836fc805f.jpg" /></div>
-				            <div>  <span title="Cr12MoV">Cr12MoV</span> <em title="国标正品 比市场价便宜40% 大连轧板 退火态&lt;HB235 适合各种精密冲裁模、连续模等">国标正品 比市场价便宜40%</em> 				              </div>
-				            <strong>￥16.88</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12(Cr&gt;7.5%)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/aa4fc56e-7d87-4e25-a7a9-5c550ecb8d6e.jpg" /></div>
-				            <div>  <span title="Cr12(Cr&gt;7.5%)">Cr12(Cr&gt;7.5%)</span> <em title="淬火后硬度可达HRC58">淬火后硬度可达HRC58</em> 				              </div>
-				            <strong>￥15.38</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD11" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/774e924c-c3a0-4f7a-9419-915f1496c7cc-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD11">SKD11</span> <em title="退火硬度HB&lt;255 韧性高 不易开裂">退火硬度HB&lt;255 韧性高 不</em> 				              </div>
-				            <strong>￥29.85</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="D2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/1bcafc7c-93f2-4aaf-ad14-abfad4671988-thumbnail.jpg" /></div>
-				            <div>  <span title="D2">D2</span> <em title="退火硬度HB&lt;255 韧性高 不易开裂">退火硬度HB&lt;255 韧性高 不</em> 				              </div>
-				            <strong>￥33.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DC53" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/897bb1cc-a093-4184-a06b-38f7fd203a7c.jpg" /></div>
-				            <div>  <span title="DC53">DC53</span> <em title="退火状态交货 韧性高 不易开裂">退火状态交货 韧性高 不易</em> 				              </div>
-				            <strong>￥36.85</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="M2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/10e9b6bb-a0a7-40be-9925-0193f41e4853.jpg" /></div>
-				            <div>  <span title="M2">M2</span> <em title="钨钼系通用高速钢 退火硬度HB&lt;255 电炉生产 碳化物细小均匀 淬火硬度高">钨钼系通用高速钢 退火硬</em> 				              </div>
-				            <strong>￥102.00</strong> </a> </li>
+          <ul class="list">
+          	<ul>
+          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+          	</ul>
+					
+				     
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="H13" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/254a4766-3006-426a-8139-6cc0aea913ff-thumbnail.jpg" /></div>
-				            <div>  <span title="H13">H13</span> <em title="国标正品 比市场价便宜20% 电炉精炼 适合普通级别的压铸模、热锻模 、塑料硬模等">国标正品 比市场价便宜20%</em> 				              </div>
-				            <strong>￥24.30</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="H13 ESR(FS413)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/644e0858-e0eb-411f-94a8-20f95f29faaf.jpg" /></div>
-				            <div>  <span title="H13 ESR(FS413)">H13 ESR(FS413)</span> <em title="抚钢牌号FS413 电渣+锻造+超细化 DIN1.2344成分 价格比进口同级产品低60% 适合高要求的压铸模、热锻模 、塑料硬模等">抚钢牌号FS413 电渣+锻造+</em> 				              </div>
-				            <strong>￥40.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="1.2714" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/e5f087dd-3800-4c48-a1c2-9dc65dc1cd67-thumbnail.jpg" /></div>
-				            <div>  <span title="1.2714">1.2714</span> <em title="良好的韧性、强度和高耐磨性">良好的韧性、强度和高耐磨</em> 				              </div>
-				            <strong>￥31.00</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="S50C标准磨光扁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/1152639e-4900-4bee-b237-f27cc6d23a16.jpg" /></div>
-				            <div>  <span title="S50C标准磨光扁">S50C标准磨光扁</span> <em title="两面精磨两侧精铣 高强度碳素钢">两面精磨两侧精铣 高强度</em> 				              </div>
-				            <strong>￥286.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="M2标准冲子料" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/d1f6cda6-59e9-4fa3-9175-0f9bb5067b8c.jpg" /></div>
-				            <div>  <span title="M2标准冲子料">M2标准冲子料</span> <em title="钨钼系通用高速钢 真空深冷至HRC62-64 电炉生产 碳化物细小均匀 淬火硬度高">钨钼系通用高速钢 真空深</em> 				              </div>
-				            <strong>￥193.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="P20标准内模件" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/8d54ce15-a97a-495e-b9a6-3b27c9fffc85.jpg" /></div>
-				            <div>  <span title="P20标准内模件">P20标准内模件</span> <em title="热销正品 硬度HRC28-34 通用型塑料模具钢">热销正品 硬度HRC28-34 通</em> 				              </div>
-				            <strong>￥18.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0) title="S136H夹具料" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/005b9926-d137-4525-b85a-d9d15d7ca04c-thumbnail.jpg" /></div>
-				            <div>  <span title="S136H夹具料">S136H夹具料</span> <em title="抚钢国标4Cr13 HRC30-36 适合PC PE等酸性塑料 抛光效果优于718 适合PC、PVC、POM、PBT等酸性塑料">抚钢国标4Cr13 HRC30-36 </em> 				              </div>
-				            <strong>￥18.50</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12MoV标准冲模板" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/b09f24fd-b95c-45b7-b625-d4d6a2e09561-thumbnail.jpg" /></div>
-				            <div>  <span title="Cr12MoV标准冲模板">Cr12MoV标准冲模板</span> <em title="大连机轧板 退火≤HB229 硬度均匀 碳化物细小 现款现货含税价14.58元/kg">大连机轧板 退火≤HB229 硬</em> 				              </div>
-				            <strong>￥46.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="738标准内模件" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/2dc78b02-1b9e-48f2-a8b9-ac27f1f0cfc2-thumbnail.jpg" /></div>
-				            <div>  <span title="738标准内模件">738标准内模件</span> <em title="可切削性及镜面研磨性好">可切削性及镜面研磨性好</em> 				              </div>
-				            <strong>￥24.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="O1标准磨光扁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/e2f2dff0-c36f-4fb2-8863-458a2fa7d6c5-thumbnail.jpg" /></div>
-				            <div>  <span title="O1标准磨光扁">O1标准磨光扁</span> <em title="O1美国标准不变形油钢 耐磨性佳 O1热处理性能稳定 尺寸变形小 用于冲裁模,冲压模,弯曲模等">O1美国标准不变形油钢 耐</em> 				              </div>
-				            <strong>￥32.00</strong> </a> </li>
-          </ul>
+      
 
           </div>
 
     </div>
-      </div>
-
-
-  	<div class="row" id="row_">
-        <div class="span12">
+  	
+  	
+  	      <div class="span12">
       <div class="hotGoods">
-            <dl class="title2">
+            <dl class="title1">
           <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">进口模具钢</a> </dt>
+                <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
               </div>
           <div class="goods_title_r">
                 <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">瑞典STEEL</a> </dd>
+                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
+               
           </div>
         </dl>
-            <div>
-           <img src="img/f8ad206d-3f88-43ba-ad57-91493c4d5aab.jpg" alt="进口模具钢" title="进口模具钢" />
+            <div class="title_img">
+           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
            </div>
 
-          <ul  class="ul_one" >
-
-				          <li> <a href="javascript:void(0)" title="SP2738mod." target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/69dc43b4-aa86-42fe-b419-33d10d941612-thumbnail.jpg" /></div>
-				            <div>  <span title="SP2738mod.">SP2738mod.</span> <em title="专利成分 蚀纹抛光优于2738 HRC30-35 专利改良型 法国阿赛洛华南区唯一代理">专利成分 蚀纹抛光优于273</em> 				              </div>
+          <ul  class="ul_one list" >
+					<ul>
+						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
 				            <strong>￥29.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SP2738mod.HH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/01a288b4-12d0-4cec-8245-b411b5759610.jpg" /></div>
-				            <div>  <span title="SP2738mod.HH">SP2738mod.HH</span> <em title="专利成分 蚀纹抛光优于2738 HRC34-38 专利改良型 法国阿赛洛华南区唯一代理">专利成分 蚀纹抛光优于273</em> 				              </div>
-				            <strong>￥31.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SP400" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/37695964-058a-4e4d-aed0-550c7dbffb0a-thumbnail.jpg" /></div>
-				            <div>  <span title="SP400">SP400</span> <em title="HRC38-42 欧洲版NAK80">HRC38-42 欧洲版NAK80</em> 				              </div>
-				            <strong>￥43.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TENASteel" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/5a8ed512-8d9a-4973-8cdf-1a77e811e769-thumbnail.jpg" /></div>
-				            <div>  <span title="TENASteel">TENASteel</span> <em title="2倍D2寿命 可供宽度2米长度4米">2倍D2寿命 可供宽度2米长</em> 				              </div>
-				            <strong>￥68.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SP_Stainless(SPS)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/151d90a1-b65d-41bd-aac0-411757868e55-thumbnail.jpg" /></div>
-				            <div>  <span title="SP_Stainless(SPS)">SP_Stainless(SPS)</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥78.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SP300" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/fc954387-4f9c-43bf-b7bb-8632d1e6cd04.jpg" /></div>
-				            <div>  <span title="SP300">SP300</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥33.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SP350" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/d480672c-3689-4158-ada6-a65f77ac812e-thumbnail.jpg" /></div>
-				            <div>  <span title="SP350">SP350</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥38.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="HP370" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/c747582a-3141-432e-9b0c-53aa60568ced.jpg" /></div>
-				            <div>  <span title="HP370">HP370</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥42.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="HP_Plus" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/8584a03b-5788-4538-8526-45ff0ca3de94-thumbnail.jpg" /></div>
-				            <div>  <span title="HP_Plus">HP_Plus</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥48.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="W1.2343_ISOTROP" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/e76c754c-a351-46c9-92d9-ebd5ce3f0c8b-thumbnail.jpg" /></div>
-				            <div>  <span title="W1.2343_ISOTROP">W1.2343_ISOTROP</span> <em title="即将到货">即将到货</em> 				              </div>
-				            <strong>￥66.00</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="PM-23板材（预硬料）" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201604/a3406618-2735-415e-b30f-5968eac2d64e.jpg" /></div>
-				            <div>
-				              PM-23板材（预硬料）
-				              </div>
-				            <strong>￥710.70</strong> </a> </li>
-          </ul>
-
-          </div>
-
-    </div>
-      </div>
-
-
-  	<div class="row" id="row_">
-        <div class="span12">
-      <div class="hotGoods">
-            <dl class="title3">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">标准模架</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">大水口模架</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">细水口模架</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">简化细水口模架</a> </dd>
-          </div>
-        </dl>
-            <div>
-           <img src="img/52f546aa-7157-4181-931e-55a68e7c5696.jpg" alt="模架/模胚" title="模架/模胚" />
-           </div>
-
-          <ul  class="ul_one" >
-
-				          <li> <a href="javascript:void(0)" title="CI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/07cd8569-6a33-44e2-9e25-112884c1ca38-thumbnail.jpg" /></div>
-				            <div>
-				              CI
-				              </div>
-				            <strong>￥432.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="AI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/56647891-8ba6-4967-a2bc-26d57ef673d8.jpg" /></div>
-				            <div>
-				              AI
-				              </div>
-				            <strong>￥492.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="CH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/1d49f223-e738-4afd-ad04-0ea45b00caef.jpg" /></div>
-				            <div>
-				              CH
-				              </div>
-				            <strong>￥392.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="BI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/89e4c95d-8ff6-481b-b5f2-bd1150eaf620-thumbnail.jpg" /></div>
-				            <div>
-				              BI
-				              </div>
-				            <strong>￥600.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="BH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/7c611cf0-4d7f-438e-a375-2eb1bbecd4e5.jpg" /></div>
-				            <div>
-				              BH
-				              </div>
-				            <strong>￥560.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/86afae49-8868-4d19-93e0-4db77565176f.jpg" /></div>
-				            <div>
-				              DH
-				              </div>
-				            <strong>￥496.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/be509995-fba0-4671-854b-b9582db9ef0c.jpg" /></div>
-				            <div>
-				              DI
-				              </div>
-				            <strong>￥536.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="AT" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/16db845e-2d9c-48d4-99f0-ae6975182254.jpg" /></div>
-				            <div>
-				              AT
-				              </div>
-				            <strong>￥496.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="BT" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/3ea6cb03-ebbe-4a1c-ae66-f867a4623112.jpg" /></div>
-				            <div>
-				              BT
-				              </div>
-				            <strong>￥604.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="CT" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/c9e74f03-140f-4e12-9503-7a22f4940892.jpg" /></div>
-				            <div>
-				              CT
-				              </div>
-				            <strong>￥436.00</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="DAH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/f065833a-646a-4c25-91a7-7ecf35f8a7ba.jpg" /></div>
-				            <div>
-				              DAH
-				              </div>
-				            <strong>￥0.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DBH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/80acb965-bf00-47b4-9df4-f077a65c99e7.jpg" /></div>
-				            <div>
-				              DBH
-				              </div>
-				            <strong>￥1314.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DDH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/b9b8f409-c8db-4c46-9530-bf883a67d380.jpg" /></div>
-				            <div>
-				              DDH
-				              </div>
-				            <strong>￥1216.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DAI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/bd4eb67a-9725-4058-875e-b29f26358880.jpg" /></div>
-				            <div>
-				              DAI
-				              </div>
-				            <strong>￥1180.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DBI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/62166abc-fb2c-4b26-b74e-8c78cd7bfef2.jpg" /></div>
-				            <div>
-				              DBI
-				              </div>
-				            <strong>￥1314.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DCI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/0270cbaf-d834-4dac-b608-2f8666066d5e.jpg" /></div>
-				            <div>
-				              DCI
-				              </div>
-				            <strong>￥1083.60</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DDI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/3c3d663e-acac-4ce6-af58-3b378f5f4c87-thumbnail.jpg" /></div>
-				            <div>
-				              DDI
-				              </div>
-				            <strong>￥1216.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="EAH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/bbbee6e4-4e4e-4673-bb00-a2178d990241.jpg" /></div>
-				            <div>
-				              EAH
-				              </div>
-				            <strong>￥1033.20</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="EBH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/675bd31e-2633-409b-bedf-9734c53eb033.jpg" /></div>
-				            <div>
-				              EBH
-				              </div>
-				            <strong>￥1162.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="ECH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/b871c23e-9cea-45cf-b0ff-d158c4abc0c3.jpg" /></div>
-				            <div>
-				              ECH
-				              </div>
-				            <strong>￥943.20</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="GCI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/66cecc86-1f10-4c9f-82c0-478aec286922.jpg" /></div>
-				            <div>
-				              GCI
-				              </div>
-				            <strong>￥626.40</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="FCH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/4b2355af-9255-4609-8d62-de818cd73381.jpg" /></div>
-				            <div>
-				              FCH
-				              </div>
-				            <strong>￥727.20</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="FCI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/3522787b-4a3b-441f-8676-556629880231.jpg" /></div>
-				            <div>
-				              FCI
-				              </div>
-				            <strong>￥727.20</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="FAH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/3366bc3b-7763-48e8-b8ba-5e71d0c0a9ae.jpg" /></div>
-				            <div>
-				              FAH
-				              </div>
-				            <strong>￥802.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="FAI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/cad90e35-1ea9-4ef8-9ce6-6e244cab553d.jpg" /></div>
-				            <div>
-				              FAI
-				              </div>
-				            <strong>￥802.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="GAH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/a91d7685-27fb-4d2a-adc3-c9ce7369311a.jpg" /></div>
-				            <div>
-				              GAH
-				              </div>
-				            <strong>￥698.40</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="GCH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/31efac88-b43a-49b2-8005-5d28caf03714.jpg" /></div>
-				            <div>
-				              GCH
-				              </div>
-				            <strong>￥626.40</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="GAI" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/6941e3e3-d7f4-4c7b-b4b0-d7e633d89515.jpg" /></div>
-				            <div>
-				              GAI
-				              </div>
-				            <strong>￥698.40</strong> </a> </li>
-          </ul>
-
-          </div>
-
-    </div>
-      </div>
-
-
-  	<div class="row" id="row_">
-        <div class="span12">
-      <div class="hotGoods">
-            <dl class="title4">
-          <div class="goods_title_l">
-                <dt> <a href="/goods/list/286.jhtml" target="_blank">模具配件</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="/goods/list/259.jhtml" target="_blank">导向系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">精定位系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">顶出系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">冷却系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">浇口套系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">锁模扣系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">限位夹系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">冲头系列</a> </dd>
-          </div>
-        </dl>
-            <div>
-           <img src="img/8dfd4f33-e1a0-47ad-b937-9e02b0f3afc7.jpg" alt="模具零配件" title="模具零配件" />
-           </div>
-
-          <ul  class="ul_one" >
-
-				          <li> <a href="javascript:void(0)" title="直司套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/97d20047-28ef-4498-99a4-b13ed07d1654.jpg" /></div>
-				            <div>  <span title="直司套">直司套</span> <em title="用于模具导向作用 无托位司套">用于模具导向作用 无托位</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="托司套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/3e447e93-61e3-45fb-bb64-bda6decf4155.jpg" /></div>
-				            <div>  <span title="托司套">托司套</span> <em title="用于模具导向作用 塑胶模具专用导柱、导套">用于模具导向作用 塑胶模</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="中托司" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/7ee04d03-61c8-4d66-83d2-230687834249.jpg" /></div>
-				            <div>  <span title="中托司">中托司</span> <em title="用于模具针板导向作用 又称EGP、针板导套">用于模具针板导向作用 又</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="中导柱（GP）" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/cc8e9980-5e8c-4e47-b7f9-41a4587857a0.jpg" /></div>
-				            <div>  <span title="中导柱（GP）">中导柱（GP）</span> <em title="用于模具针板导向作用 又称EGP、针板导柱">用于模具针板导向作用 又</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="拉杆" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/2d004b8c-c46c-41a0-94bc-51d45766f0dc.jpg" /></div>
-				            <div>  <span title="拉杆">拉杆</span> <em title="用于模具针板导向作用 又称SP、水口边">用于模具针板导向作用 又</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="导柱" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/1a6f6c71-8acb-4b4e-9c78-0affcbe0227d.jpg" /></div>
-				            <div>  <span title="导柱">导柱</span> <em title="用于模具导向作用 塑胶模具专用导柱、导套">用于模具导向作用 塑胶模</em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="回针(复位杆)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/ba524249-d786-4cd1-b923-63335c37a7a0.jpg" /></div>
-				            <div>  <span title="回针(复位杆)">回针(复位杆)</span> <em title="用于顶回针板 又称复位杆 扶杆 回程杆">用于顶回针板 又称复位杆 </em> 				              </div>
-				            <strong>￥7.67</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="自润中托司" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/04e43d9e-7334-4c42-a2e7-0e07dc1c9507-thumbnail.jpg" /></div>
-				            <div>  <span title="自润中托司">自润中托司</span> <em title="用于模具针板导向作用 又称EGP、针板导套">用于模具针板导向作用 又</em> 				              </div>
-				            <strong>￥49.70</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="自润直司" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/0449de20-8354-4f3f-9209-62cc3418c160-thumbnail.jpg" /></div>
-				            <div>  <span title="自润直司">自润直司</span> <em title="用于模具导向作用 高力黄铜+石墨司套">用于模具导向作用 高力黄</em> 				              </div>
-				            <strong>￥38.38</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="自润托司" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/aa2f2181-3da9-4f4c-9a01-2814b2df102d.jpg" /></div>
-				            <div>  <span title="自润托司">自润托司</span> <em title="用于模具导向作用 高力黄铜+石墨司套">用于模具导向作用 高力黄</em> 				              </div>
-				            <strong>￥45.29</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="涂层边锁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/8636ba57-7db8-44db-859d-20597ae2729d-thumbnail.jpg" /></div>
-				            <div>  <span title="涂层边锁">涂层边锁</span> <em title="用于高精度模具定位">用于高精度模具定位</em> 				              </div>
-				            <strong>￥111.15</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="边锁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/5d8fac04-9a46-4a82-b671-f35371954e01.jpg" /></div>
-				            <div>  <span title="边锁">边锁</span> <em title="用于高精度模具定位">用于高精度模具定位</em> 				              </div>
-				            <strong>￥30.57</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="顶锁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/3fd07bed-41c9-461c-ba80-d6afaf781b44-thumbnail.jpg" /></div>
-				            <div>  <span title="顶锁">顶锁</span> <em title="用于高精度模具定位">用于高精度模具定位</em> 				              </div>
-				            <strong>￥62.52</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="自润边锁" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/088f5211-7789-4781-b2aa-65a1a06abf8b.jpg" /></div>
-				            <div>  <span title="自润边锁">自润边锁</span> <em title="用于高精度模具定位">用于高精度模具定位</em> 				              </div>
-				            <strong>￥104.21</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="斜导位辅助器" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/e2bbf3a7-b952-4f66-b785-b46862f704ad.jpg" /></div>
-				            <div>  <span title="斜导位辅助器">斜导位辅助器</span> <em title="用于高精度模具定位 TBL50 TBL100 TBL150">用于高精度模具定位 TBL50</em> 				              </div>
-				            <strong>￥34.73</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="导柱辅助器（圆形斜度锁）" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/ae843f41-4e76-4aad-a137-23f4dc53d11b.jpg" /></div>
-				            <div>  <span title="导柱辅助器（圆形斜度锁）">导柱辅助器（圆形斜度锁）</span> <em title="用于高精度模具定位">用于高精度模具定位</em> 				              </div>
-				            <strong>￥20.84</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="国产SKD61顶针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/da84ea67-63a2-483f-9b3a-53df4c03daaa.jpg" /></div>
-				            <div>  <span title="国产SKD61顶针">国产SKD61顶针</span> <em title="用于顶出产品">用于顶出产品</em> 				              </div>
-				            <strong>￥3.01</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD61顶针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/86e79d40-90dd-4bba-8985-25e25093c590-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD61顶针">SKD61顶针</span> <em title="用于顶出产品 正品SKD61材质">用于顶出产品 正品SKD61材</em> 				              </div>
-				            <strong>￥3.98</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="台湾Y·F精品SKD61顶针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/f7e646e8-8b5f-4380-b7b2-346c8c591c42.jpg" /></div>
-				            <div>  <span title="台湾Y·F精品SKD61顶针">台湾Y·F精品SKD61顶针</span> <em title="用于顶出产品">用于顶出产品</em> 				              </div>
-				            <strong>￥3.69</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="65Mn顶针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/b046f224-1489-4a29-8dc4-c447932b1df9-thumbnail.jpg" /></div>
-				            <div>  <span title="65Mn顶针">65Mn顶针</span> <em title="用于顶出产品 正品65Mn材质">用于顶出产品 正品65Mn材</em> 				              </div>
-				            <strong>￥1.17</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="普通托针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/e1ca4510-335c-49e6-98f7-d1e6eaf87bd3.jpg" /></div>
-				            <div>  <span title="普通托针">普通托针</span> <em title="用于顶出产品">用于顶出产品</em> 				              </div>
-				            <strong>￥1.17</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="国产SKD61托针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/c23b572e-2eea-4966-bae3-febdf35c13d3.jpg" /></div>
-				            <div>  <span title="国产SKD61托针">国产SKD61托针</span> <em title="用于顶出产品 正品SKD61材质">用于顶出产品 正品SKD61材</em> 				              </div>
-				            <strong>￥2.11</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="进口SKD61托针" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/30edaa6f-1b17-486d-85ff-83d5535c2bd8.jpg" /></div>
-				            <div>  <span title="进口SKD61托针">进口SKD61托针</span> <em title="用于顶出产品 正品SKD61材质">用于顶出产品 正品SKD61材</em> 				              </div>
-				            <strong>￥5.27</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="国产SKD61司筒" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/c6e3f4b3-e699-4aa7-b79a-819510718fb7.jpg" /></div>
-				            <div>  <span title="国产SKD61司筒">国产SKD61司筒</span> <em title="又称顶管 用于顶出产品">又称顶管 用于顶出产品</em> 				              </div>
-				            <strong>￥18.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="进口SKD61司筒" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/288cd65c-be2a-4ce2-8ca7-92ae58e79074.jpg" /></div>
-				            <div>  <span title="进口SKD61司筒">进口SKD61司筒</span> <em title="又称顶管 用于顶出产品">又称顶管 用于顶出产品</em> 				              </div>
-				            <strong>￥35.10</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="HASCO-Z801接头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/25316ede-9613-4287-a6cb-5d91eb49b3db.jpg" /></div>
-				            <div>  <span title="HASCO-Z801接头">HASCO-Z801接头</span> <em title="用于模具冷却系统 Hasco快速接头系列组件">用于模具冷却系统 Hasco快</em> 				              </div>
-				            <strong>￥12.87</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="HASCO-Z80接头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/6403771f-a3ef-4a5e-bd56-48c1d5d1833a-thumbnail.jpg" /></div>
-				            <div>  <span title="HASCO-Z80接头">HASCO-Z80接头</span> <em title="用于模具冷却系统 Hasco快速接头系列组件">用于模具冷却系统 Hasco快</em> 				              </div>
-				            <strong>￥12.87</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="HASCO-Z81接头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/1b811f2a-0eb5-44c0-9c20-3099ddaf5e45.jpg" /></div>
-				            <div>  <span title="HASCO-Z81接头">HASCO-Z81接头</span> <em title="用于模具冷却系统 Hasco快速接头系列组件">用于模具冷却系统 Hasco快</em> 				              </div>
-				            <strong>￥2.34</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DME-JP接头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/e293cedc-2970-4f98-bc08-f18dcc8c7e70.jpg" /></div>
-				            <div>  <span title="DME-JP接头">DME-JP接头</span> <em title="用于模具冷却系统 DME快速接头系列组件">用于模具冷却系统 DME快速</em> 				              </div>
-				            <strong>￥1.87</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DME-JS接头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/3ef4c815-db4a-4dc0-a1f2-10e8e9bf93d0.jpg" /></div>
-				            <div>  <span title="DME-JS接头">DME-JS接头</span> <em title="用于模具冷却系统 DME快速接头系列组件">用于模具冷却系统 DME快速</em> 				              </div>
-				            <strong>￥9.36</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="HASCO-Z811" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/72976b1a-d19f-40da-ab42-bfc89d103580.jpg" /></div>
-				            <div>  <span title="HASCO-Z811">HASCO-Z811</span> <em title="用于模具冷却系统 Hasco快速接头系列组件">用于模具冷却系统 Hasco快</em> 				              </div>
-				            <strong>￥5.50</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="A型浇口套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201508/541d9ed9-c1d7-425d-bf20-bafd4d5c231f.jpg" /></div>
-				            <div>  <span title="A型浇口套">A型浇口套</span> <em title="用于模具注胶 又称唧咀(唧嘴),灌嘴,浇口灌">用于模具注胶 又称唧咀(唧</em> 				              </div>
-				            <strong>￥43.80</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="B型浇口套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/ad986822-860b-45a2-b9df-d531c8f4d92d.jpg" /></div>
-				            <div>  <span title="B型浇口套">B型浇口套</span> <em title="用于模具注胶 又称唧咀(唧嘴),灌嘴,浇口灌">用于模具注胶 又称唧咀(唧</em> 				              </div>
-				            <strong>￥42.12</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="C型浇口套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/e63227a8-cfd1-4347-b858-e85848701a81.jpg" /></div>
-				            <div>  <span title="C型浇口套">C型浇口套</span> <em title="用于模具注胶 又称唧咀(唧嘴),灌嘴,浇口灌">用于模具注胶 又称唧咀(唧</em> 				              </div>
-				            <strong>￥33.70</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="锁模扣Z171" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/838f5224-6e98-4813-9e7f-dfb2fb1f9e84.jpg" /></div>
-				            <div>  <span title="锁模扣Z171">锁模扣Z171</span> <em title="用于模具开合顺序控制 兼容Hasco标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥231.66</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="锁模扣Z170" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/4523afa4-07a7-45c4-8b6a-2862cc8ea2da.jpg" /></div>
-				            <div>  <span title="锁模扣Z170">锁模扣Z170</span> <em title="用于模具开合顺序控制 兼容Hasco标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥231.66</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="锁模扣Z174" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/d6a78b2f-bc8e-4845-8240-45298c53fdeb.jpg" /></div>
-				            <div>  <span title="锁模扣Z174">锁模扣Z174</span> <em title="用于模具开合顺序控制 兼容Hasco标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥411.84</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="锁模扣L050" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/cfa6f407-6978-43df-8231-db79f96d9662.jpg" /></div>
-				            <div>  <span title="锁模扣L050">锁模扣L050</span> <em title="用于模具开合顺序控制 兼容DME标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥386.10</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="锁模扣PLS/M/L" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/4306f873-4195-444f-aba3-e30534c5cd94.jpg" /></div>
-				            <div>  <span title="锁模扣PLS/M/L">锁模扣PLS/M/L</span> <em title="用于模具开合顺序控制 兼容MISUMI标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥257.40</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="T型锁模扣Z5-0/1" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/119ce01d-5d3f-4051-971a-7eb290e1c2e7.jpg" /></div>
-				            <div>  <span title="T型锁模扣Z5-0/1">T型锁模扣Z5-0/1</span> <em title="用于模具开合顺序控制 兼容STRACK标准组件">用于模具开合顺序控制 兼</em> 				              </div>
-				            <strong>￥900.90</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="加速顶出机构AEP" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/85d5a906-c43f-41b4-b8ba-b7bcaf8c251d.jpg" /></div>
-				            <div>  <span title="加速顶出机构AEP">加速顶出机构AEP</span> <em title="用于加速顶出产品 兼容DME标准组件">用于加速顶出产品 兼容DME</em> 				              </div>
-				            <strong>￥489.06</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="限位夹Z5140" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/068ccbbc-769c-4e44-9240-a91e413113b5.jpg" /></div>
-				            <div>  <span title="限位夹Z5140">限位夹Z5140</span> <em title="用于模具开合限制滑块位置 兼容STRACK标准组件">用于模具开合限制滑块位置</em> 				              </div>
-				            <strong>￥57.92</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="限位夹Z5135" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/5105fbaf-eff9-4380-8dc7-c6600814820b.jpg" /></div>
-				            <div>  <span title="限位夹Z5135">限位夹Z5135</span> <em title="用于模具开合限制滑块位置 兼容STRACK标准组件">用于模具开合限制滑块位置</em> 				              </div>
-				            <strong>￥102.96</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="限位夹RC." target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/5c589ce4-353d-463a-b5d7-f8c4aa8dac73.jpg" /></div>
-				            <div>  <span title="限位夹RC.">限位夹RC.</span> <em title="用于延迟模具开合 兼容STRACK标准组件">用于延迟模具开合 兼容STR</em> 				              </div>
-				            <strong>￥51.48</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="SKD11T冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/2116cc3e-d0c5-4ad8-84ae-9e12bad67940-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD11T冲">SKD11T冲</span> <em title="正品SKD11材料 硬度58-60°10mm以下30支起订 10mm以上20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥1.40</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKH51T冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201603/1db89666-07ed-4526-9df0-705710d5b9c3.jpg" /></div>
-				            <div>  <span title="SKH51T冲">SKH51T冲</span> <em title="正品SKH51材料 硬度61-64°10mm以下30支起订 10mm以上20支起订">正品SKH51材料 硬度61-64°</em> 				              </div>
-				            <strong>￥3.28</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12MoVA冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/a05fdb1f-8b53-4403-b963-a5805d9c1793-thumbnail.jpg" /></div>
-				            <div>  <span title="Cr12MoVA冲">Cr12MoVA冲</span> <em title="正品Cr12MoV材料 硬度59-61°20只起订">正品Cr12MoV材料 硬度59-6</em> 				              </div>
-				            <strong>￥3.93</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DC53A冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/b4083806-8505-434d-bbf8-7636fff5095c-thumbnail.jpg" /></div>
-				            <div>  <span title="DC53A冲">DC53A冲</span> <em title="正品DC53材料 硬度59-61°20支起订">正品DC53材料 硬度59-61°2</em> 				              </div>
-				            <strong>￥7.86</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD11A冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/6dfafd85-7ebc-46c2-8f8b-d0933eb49e2b-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD11A冲">SKD11A冲</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥3.28</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD11引导冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/93eb50f5-b9c8-4551-8014-8c6bb84fb59b-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD11引导冲">SKD11引导冲</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥3.28</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD11二级引导冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/5ae8cc26-b99c-46ef-826e-7c8e56e6cabe-thumbnail.jpg" /></div>
-				            <div>  <span title="SKD11二级引导冲">SKD11二级引导冲</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥5.24</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="MAD衬套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/3b5ba186-eb2e-4932-a27d-65477300ca80.jpg" /></div>
-				            <div>  <span title="MAD衬套">MAD衬套</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥10.65</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="MBD衬套" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201510/b00b0a81-a549-499d-b9ac-460015b1f7ee-thumbnail.jpg" /></div>
-				            <div>  <span title="MBD衬套">MBD衬套</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥10.65</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="ADK抽牙冲" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/129df0af-ad42-4920-a79f-5985d0ebed93-thumbnail.jpg" /></div>
-				            <div>  <span title="ADK抽牙冲">ADK抽牙冲</span> <em title="正品SKD11材料 硬度58-60°20支起订">正品SKD11材料 硬度58-60°</em> 				              </div>
-				            <strong>￥6.55</strong> </a> </li>
-          </ul>
-
-          </div>
-
-    </div>
-      </div>
-
-
-  	<div class="row" id="row_">
-        <div class="span12">
-      <div class="hotGoods">
-            <dl class="title5">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">圆钢大全</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">模配精光圆</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">通用圆钢</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">粉末高速钢圆</a> </dd>
-          </div>
-        </dl>
-            <div>
-           <img src="img/b6f74b29-2564-4e57-8e00-90b12c76fbdb.jpg" alt="圆钢大全" title="圆钢大全" />
-           </div>
-
-          <ul  class="ul_one" >
-
-				          <li> <a href="javascript:void(0)" title="M2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/d052a1c8-b247-44c3-9883-40006928a077-thumbnail.jpg" /></div>
-				            <div>
-				              M2
-				              </div>
-				            <strong>￥82.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DC53" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/8a4e4db3-b04d-487f-971b-4f1eec0a4884-thumbnail.jpg" /></div>
-				            <div>
-				              DC53
-				              </div>
-				            <strong>￥33.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="D2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/32903fc6-cf1b-42d1-ba7d-253756fcbb4e-thumbnail.jpg" /></div>
-				            <div>
-				              D2
-				              </div>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
 				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+					</ul>
+				        <ul>
+				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        </ul>
 
-				          <li> <a href="javascript:void(0)" title="SKD11" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/f8dd3dd8-df10-4584-bbfe-f94caca957ba.jpg" /></div>
-				            <div>
-				              SKD11
-				              </div>
-				            <strong>￥28.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12MoV" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/cad6a0d6-af22-40ac-a79f-addc7d346c29-thumbnail.jpg" /></div>
-				            <div>
-				              Cr12MoV
-				              </div>
-				            <strong>￥20.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="O1" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/4e413210-0ffa-44ac-a9c9-d9a6f20425a2-thumbnail.jpg" /></div>
-				            <div>
-				              O1
-				              </div>
-				            <strong>￥19.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD61" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/2b97ba49-a1e0-4d39-b994-0a7c938c68c5-thumbnail.jpg" /></div>
-				            <div>
-				              SKD61
-				              </div>
-				            <strong>￥32.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SUS420" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/5bbe1ed8-2f1a-4f47-868f-941a88bb3d36-thumbnail.jpg" /></div>
-				            <div>
-				              SUS420
-				              </div>
-				            <strong>￥22.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SUJ2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/70097704-d7f4-4285-8b9d-4c6f9ac6cc46.jpg" /></div>
-				            <div>
-				              SUJ2
-				              </div>
-				            <strong>￥12.00</strong> </a> </li>
+				          
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="H13" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/452ab00c-49db-47a7-94ed-2ebbecb16d5c.jpg" /></div>
-				            <div>
-				              H13
-				              </div>
-				            <strong>￥28.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="DC53" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/cbfa8285-bc2a-4bf8-acee-cea34757f8c7.jpg" /></div>
-				            <div>
-				              DC53
-				              </div>
-				            <strong>￥33.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="D2" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/98bd61e4-cf13-498d-ad9a-60f449ffaae1.jpg" /></div>
-				            <div>
-				              D2
-				              </div>
-				            <strong>￥28.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="SKD11" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/57eb1cf7-ccdf-4df8-8016-9784fc6eb56f.jpg" /></div>
-				            <div>
-				              SKD11
-				              </div>
-				            <strong>￥17.50</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="Cr12MoV" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/15617a7d-3c85-4ebf-876a-da9b43c3d909.jpg" /></div>
-				            <div>
-				              Cr12MoV
-				              </div>
-				            <strong>￥20.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="O1" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/5247a331-6e3d-4db9-b440-dcff7fc36e4d.jpg" /></div>
-				            <div>
-				              O1
-				              </div>
-				            <strong>￥19.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="4Cr13（S136）" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/3d559187-5a40-488e-970e-1d4ed0938ee0.jpg" /></div>
-				            <div>
-				              4Cr13（S136）
-				              </div>
-				            <strong>￥14.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="P20" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/e2353ae7-e07e-40aa-841f-045a5d75532f.jpg" /></div>
-				            <div>
-				              P20
-				              </div>
-				            <strong>￥10.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="38CrMoAl" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/65668196-3b31-4140-8378-d973499cdb50.jpg" /></div>
-				            <div>
-				              38CrMoAl
-				              </div>
-				            <strong>￥12.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="GCr15" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201602/5324395f-2402-4c61-b8f7-3dcb5547e2f2.jpg" /></div>
-				            <div>
-				              GCr15
-				              </div>
-				            <strong>￥11.00</strong> </a> </li>
+          <ul class="list">
+          	<ul>
+          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+          	</ul>
+					
+				     
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="PM-23圆棒" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201609/c530a56a-1269-44e4-9596-956ddfaceaae-thumbnail.jpg" /></div>
-				            <div>
-				              PM-23圆棒
-				              </div>
-				            <strong>￥385.00</strong> </a> </li>
-          </ul>
+      
 
           </div>
 
     </div>
-      </div>
-
-
-  	<div class="row" id="row_">
-        <div class="span12">
+    
+    
+          <div class="span12">
       <div class="hotGoods">
-            <dl class="title6">
+            <dl class="title1">
           <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">热流道专区</a> </dt>
+                <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
               </div>
           <div class="goods_title_r">
-                <dd  class="one" > <a href="/goods/list/381.jhtml" target="_blank">VNM系列热咀</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">单点针阀系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">VNS/D系列热咀</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">分流板用钢</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">气缸系列</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">其他配件</a> </dd>
+                <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
+                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
+               
           </div>
         </dl>
-            <div>
-           <img src="img/455d8519-17ab-474a-85ee-5c2000fc33a1.jpg" alt="热流道专区" title="热流道专区" />
+            <div class="title_img">
+           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
            </div>
 
-          <ul  class="ul_one" >
+          <ul  class="ul_one list" >
+					<ul>
+						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+					</ul>
+				        <ul>
+				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+				        </ul>
 
-				          <li> <a href="javascript:void(0)" title="VNM23/32/40/50/60PF" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/f5f0c177-f4ec-4f72-961b-bdece47e3267-thumbnail.jpg" /></div>
-				            <div>
-				              VNM23/32/40/50/60PF
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNM23/32/40/50/60PE" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/b758ab30-fe67-49f6-96f4-0f689ba33a6c-thumbnail.jpg" /></div>
-				            <div>
-				              VNM23/32/40/50/60PE
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNM23/32/PL" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/07c378c9-79fc-4804-93ed-d473d43047c9-thumbnail.jpg" /></div>
-				            <div>
-				              VNM23/32/PL
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNM23/32/40/50/60GF" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/38ce9da2-8c31-49c6-8854-c3b0b2896dfb-thumbnail.jpg" /></div>
-				            <div>
-				              VNM23/32/40/50/60GF
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNM32/40PH" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/44b48b0a-b919-4217-a910-d4c1193f695f-thumbnail.jpg" /></div>
-				            <div>
-				              VNM32/40PH
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNM23/32/40/50/60PET" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/ee23fdef-edbf-48d4-9c46-89d823b5fe68-thumbnail.jpg" /></div>
-				            <div>
-				              VNM23/32/40/50/60PET
-				              </div>
-				            <strong>￥767.25</strong> </a> </li>
+				          
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="VVG32" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/03963158-2a02-4142-9200-2c7b2f8a746a-thumbnail.jpg" /></div>
-				            <div>
-				              VVG32
-				              </div>
-				            <strong>￥5733.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VVG40" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/b6dc9644-e65c-40be-9890-5b5d399caafd.jpg" /></div>
-				            <div>
-				              VVG40
-				              </div>
-				            <strong>￥6210.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VVG50" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/6c8e2976-7b38-4f11-b2c7-9252d61860e7-thumbnail.jpg" /></div>
-				            <div>
-				              VVG50
-				              </div>
-				            <strong>￥7740.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VVG60" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/3cb4f73e-9499-41c5-a1be-dbbf50d366db-thumbnail.jpg" /></div>
-				            <div>
-				              VVG60
-				              </div>
-				            <strong>￥9640.00</strong> </a> </li>
+          <ul class="list">
+          	<ul>
+          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
+				            <div class="goods_img"><img src="img/product.jpg"  /></div>
+				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
+				            <strong>￥29.00</strong> </a> </li>
+          	</ul>
+					
+				     
           </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="VNS32/40/50/60PF" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201512/b0e448bb-7658-4209-b4e8-e2bd3abe6af0-thumbnail.jpg" /></div>
-				            <div>
-				              VNS32/40/50/60PF
-				              </div>
-				            <strong>￥932.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNS32/40/50/60PE" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/62d821e0-e7bd-4f5a-a259-10840c0152a5-thumbnail.jpg" /></div>
-				            <div>
-				              VNS32/40/50/60PE
-				              </div>
-				            <strong>￥932.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VNS32/40/50/60SE" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/a778a8b4-88c4-4fa5-bcb8-ce6cb5756fa9.jpg" /></div>
-				            <div>
-				              VNS32/40/50/60SE
-				              </div>
-				            <strong>￥932.25</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VND23/32/40/50/60PF" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/2b924398-059d-4241-a613-17fba127d403-thumbnail.jpg" /></div>
-				            <div>
-				              VND23/32/40/50/60PF
-				              </div>
-				            <strong>￥1287.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VND23/32/40/50/60PE" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/52e98f41-a18e-450b-9232-2b1a8781b606-thumbnail.jpg" /></div>
-				            <div>
-				              VND23/32/40/50/60PE
-				              </div>
-				            <strong>￥1287.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="VND23/32/40/50/60SE" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201601/6839a67a-934a-43b6-80b5-f53218a9ac68-thumbnail.jpg" /></div>
-				            <div>
-				              VND23/32/40/50/60SE
-				              </div>
-				            <strong>￥1287.00</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="4Cr13H" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/653db59a-6487-4df3-a106-111f0c4f96f8-thumbnail.jpg" /></div>
-				            <div>
-				              4Cr13H
-				              </div>
-				            <strong>￥15.50</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="1.2085" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/4ce1a662-c7eb-416b-b373-02ce84b8fe95-thumbnail.jpg" /></div>
-				            <div>
-				              1.2085
-				              </div>
-				            <strong>￥38.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="1.2316" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201509/8e5b1f53-d19e-4681-9b63-56e4f2214972-thumbnail.jpg" /></div>
-				            <div>
-				              1.2316
-				              </div>
-				            <strong>￥46.00</strong> </a> </li>
-          </ul>
-          <ul >
-          </ul>
-          <ul >
-          </ul>
+      
 
           </div>
 
     </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
       </div>
 
 
-  	<div class="row" id="row_">
-        <div class="span12">
-      <div class="hotGoods">
-            <dl class="title7">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">模具夹治具</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="/goods/list/394.jhtml" target="_blank">不锈钢夹头</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">铝合金夹头</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">黄铜夹头</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">气动卡盘</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">手动卡盘</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">卡盘面板底座</a> </dd>
-          </div>
-        </dl>
-            <div>
-           <img src="img/0a83946a-3d6a-4670-9445-cb8503c88581.jpg" alt="夹头" title="夹头" />
-           </div>
 
-          <ul  class="ul_one" >
 
-				          <li> <a href="javascript:void(0)" title="TY-JT0022S25方形不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/5f8494fa-15e3-4951-ae60-4123785beb48-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0022S25方形不锈钢夹头
-				              </div>
-				            <strong>￥174.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0023S30方形不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/eac33a62-e83b-4a35-9b67-488eb4c66cb4-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0023S30方形不锈钢夹头
-				              </div>
-				            <strong>￥174.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0024-51x51平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/c09a4e24-b0ad-489f-89d4-3f0ac7dcd8f9-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0024-51x51平面不锈钢夹头
-				              </div>
-				            <strong>￥174.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0025-81x51平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/399b830f-946d-4365-855c-048217da2411-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0025-81x51平面不锈钢夹头
-				              </div>
-				            <strong>￥195.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0026-130x51平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/745014a4-16d9-475d-88b8-9240bbfaf49e-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0026-130x51平面不锈钢夹头
-				              </div>
-				            <strong>￥255.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0027-150x92平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/46412b00-3c28-4941-8c9c-5d272bc9ff59-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0027-150x92平面不锈钢夹头
-				              </div>
-				            <strong>￥480.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0028D72 ITS 25方型不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/3692e4ce-43df-430d-8402-d0bffeb45168-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0028D72 ITS 25方型不锈钢夹头
-				              </div>
-				            <strong>￥840.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0029D72 ITS U20槽型不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/11ba7b21-45a3-4c29-a443-5c70b91a6951-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0029D72 ITS U20槽型不锈钢夹头
-				              </div>
-				            <strong>￥840.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0030D72 ITS 平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/8efe9cb0-7d84-4e8e-a1b4-9c67ded9fa7b-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0030D72 ITS 平面不锈钢夹头
-				              </div>
-				            <strong>￥1050.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-JT0031D72 ITS 平面不锈钢夹头" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/e16db378-733e-44a0-b2e3-cd1f84a3758c-thumbnail.jpg" /></div>
-				            <div>
-				              TY-JT0031D72 ITS 平面不锈钢夹头
-				              </div>
-				            <strong>￥810.00</strong> </a> </li>
-          </ul>
-          <ul >
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="U15槽型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/ef3e5129-b08d-4b35-92a6-9985790b8561-thumbnail.jpg" /></div>
-				            <div>
-				              U15槽型黃銅夾頭
-				              </div>
-				            <strong>￥320.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="U20槽型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/11d84286-dfc3-4fb7-ae89-f7d6c8e87338-thumbnail.jpg" /></div>
-				            <div>
-				              U20槽型黃銅夾頭
-				              </div>
-				            <strong>￥320.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="U25槽型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/4ef3eb47-cec1-4a35-93a3-619369a7ba71-thumbnail.jpg" /></div>
-				            <div>
-				              U25槽型黃銅夾頭
-				              </div>
-				            <strong>￥320.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="51x51平面黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/755da362-41d1-4104-bb8d-85210b315e3a-thumbnail.jpg" /></div>
-				            <div>
-				              51x51平面黃銅夾頭
-				              </div>
-				            <strong>￥240.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S15方型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/1f06704a-beba-4024-8720-dd8a60b6f6f1-thumbnail.jpg" /></div>
-				            <div>
-				              S15方型黃銅夾頭
-				              </div>
-				            <strong>￥240.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S20方型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/9d6580b2-ce30-496d-b3cc-fffbd3644acf-thumbnail.jpg" /></div>
-				            <div>
-				              S20方型黃銅夾頭
-				              </div>
-				            <strong>￥240.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="S25方型黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/cf07c96b-7196-4c32-8ccb-0df311b2d1a3-thumbnail.jpg" /></div>
-				            <div>
-				              S25方型黃銅夾頭
-				              </div>
-				            <strong>￥240.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="51x81平面黃銅夾頭" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/af6f72d0-abd2-4265-9866-1d7430e940a3-thumbnail.jpg" /></div>
-				            <div>
-				              51x81平面黃銅夾頭
-				              </div>
-				            <strong>￥285.00</strong> </a> </li>
-          </ul>
-          <ul >
-
-				          <li> <a href="javascript:void(0)" title="D100 曲头气动卡盘" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/83a874f1-e3ac-4c9a-b92b-219b5ef08aa8-thumbnail.jpg" /></div>
-				            <div>
-				              D100 曲头气动卡盘
-				              </div>
-				            <strong>￥9600.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="D100 横立气动卡盘" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/ed5ebb57-062a-43d7-a609-0367ef6a2d41-thumbnail.jpg" /></div>
-				            <div>
-				              D100 横立气动卡盘
-				              </div>
-				            <strong>￥20400.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="80方型單頭氣動卡盤" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/bc5deb24-353b-47ae-a64a-6e356d67374a-thumbnail.jpg" /></div>
-				            <div>
-				              80方型單頭氣動卡盤
-				              </div>
-				            <strong>￥5850.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="80方型CNC氣動卡盤" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/42cd238a-101b-4e91-99a8-0a4119fd89d2-thumbnail.jpg" /></div>
-				            <div>
-				              80方型CNC氣動卡盤
-				              </div>
-				            <strong>￥6840.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="80方型EDM氣動卡盤" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/2f4661da-265f-45b2-821b-d52c9b837ca7-thumbnail.jpg" /></div>
-				            <div>
-				              80方型EDM氣動卡盤
-				              </div>
-				            <strong>￥7800.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="80方型EDM氣動卡盤(帶連接桿)" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/486af932-ef85-401c-a548-6f62b844cb64-thumbnail.jpg" /></div>
-				            <div>
-				              80方型EDM氣動卡盤(帶連接桿)
-				              </div>
-				            <strong>￥7050.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="D150型气动卡盘" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/d56aec67-8a50-40c0-9a78-8a16889aad0e-thumbnail.jpg" /></div>
-				            <div>
-				              D150型气动卡盘
-				              </div>
-				            <strong>￥13500.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="重型氣動卡盤" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/645f9296-dbdc-4013-a5a4-9f4f67dda86b-thumbnail.jpg" /></div>
-				            <div>
-				              重型氣動卡盤
-				              </div>
-				            <strong>￥21600.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="TY-KP0016" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/0ef574ce-8946-4903-97b5-70e4b9b60de6-thumbnail.jpg" /></div>
-				            <div>
-				              TY-KP0016
-				              </div>
-				            <strong>￥8400.00</strong> </a> </li>
-
-				          <li> <a href="javascript:void(0)" title="2頭重力型卡盤面板" target="_blank">
-				            <div class="goods_img"><img src="img/blank.gif" data-original="http://resources.51mocai.com/upload/image/201611/cb44512d-1a31-4f07-a956-168dd087635c-thumbnail.jpg" /></div>
-				            <div>
-				              2頭重力型卡盤面板
-				              </div>
-				            <strong>￥8400.00</strong> </a> </li>
-          </ul>
-          <ul >
-          </ul>
-          <ul >
-          </ul>
-
-          </div>
-
-    </div>
-      </div>
-
-  <div class="row">
-        <div class="span12"> <div></div> </div>
-      </div>
-
-
-      <!--<div class="row">
-
-      <div class="selected" style="margin-top:0;">
-      <h3>产业联盟</h3>
-      <a href="/friend_link/alliance.jhtml" target="_blank"><img src="img/alliance.jpg" alt="产业联盟"></a>
-      </div>
-      </div>-->
-
-</div>
-
-<!--浮动楼层导航-->
-<div id="box">
-	<ul>
-
-		<li>
-			<a class="num" href="javascript:;" style="display:none">1F</a>
-			<a class="word" href="javascript:;" style="display:block">国产钢</a>
-		</li>
-		<li>
-			<a class="num" href="javascript:;">2F</a>
-			<a class="word" href="javascript:;">进口钢</a>
-			</li>
-		<li>
-			<a class="num" href="javascript:;">3F</a>
-			<a class="word" href="javascript:;">模架模胚</a>
-		</li>
-		<li>
-			<a class="num" href="javascript:;">4F</a>
-			<a class="word" href="javascript:;">模具配件</a>
-			</li>
-		<li>
-			<a class="num" href="javascript:;">5F</a>
-			<a class="word" href="javascript:;">圆钢大全</a>
-		</li>
-		<li>
-			<a class="num" href="javascript:;">6F</a>
-			<a class="word" href="javascript:;">热流道</a>
-		</li>
-		<li class="last">
-			<a class="num" href="javascript:;">7F</a>
-			<a class="word" href="javascript:;">夹治具</a>
-		</li>
-
-
-	</ul>
-</div>
-<!--浮动楼层导航-->
-
-
-<script charset="utf-8" src="js/wpa.js"></script>
-<script charset="utf-8" src="js/toolbar.js"></script>
-<link rel="stylesheet" href="css/login.css" type="text/css">
-
-<link href="css/steelpifa.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/cart.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="js/jquery.validate.js"></script>
-<script type="text/javascript" src="js/jsbn.js"></script>
-<script type="text/javascript" src="js/prng4.js"></script>
-<script type="text/javascript" src="js/rng.js"></script>
-<script type="text/javascript" src="js/rsa.js"></script>
-<script type="text/javascript" src="js/base64.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
-<script type="text/javascript" src="js/check.js"></script>
-<script type="text/javascript" src="js/togglebox.js"></script>
-
-<script>
-var len=32;//32长度
-var radix=16;//16进制
-var chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');var uuid=[],i;radix=radix||chars.length;if(len){for(i=0;i<len;i++)uuid[i]=chars[0|Math.random()*radix];}else{var r;uuid[8]=uuid[13]=uuid[18]=uuid[23]='-';uuid[14]='4';for(i=0;i<36;i++){if(!uuid[i]){r=0|Math.random()*16;uuid[i]=chars[(i==19)?(r&0x3)|0x8:r];}}}
-var uuid = uuid.join('');
-$().ready(function() {
-
-
-
-});
-
-$(document).keyup(function(e){
-        var key =  e.which;
-        if(key == 27){
-
-
-             $('.tg_bg').hide();
-        }
-    });
-
-function refreshPrice(){
-	$.ajax({
-		url: "/cart/refreshPrice.jhtml",
-		type: "GET",
-		data: {},
-		dataType: "json",
-		cache: false,
-		async: false,
-		success: function(data) {
-
-		}
-	});
-}
-function closeLogin(){
-	closeModal('#dialog');
-}
-(function($) {
-// 对话框
-	$.login = function(options) {
-		var settings = {
-			onSuccess: null,
-			onFailure: null,
-			onShow: null,
-			onClose: null,
-			onFinish:null
-		};
-		$.extend(settings, options);
-		if ($.checkLogin()) {
-			return false;
-		}
-		openModal("#dialog");
-		//$( "#dialog" ).dialog({
-		//	dialogClass: "aoo",
-			//modal: true,
-		//	height:440,
-		//	width:410,
-		//	draggable:false
-		//	});
-		//$( "#dialog" ).css("width",306)
-		//$('.tg_bg').css({
-	    //    display: "block", height: $(document).height() , width: $(document).width()
-	    //});
-	    //$('.aoo').show();
-		//if (settings.onShow && typeof settings.onShow == "function") {
-		//		settings.onShow();
-		//	}
-		//$('.ui-icon-closethick').live("click",function(){
-		//	closeLogin();
-		//	if (settings.onClose && typeof settings.onClose == "function") {
-		//		closeModal('#dialog');
-		//	}
-		//});
-
-	var $loginForm = $("#loginForm");
-	var $username = $("#username");
-	var $password = $("#password");
-	var $captcha = $("#captcha");
-	var $captchaImage = $("#captchaImage");
-	var $isRememberUsername = $("#isRememberUsername");
-	var $submit = $("input:submit");
-	var $headerName = $("#headerName");
-	var $headerLogin = $("#headerLogin");
-	var $headerRegister = $("#headerRegister");
-	var $headerLogout = $("#headerLogout");
-	var isCaptcha = 0;
-	// 记住用户名
-	if (getCookie("memberUsername") != null) {
-		$isRememberUsername.prop("checked", true);
-		$username.val(getCookie("memberUsername"));
-		$password.focus();
-	} else {
-		$isRememberUsername.prop("checked", false);
-		$username.focus();
-	}
-	// 更换验证码
-	$captchaImage.click(function() {
-		$captchaImage.attr("src", "/common/captcha.jhtml?captchaId="+uuid+"&timestamp=" + new Date().getTime());
-	});
-	$captchaImage.click();
-	// 表单验证、记住用户名
-	$loginForm.validate({
-		rules: {
-			username: "required",
-			password: "required"
-		},
-		submitHandler: function(form) {
-			$.ajax({
-				url: "/common/public_key.jhtml",
-				type: "GET",
-				dataType: "json",
-				cache: false,
-				beforeSend: function() {
-					$submit.prop("disabled", true);
-				},
-				success: function(data) {
-					var rsaKey = new RSAKey();
-					rsaKey.setPublic(b64tohex(data.modulus), b64tohex(data.exponent));
-					var enPassword = hex2b64(rsaKey.encrypt($password.val()));
-					$.ajax({
-						url: $loginForm.attr("action"),
-						type: "POST",
-						data: {
-							username: $username.val(),
-							enPassword: enPassword
-								,captchaId: uuid,
-								captcha: $captcha.val()
-						},
-						dataType: "json",
-						cache: false,
-						success: function(data) {
-							if ($isRememberUsername.prop("checked")) {
-								addCookie("memberUsername", $username.val(), {expires: 7 * 24 * 60 * 60});
-							} else {
-								removeCookie("memberUsername");
-							}
-							$submit.prop("disabled", false);
-
-							if (settings.onFinish && typeof settings.onFinish == "function") {
-								settings.onFinish();
-							}
-							if (data.message.type == "success") {
-								var username = getCookie("username");
-								var nickname = getCookie("nickname");
-
-								if ($.trim(nickname) != "") {
-									$headerName.text(nickname).show();
-									$headerLogout.show();
-									$headerLogin.hide();
-									$headerRegister.hide();
-								} else if ($.trim(username) != "") {
-									$headerName.text(username).show();
-									$headerLogout.show();
-									$headerLogin.hide();
-									$headerRegister.hide();
-								} else {
-									$headerLogin.show();
-									$headerRegister.show();
-								}
-								if (settings.onSuccess && typeof settings.onSuccess == "function") {
-									if (settings.onSuccess() != false) {
-										closeLogin();
-									}
-								}else{
-									closeLogin();
-								}
-							} else {
-								$.message(data.message);
-								isCaptcha=data.isCaptcha;
-								if(data.isCaptcha==1){
-									$("#captcha_td").show();
-								}else{
-									$("#captcha_td").hide();
-								}
-									$captcha.val("");
-									$captchaImage.attr("src", "/common/captcha.jhtml?captchaId="+uuid+"&timestamp=" + new Date().getTime());
-								if (settings.onFailure && typeof settings.onFailure == "function") {
-									if (settings.onFailure() != false) {
-
-									}
-								}else{
-
-								}
-							}
-						}
-					});
-				}
-			});
-		}
-	});
-	};
-})(jQuery);
-</script>
-  <style>
-  .aoo .ui-dialog-titlebar-close {
-	 /*background:url(images/dialog.png) no-repeat;*/
-	 padding:0; margin-top:-8px;
-	}
-	.aoo .ui-state-hover{border:none;}
-
-	.ui-widget-content{
-	position:fixed;
-	}
-	.aoo {
-	background:#fff;
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    padding:0;
-
-    }
-    #dialog{display:none;}
-    .aoo .ui-dialog-titlebar {
-    background: #f3f3f3 none repeat scroll 0 0;
-    color: #666;
-    font-family: "Microsoft YaHei";
-    font-size: 14px;
-    height: 31px;
-    line-height: 31px;
-    padding: 0 10px;
-    position: relative;
-    border:none;
-    }
-    .aoo .ui-dialog-title{
-    font-weight:normal;}
-    .aoo .ui-dialog-titlebar-close span{
-    }
-    .ui-widget-overlay{ height:100%;}
-    .tg_bg{background:#555;}
-    .mt h1{
-    	color: #666;
-	    float: left;
-	    font-weight:normal;
-	    font-size: 20px;
-	    height: 27px;
-	    line-height: 27px;
-	    position: relative;
-	    top: -5px;
-    }
-    .mt{height:27px;}
-    .mt .extra-r{float:right; outline:none;}
-    .mt .extra-r a{
-    	color: #f00;font-size: 14px; background:url(images/nameicons.jpg) no-repeat 0 3px;
-		padding-left:24px;	outline:none;
-}
-    .mt .extra-r a:hover{ text-decoration:underline; color:#c00;}
-    .loginuser{
-    background:url(images/userlogin.jpg) no-repeat; width:38px; height:38px;
-    position:absolute;border-right:#bdbdbd 1px solid; left:1px;}
-    .loginpassword{
-    background:url(images/passlogin.jpg) no-repeat; width:38px; height:38px;
-    position:absolute;border-right:#bdbdbd 1px solid; left:1px; }
-    .logincaptcha{
-    background:url(images/passlogin.jpg) no-repeat; width:38px; height:38px;
-    position:absolute;border:#bdbdbd 1px solid; left:1px; }
-    .mchuser ,.mchpassword{height:38px; border:#bdbdbd 1px solid; margin-top:20px;position:relative;}
-    .mchcaptcha{height:38px; margin-top:20px;position:relative;}
-    #username-error ,#password-error{position:absolute; right:10px; top:7px;}
-    .mchuser input{ height:38px; line-height:38px; width:254px; margin-left:38px; border:none; text-indent:10px; font-size: 14px; border:none; box-shadow:none; padding:0;}
-    .mchpassword input{ height:38px; line-height:38px; width:254px; margin-left:38px; border:none; text-indent:10px; font-size: 14px; border:none; box-shadow:none; padding:0;}
-    .mchcaptcha input{ height:38px; line-height:38px; width:160px; margin-left:38px; border:none; text-indent:10px; font-size: 14px; border:none; box-shadow:none; padding:0;}
-    .mch input.text:focus{border:none; width:100%;box-shadow:none; width:254px; background:#fff;}
-    .mch input.text:hover{border:none; width:100%;box-shadow:none; width:254px; background:#fff;}
-    .mch input.text{ background:none;}
-    .safe{ margin:20px 0 20px 0;}
-    .forget-pw-safe{ float:right;}
-    .forget-pw-safe a:hover{color: #b61d1d; text-decoration:underline;}
-    .login-btn .btn-img{
-    background: #e4393c none repeat scroll 0 0;
-    border: 1px solid #e85356;
-    color: #fff;
-    display: block;
-    font-family: "Microsoft YaHei";
-    font-size: 20px;
-    height: 33px;
-    line-height: 31px;
-    width: 306px;
-    text-align:center;
-    }
-   .ui-dialog .ui-dialog-content{ padding:0;}
-   #captcha_td{margin-top:20px;}
-   #captcha_td .fieldSet{display:inline-block;overflow: hidden;vertical-align: middle;}
-   #captcha_td input{width:160px;border: 1px solid #ccc; margin-left: 40px;}
-   #captcha_td .captchaImage{margin-left: 15px;}
-  </style>
-<div id="dialog" class="modal width400 height400 aoo"> <span onclick="closeModal('#dialog');" class="modal-close"> <b class="modal-close-ico order_msg_close">x</b> </span>
-  <div class="modal-header pad5">
-    <h2 class="modal-title-12 pad-r10">您尚未登录</h2>
-  </div>
-  <div class="pad20 min-high100 goodsContent">
-    <div class="login-form">
-  	<div class="mt">
-    	<h1>51模材网会员</h1>
-        <div class="extra-r">
-        	<a href="/register.jhtml">立即注册</a>
-        </div>
-    </div>
-    <form id="loginForm" action="/login/submit.jhtml" method="post">
-    	<input id="loginUrl" type="hidden">
-	    <div class="mch">
-	    	<div class="mchuser">
-	        	<label class="loginuser" ></label>
-	        	<input type="text" id="username" name="username" class="text" maxlength="200" placeholder="用户名/手机" />
-	        </div>
-	        <div class="mchpassword">
-	        	<label class="loginpassword" ></label>
-	        	<input type="password" id="password" name="password" class="text" maxlength="200" autocomplete="off" placeholder="密 码" />
-	        </div>
-				<div id="captcha_td" class="mchcaptcha" style="display:none;">
-					<label class="logincaptcha" ></label>
-					<span class="fieldSet">
-						<input type="text" style="text-transform:uppercase;" id="captcha" name="captcha" class="text captcha" maxlength="4" autocomplete="off" /><img id="captchaImage" class="captchaImage" src="img/captcha.jhtml" title="点击更换验证码" />
-					</span>
-				</div>
-	    </div>
-	    <div class="safe">
-	    	<span>
-	        <input type="checkbox" id="isRememberUsername" name="isRememberUsername" value="true" />
-	        <label for="isRememberUsername">记住用户名</label>
-			</span>
-	        <span class="forget-pw-safe">
-	        <a href="/password/find.jhtml">找回密码?</a>
-	        </span>
-	    </div>
-	    <div class="login-btn">
-			<input type="submit" class="submit btn-img" value="登 录" />
-		</div>
-    </form>
-  </div>
- </div>
-
+  
 </div>
  </div>
-  		<span style="display: none;">
-		<script type="text/javascript" src="js/c.js" charset="gb2312"></script>
-	</span>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?5cc2dbd9faab1d1b16e8c67ff20bf0e4";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
  </div>
-
-  <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
-        <script type="text/javascript">
-          $(function(){
-            $("#divexample1").niceScroll("#wrapperexample1",{cursorcolor:"#333",boxzoom:false});
-            $("#divexample2").niceScroll("#wrapperexample2",{cursorcolor:"#333",boxzoom:false});
-            $(".content_cc").css({height:($(window).height()-150)+'px'});
-            $(".tbar-tab-cart").click(function(){
-            	if($('.toolbar-wrap').hasClass('toolbar-open')){
-            		$(".fixed-box").css('marginRight','276px');
-            	}else{
-            		$(".fixed-box").css('marginRight','0px');
-            	}
-            });
-
-            $(window).scroll(function(){
-            	var scroH = $(this).scrollTop();
-            	if($('.toolbar-wrap').hasClass('toolbar-open')){
-            		$(".fixed-box").css('marginRight','276px');
-            		if(scroH<600){
-            			$("#action").css('marginRight','0');
-            		}
-            	}else{
-            		$(".fixed-box").css('marginRight','0px');
-            	}
-            })
-
-           });
-  </script>
-	<iframe src="widget/footer.html" width="100%" height="550px" scrolling="no" style="border: none;"></iframe>
-
+ <div class="side_right">
+ 		<ul>
+ 			<li></li>
+ 			<li></li>
+ 			<li></li>
+ 		</ul>
+ </div>
 </body>
 </html>

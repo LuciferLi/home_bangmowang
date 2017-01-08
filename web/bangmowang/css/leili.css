@@ -3,9 +3,9 @@
 	margin: 0px;
 	padding: 0px;
 }
-/*body{
-	font-family: "微软雅黑";
-}*/
+body{
+	font-family: simhei;
+}
 ul li{
 	list-style-type: none;
 	float: left;
@@ -29,6 +29,7 @@ a{
 	margin-left: 100px;
 	font-size: 12px;
 	font-weight: 100;
+	font-family: "黑体",Verdana;
 }
 .heard_zh li{
 	margin-top: 17px;
@@ -117,6 +118,9 @@ a{
     right: 5px;
     top: 3px;
 }
+.shuff_t i{
+	font-size: 12px
+}
 .shuff_ri{
 	float: right;
 	width: 390px;
@@ -145,6 +149,7 @@ a{
 	font-size: 12px;
 	margin-top: 30px;
 	position: relative;
+	font-family: simhei;
 }
 .shuff_nr li{
 	float: none;
@@ -174,6 +179,7 @@ a{
 }
 .mall_le{
 	float: left;
+	position: relative;
 }
 .mall_z{
 	display: inline-block;
@@ -185,6 +191,12 @@ a{
 .mall_y{
 	display: inline-block;
 	font-size: 12px;
+	margin-left: 10px;
+}
+.mall_y img{
+	position: relative;
+    top: 3px;
+    left: 2px;
 }
 .mall_ri{
 	float: right;
@@ -208,7 +220,7 @@ a{
 }
 .zolub{
 	position: relative;
-	left: 0px;
+	right: : 192px;
 	top: -65px;
 }
 .yolub{
@@ -235,6 +247,13 @@ a{
 }
 .search_no{
 	line-height: 50px;
+}
+.search_no i{
+	margin-right: 6px;
+}
+.search_no{
+	font-family: simhei;
+	font-size: 14px;
 }
 .search_to{
 	font-size: 12px;
@@ -265,6 +284,10 @@ a{
 .search_ytoz{
 	float: left;
 }
+.search_ytoz img{
+	width: 160px;
+	height: 82px
+}
 .search_ytoy{
 	float: right;
 	width: 465px;
@@ -277,12 +300,13 @@ a{
 	margin-top: 17px;
 	margin-left: 75px;
 	border: none;
-	font-size: 12px;
+	font-size: 10px;
 	color: #A1A1A1;
 }
 .search_ytoy button{
 	width: 52px;
 	height: 50px;
+	margin-left: 10px;
 	border: none;
 	background-image: url(../img/buttbj_03.jpg);
 	background-repeat:no-repeat;
@@ -346,6 +370,11 @@ a{
 	margin-top: 37px;
 	font-size: 10px;
 	color: #bbb8b8;
+	position: relative;
+}
+.shing_y img{
+    position: relative;
+    top: 1px;
 }
 .demand{
 	width: 860px;
@@ -380,6 +409,7 @@ a{
 .reles span{
 	font-size: 30px;
 	color: #FFFFFF;
+	font-family: simhei;
 	
 }
 .demand_zj{
@@ -463,6 +493,7 @@ a{
     font-size: 12px;
     color: #bf1e23;
     border: 2px solid #bf1e23;
+    font-family: simhei;
 }/*结尾*/
 .ment{
 	width: 860px;
@@ -483,6 +514,7 @@ a{
 	color: #fff;
     background: red;
     border: none;
+    font-family: simhei;
 }
 .ment_yx button{
 	width: 108px;
@@ -493,6 +525,7 @@ a{
 	color: #fff;
     background: red;
     border: none;
+    font-family: simhei;
 }
 .ment_zs{
 	width: 410px;
@@ -501,7 +534,7 @@ a{
 	font-family: simhei;
 }
 .ment_zs span{
-	font-size: 18px;
+	font-size: 15px;
 	color: #313131;
 }
 .ment_zx{
@@ -519,7 +552,7 @@ a{
 	font-family: simhei;
 }
 .ment_ys span{
-	font-size: 18px;
+	font-size: 15px;
 	color: #313131;
 }
 .ment_yx{
@@ -535,7 +568,7 @@ a{
 }
 .informan span{
 	float: left;
-	font-size: 17px;
+	font-size: 15px;
 }
 .infor{
 	width: 860px;
@@ -566,6 +599,7 @@ a{
 	color: #fff;
     background: red;
     border: none;
+    font-family: simhei;
 }
 .infor_y button{
 	width: 83px;
@@ -576,6 +610,7 @@ a{
 	color: #fff;
     background: red;
     border: none;
+    font-family: simhei;
 }
 .infor_xx button{
 	width: 83px;
@@ -586,4 +621,5 @@ a{
     margin-top: 37px;
     margin-right: 37px;
     float: right;
+    font-family: simhei;
 }

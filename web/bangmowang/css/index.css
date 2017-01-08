@@ -339,7 +339,6 @@
 	position:relative;
 	height:34px;
 	display:inline;
-	border:#eee 1px solid;
 	margin-left:-1px;
 	border-bottom:none;
 	border-right:none;
@@ -380,7 +379,7 @@
 .index .hotGoods li span {
 	height: 21px;
 	display: block;
-	font-size: 14px;
+	font-size: 8px;
 	overflow: hidden;
 	color:#333;
 }
@@ -508,7 +507,7 @@
 	color:#c00;
 	}
 .index .hotGoods li img{
-	width:130px;
+	width:170px;
 	height:130px;
 	}
 .index .hotGoods li .goods_img{
@@ -527,18 +526,17 @@
 	font-size:16px;
 	color:#f00;
 }
-.index .row{
-	margin-top:10px;
-	margin-bottom:0;
-}
+
 .index .middleAd{
 
 	margin-bottom:20px;
 }
-
+.category_left{
+	margin-left: -10px;
+}
 
 .index .row{
-	margin-top:0;
+	margin-top:20px;
 }
 .index .index_goods{
 	margin-top:20px;
@@ -623,10 +621,11 @@
 }
 
 .index .hotGoods{
+    margin-top: 20px;
 	height:518px;
 	overflow:hidden;
 }
-.hotGoods ul{
+.hotGoods .list{
 	display:none;
 	padding-top:1px;
 }
@@ -645,9 +644,6 @@
 }
 
 .index .hotGoods .one{
-	border-top:#c00 3px solid;
-	border-left:#c00 1px solid;
-	border-right:#c00 1px solid;
 	position:ralative;
 	padding:0 19px 0 20px;
 	z-index:1;
@@ -755,75 +751,14 @@
 
 /*品牌专区*/
 
-/*浮动楼层导航*/
-#box{
-		position: fixed;
-		left: 30px;
-		top: 160px;
-		display: none;
-	}
-	#box ul li{
-		width: 36px;
-		height: 40px;
-		line-height: 16px;
-		/*border: 1px dotted #666;*/
-		text-align: center;
-		border-bottom:none;
-		background: #fff;
 
-
-	}
-	#box ul li.last{
-		border-bottom:none;
-	}
-	#box ul li .num{
-		color: #666;
-		line-height:40px;
-		font-size:15px;
-		/*display: none;*/
-	}
-	#box ul li .word{
-		display: none;
-		color: #CB1C39;
-		text-align:center;
-		height:32px;
-		padding:2px 6px 4px;
-	}
-/*浮动楼层导航*/
-
-.shopCar{
-	font-size:12px;
-	float:right; display:inline; width:114px;
-	margin-top:-7px; position:relative;
-	z-index:9;}
-.dafult{
-	height:34px;
-	line-height:34px;
-	background:#f9f9f9;
-	border:#ddd 1px solid;
-	padding-left:9px;
-	}
-.icon_shopCar{
-	background:url(../images/icon_cart.png) no-repeat 3px 7px;
-	display:block; width:30px;
-	height:28px; float:left;
-	padding:3px 0 10px 3px;}
-.header .container .span6{
-	margin-left:100px;
-	width:530px;
-}
-.header .row .span3{
-	padding-left:5px;
-}
 /*帮模小助手*/
 .small_box1{
 	width: 192px;
 	height: 75px;
 	margin-right: 16px;
 	display: inline-block;
-	background:url(../images/bang_03.png) no-repeat;
-	background-size:cover ;
-	background-position: 50% bottom;
+	background: #ccc;
 	margin-top: 10px;
 	vertical-align: top;
 }
@@ -910,9 +845,8 @@ border-right:10px solid #fff;
 	margin-bottom: 36px;
 }
 .characteristic input{
-	width: 120px;
-	height: 100px;
-	display: block;
+	width: 100%;
+	height: 80px;
 }
 .characteristic button{
 	height:40px;
@@ -920,7 +854,7 @@ border-right:10px solid #fff;
 	background: orange;
 	color: #fff;
 	border: none;
-
+	float: right;
 }
 .characteristic button:after{
 	clear: both;
@@ -938,10 +872,24 @@ border-right:10px solid #fff;
   	width: 60px;
   	margin-top: 10px;
   }
-
-.btn2{
-	width: 168px!important;
-	box-sizing: border-box!important;
-	border: 1px solid #ccc!important;
-	background: #fff!important;
+/*产品介绍图*/
+.title_img{
+		
+	height: 474px!important;
+}
+.title_img img{
+	width: 171px;
+}
+/*边部*/
+.side_right{
+	width: 50px;
+	height: 100px;
+	position: fixed;
+	right: 0;
+	top: 80%;
+	background: red;
+}
+.side_right ul{
+	
+	
 }

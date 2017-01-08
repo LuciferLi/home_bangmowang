@@ -12,8 +12,6 @@
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery-uimin.js"></script>
-<script type="text/javascript" src="js/jquery.tools.js"></script>
-<script type="text/javascript" src="js/jquery.lazyload.js"></script>
 <script type="text/javascript" src="js/slider.js"></script>
 
 <style type="text/css">
@@ -97,14 +95,14 @@ $().ready(function(){
 	<div class="container">
 		<div class="row">
 			<div class="span3">
-				<a href="/">
-					<img src="picture/319cc045-2f73-480a-80a1-a872d1304fcc.png" alt="51模材网" />
+				<a href="#">
+					<img src="img/logo.jpg" alt="帮模网" />
 				</a>
 			</div>
 			<div class="span6">
 				<div class="search">
 					<form id="goodsSearchForm" action="/goods/search.jhtml" method="get">
-						<input name="keyword" class="keyword" value="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
+						<input name="keyword" class="keyword" placeholder="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
 						<button type="submit">搜索</button>
 					</form>
 				</div>
@@ -124,11 +122,14 @@ $().ready(function(){
 							<a href="javascript:void(0)" rel="nofollow">O1</a>
 				</div>
 			</div>
+			
 			<div class="span3">
+				<div class="phone_box" >
+				<img class="phone" src="images/phone.png" /><span>400-133-8806</span>
+			
+				</div>
 				<div class="shopCar">
-			        <a href="javascript:void(0)" rel="nofollow"><div id="headerCart" class="dafult headerCart"> <i class="icon_shopCar"></i> 购物车(<em>0</em>) </div></a>
-			        <!--<div class="shop_list" style="display: none;">
-			        <div class="spacer"></div>购物车中没有商品，赶紧<a href="#">选购</a>吧</div>-->
+			 		<a href="javascript:void(0)" class="car_icon">购物车</a>
 		      </div>
 			</div>
 		</div>
@@ -631,8 +632,8 @@ $().ready(function(){
 		    <h2 class="dynamic_content">上传你的BOM，收到后我们会立刻给你回电确认，剩下的就交给我们吧。</h2>
 
 	      <h3>上传 BOM</h3>
-	      <form class="characteristic" method="post">
-	    		<input type="file"  value="浏览" />
+	      <form class="characteristic" method="get">
+	    		<input type="button" class="characteristic_btn"  value="浏览..." /><span></span>
 	    		<button>上传</button>
 	      </form>
 	    </div>
@@ -661,10 +662,11 @@ $().ready(function(){
           </div>
         </dl>
             <div class="title_img">
-           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
+           <img src="" alt="模具钢" title="国产模具钢" />
            </div>
 
           <ul  class="ul_one list" >
+          	<div	 class="icon_left"></div>
 					<ul>
 						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
 				            <div class="goods_img"><img src="img/product.jpg"  /></div>
@@ -691,6 +693,8 @@ $().ready(function(){
 				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
 				            <strong>￥29.00</strong> </a> </li>
 					</ul>
+					<div	 class="icon_right"></div>
+					<div	 class="icon_left"></div>
 				        <ul>
 				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
 				            <div class="goods_img"><img src="img/product.jpg"  /></div>
@@ -717,7 +721,7 @@ $().ready(function(){
 				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
 				            <strong>￥29.00</strong> </a> </li>
 				        </ul>
-
+					<div	 class="icon_right"></div>	
 				          
           </ul>
           <ul class="list">
@@ -754,7 +758,7 @@ $().ready(function(){
           </div>
         </dl>
             <div class="title_img">
-           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
+           <img src="" alt="模具钢" title="国产模具钢" />
            </div>
 
           <ul  class="ul_one list" >
@@ -847,7 +851,7 @@ $().ready(function(){
           </div>
         </dl>
             <div class="title_img">
-           <img src="picture/26427819-ae04-4b97-a379-07f8237cfec2.jpg" alt="模具钢" title="国产模具钢" />
+           <img src="" alt="模具钢" title="国产模具钢" />
            </div>
 
           <ul  class="ul_one list" >
@@ -925,42 +929,13 @@ $().ready(function(){
           </div>
 
     </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+ 
     
     
     
       </div>
-
-
-
-
-  
 </div>
  </div>
-
- </div>
- <div class="side_right">
- 		<ul>
- 			<li></li>
- 			<li></li>
- 			<li></li>
- 		</ul>
  </div>
 </body>
 </html>

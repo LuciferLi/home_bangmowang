@@ -821,7 +821,9 @@
 	height: 75px;
 	margin-right: 16px;
 	display: inline-block;
-	background: #ccc;
+	background:url(../images/bang_03.png) no-repeat;
+	background-size:cover ;
+	background-position: 50% bottom;
 	margin-top: 10px;
 	vertical-align: top;
 }
@@ -908,8 +910,9 @@ border-right:10px solid #fff;
 	margin-bottom: 36px;
 }
 .characteristic input{
-	width: 100%;
-	height: 80px;
+	width: 120px;
+	height: 100px;
+	display: block;
 }
 .characteristic button{
 	height:40px;
@@ -917,7 +920,7 @@ border-right:10px solid #fff;
 	background: orange;
 	color: #fff;
 	border: none;
-	float: right;
+
 }
 .characteristic button:after{
 	clear: both;
@@ -935,3 +938,10 @@ border-right:10px solid #fff;
   	width: 60px;
   	margin-top: 10px;
   }
+
+.btn2{
+	width: 168px!important;
+	box-sizing: border-box!important;
+	border: 1px solid #ccc!important;
+	background: #fff!important;
+}

@@ -992,7 +992,7 @@ span.loadingBar {
 .phone{
 	width:20px;
 	height: 20px;
-}
+	    margin-right: 5px;}
 
 .header .mainNav {
 	height: 40px;

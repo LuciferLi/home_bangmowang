@@ -501,11 +501,18 @@
 .index .hotGoods .goods_title_r{
 	float:right;
 	width:auto;
-	border-right:#eee 1px solid;
 	padding-left:1px;
 }
 .goods_title_r a:hover{
 	color:#c00;
+	}
+.more{
+	text-decoration: none;
+	float: right;
+	}
+	.more:hover{
+		
+		color: #f00;
 	}
 .index .hotGoods li img{
 	width:170px;
@@ -916,7 +923,11 @@ border-right:10px solid #fff;
 	width: 150px;display: inline-block;vertical-align: top;    height: 30px;
     line-height: 30px;
 }
-
+.phone_box span{
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	}
 /*side浮动*/
 .float_side{
 	position: fixed;

@@ -14,7 +14,7 @@ a{
 	text-decoration: none;
 }
 .heard{
-	width: 860px;
+	width: 1200px;
 	height: 58px;
 	margin: 0 auto;
 }
@@ -88,7 +88,7 @@ a{
 	background-color: #ae2825;
 }
 .shuff_zh{
-	width: 860px;
+	width: 1200px;
 	margin: 0 auto;
 }
 .shuff_ff{
@@ -174,7 +174,7 @@ a{
 }
 /*结尾*/
 .mall{
-	width: 860px;
+	width: 1200px;
 	height: 60px;
 	margin: 0 auto;
 	border-bottom: 3px solid #e2e2e2;
@@ -208,7 +208,7 @@ a{
 	font-family: simhei;
 }/*结尾*/
 .picture{
-	width: 860px;
+	width: 1200px;
 	height: 90px;
 	margin: 0 auto;
 	margin-top:20px ;
@@ -217,10 +217,14 @@ a{
 }
 
 .picture_s li{
-	width: 105px;
-    height: 45px;
+	width: 148px;
+	height:59px;
     border: 1px dashed #a1a1a1;
     
+}
+.picture_s li img{
+	width: 100%;
+	
 }
 .zolub{
 	float: left;
@@ -236,8 +240,8 @@ a{
 	top: -65px;
 }/*结尾*/
 .search{
-	width: 860px;
-	height: 300px;
+	width: 1200px;
+	height: 350px;
 	margin: 0 auto;
 }
 .search_z{
@@ -284,7 +288,7 @@ a{
 }
 .search_y{
 	margin-top: 10px;
-	width: 640px;
+	width: 900px;
 	height: 300px;
 	float: right;
 }
@@ -292,28 +296,33 @@ a{
 	float: left;
 }
 .search_ytoz img{
-	width: 160px;
+	width: 240px;
 	height: 82px
 }
 .search_ytoy{
 	float: right;
-	width: 465px;
+	width: 650px;
 	height: 82px;
-	background-image: url(../img/shuru_03.jpg);
+	background-repeat: no-repeat;
+	background: #CCCCCC;
+	
 }
 .search_ytoy textarea{
-	width: 271px;
+	width: 500px;
 	height: 50px;
-	margin-top: 17px;
-	margin-left: 75px;
+	margin-top: 12px;
+	margin-left: 30px;
 	border: none;
 	font-size: 10px;
 	color: #A1A1A1;
+	padding: 5px;
 }
 .search_ytoy button{
 	width: 52px;
 	height: 50px;
 	margin-left: 10px;
+	float: right;
+	margin: 15px;
 	border: none;
 	background-image: url(../img/buttbj_03.jpg);
 	background-repeat:no-repeat;
@@ -322,7 +331,8 @@ a{
 	clear: both;
 }
 .search_yxx img{
-     width: 213px;	
+     width: 300px;
+     height: 150px;	
 }
 .search_jiage{
 	height: 30px;
@@ -356,13 +366,13 @@ a{
     margin-right: 5px;
 }*/
 .shing{
-	width: 860px;
+	width: 1200px;
 	height: 66px;
 	margin: 0 auto;
 	border-bottom:3px solid #E2E2E2;
 }
 .shing2{
-	width: 860px;
+	width: 1200px;
 	margin: 0 auto;
 	border-bottom:3px solid #E2E2E2;
 }
@@ -371,6 +381,10 @@ a{
 	margin-top: 30px;
 	font-family:simhei ;
 	font-size: 15px;
+
+}
+.shing_title{
+	text-align: left;
 }
 .shing_y{
 	display: inline-block;
@@ -384,13 +398,13 @@ a{
     top: 1px;
 }
 .demand{
-	width: 860px;
+	width: 1200px;
 	height: 386px;
 	margin: 0 auto;
 	position: relative;
 }
 .demand2{
-	width: 860px;
+	width: 1200px;
 	height: 386px;
 	margin: 0 auto;
 	position: relative;
@@ -406,7 +420,7 @@ a{
 	top: 20px;
 }
 .reles{
-	width: 860px;
+	width: 1200px;
 	height: 114px;
 	margin: 0 auto;
 	background-color: #fe0000;
@@ -455,12 +469,12 @@ a{
     margin-top: 20px;
 }
 .exhibit{
-	width: 860px;
+	width: 1200px;
 	height: 764px;
 	margin: 0 auto;
 }
 .exhibit_z{
-	width: 380px;
+	width: 500px;
 	height: 328px;
 	border-bottom: 1px solid #999999;
 	float: left;
@@ -468,7 +482,7 @@ a{
 	margin-top: 58px;
 }
 .exhibit_y{
-	width: 380px;
+	width: 500px;
 	height: 328px;
 	border-bottom: 1px solid #999999;
 	float: right;
@@ -476,18 +490,22 @@ a{
 	margin-top: 58px;
 }
 .exhibit_xz{
-	width: 380px;
+	width: 500px;
 	height: 328px;
 	float: left;
 	margin-left: 26px;
 	margin-top: 58px;
 }
 .exhibit_xy{
-	width: 380px;
+	width: 500px;
 	height: 328px;
 	float: right;
 	margin-right: 26px;
 	margin-top: 58px;
+}
+.exhibit_tp img{
+	width: 500px;
+	height: 248px;
 }
 .exhibit_tp span{
 	display: block;
@@ -503,14 +521,19 @@ a{
     font-family: simhei;
 }/*结尾*/
 .ment{
-	width: 860px;
+	width: 1200px;
 	height: 310px;
 	margin: 0 auto;
 }
 .ment_z{
-	width: 420px;
+	width: 550px;
+	height: 228px;
 	float: left;
 
+}
+.ment_z img{
+	width: 550px;
+	height: 228px;
 }
 .ment_zx button{
 	width: 108px;
@@ -535,7 +558,7 @@ a{
     font-family: simhei;
 }
 .ment_zs{
-	width: 410px;
+	width: 550px;
 	height: 27px;
 	border-bottom: 2px solid #b2b2b2;
 	font-family: simhei;
@@ -549,11 +572,16 @@ a{
 	position: relative;
 }
 .ment_y{
-	width: 420px;
+	width: 550px;
+	height: 228px;
 	float: right;
 }
+.ment_y img{
+	width: 550px;
+	height: 228px;
+}
 .ment_ys{
-	width: 410px;
+	width: 550px;
 	height: 27px;
 	border-bottom: 2px solid #b2b2b2;
 	font-family: simhei;
@@ -566,7 +594,7 @@ a{
 	margin-top: 20px;
 }/*结尾*/
 .informan{
-	width: 860px;
+	width: 1200px;
 	height: 30px;
 	line-height: 30px;
 	border-bottom: 2px solid #b2b2b2;
@@ -578,7 +606,7 @@ a{
 	font-size: 15px;
 }
 .infor{
-	width: 860px;
+	width: 1200px;
 	height: 320px;
 	margin: 0 auto;
 	clear: both;
@@ -586,16 +614,24 @@ a{
 .infor_z{
 	float: left;
 	margin-top: 22px;
-	width: 267px;
+	width: 347px;
+	height: 250px;
 	position: relative;
+}
+.infor_z img{
+	width: 347px;
+	height: 250px;
 }
 .infor_y{
 	float: right;
-	width: 560px;
+	width: 800px;
 	height: 250px;
 	margin-top: 2px;
-	padding-right: 16px;
 	position: relative;
+}
+.infor_y img{
+	width: 800px;
+	height: 250px;
 }
 .infor_z button{
 	width: 83px;

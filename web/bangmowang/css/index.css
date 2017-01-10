@@ -482,7 +482,7 @@
 	text-align:left;
 	background:url(../images/set.png) no-repeat;
 	padding-left:40px;
-	background-size:35px;
+
 }
 .index .hotGoods dl .goods_title_l dt a{
 
@@ -781,7 +781,7 @@
 .small_box2{
 	height: 75px;
 	display: inline-block;
-	width: 519px;
+	width: 518px;
 	background: #ccc;
 	margin-top: 10px;
 	box-sizing: border-box;
@@ -913,7 +913,7 @@ border-right:10px solid #fff;
 	background-position:15px 50%;
 }
 .phone_box{
-	width: 100px;display: inline-block;vertical-align: top;    height: 30px;
+	width: 150px;display: inline-block;vertical-align: top;    height: 30px;
     line-height: 30px;
 }
 

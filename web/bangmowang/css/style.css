@@ -121,8 +121,8 @@ body {
 
 .lc_head {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	height: 23px;
 	text-align: left;
 	font-size: 10px;
@@ -151,8 +151,8 @@ iframe {
 
 .foot_tag {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
@@ -163,8 +163,8 @@ iframe {
 
 .foot_friend {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
@@ -186,16 +186,16 @@ iframe {
 
 .foot_banner_content {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 	line-height: 120px;
 }
 
 .login_banner_content {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 }
 
@@ -232,8 +232,8 @@ iframe {
 .foot_tips {
 	clear: both;
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 	font-size: 10px;
 	line-height: 23px;
@@ -243,8 +243,8 @@ iframe {
 
 .foot_tips_tab {
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	line-height: 120px;
 }
 
@@ -254,6 +254,11 @@ iframe {
 	font-size: 18px;
 	text-align: center;
 }
+.foot_tips_tab img{
+	width: 120px;
+	
+	
+}
 
 .foot_tips_tab img {
 	border: 1px solid #000000;
@@ -262,8 +267,8 @@ iframe {
 .login_body {
 	clear: both;
 	margin: 0 auto;
-	width: 860px;
-	min-width: 860px;
+	width: 1200px;
+	min-width: 1200px;
 	text-align: left;
 	margin-top: 16px;
 	margin-bottom: 16px;
@@ -271,7 +276,7 @@ iframe {
 
 .login_banner {
 	width: 100%;
-	min-width: 860px;
+	min-width: 1200px;
 	height: auto;
 	background: url(../images/ad111.jpg) center 0 no-repeat;
 	background-size: 100% 470px;
@@ -338,10 +343,17 @@ a:hover {
 	color: #FFFFFF;
 	padding: 5px 0px 5px;
 }
-
+.lc_foot_item{
+	font-size: 13px;
+	line-height: 20px;
+	
+}
+.lc_foot_item p{
+	color: #777777 !important;
+}
 .register_input {
 	float: left;
-	width: 444px;
+	width: 550px;
 	height: 311px;
 	background: #FFFFFF;
 	padding: 30px;

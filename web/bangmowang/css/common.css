@@ -1056,7 +1056,7 @@ span.loadingBar {
     color: #fff;
     font-size: 10px;
 }
-.header .mainNav dd a:hover{ color:#f00;}
+.header .mainNav dd a:hover{ color:#f00;text-decoration: none}
  
 /* ---------- Footer ---------- */
 

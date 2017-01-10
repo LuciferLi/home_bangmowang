@@ -1,113 +1,104 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<title>帮模商城</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="/favicon.ico" rel="icon" type="image/x-icon" />
-<link href="css/common.css" rel="stylesheet" type="text/css" />
-<link href="css/index.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/jquery-uimin.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>帮模商城</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+		<link href="css/common.css" rel="stylesheet" type="text/css" />
+		<link href="css/index.css" rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-.header {
-	margin-bottom: 0px;
-}
-.one {
-	color:#c00;
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery-uimin.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
+		<link rel="stylesheet" href="font/demo.css" />
+		<link rel="stylesheet" href="font/iconfont.css" />
+		<style type="text/css">
+			.header {
+				margin-bottom: 0px;
+			}
+			
+			.one {
+				color: #c00;
+			}
+		</style>
+		<script type="text/javascript">
+			$().ready(function() {
 
-}
-</style>
-<script type="text/javascript">
-$().ready(function() {
+				var $productCategoryMenuItem = $("#productCategoryMenu li");
+				var $slider = $("#slider");
+				var $newArticleTab = $("#newArticle ul.tab");
+				var $hotGoodsImage = $("div.hotGoods img");
 
-	var $productCategoryMenuItem = $("#productCategoryMenu li");
-	var $slider = $("#slider");
-	var $newArticleTab = $("#newArticle ul.tab");
-	var $hotGoodsImage = $("div.hotGoods img");
+				$productCategoryMenuItem.hover(
+					function() {
+						$(this).children("div.menu").show();
+					},
+					function() {
+						$(this).children("div.menu").hide();
+					}
+				);
 
-	$productCategoryMenuItem.hover(
-		function() {
-			$(this).children("div.menu").show();
-		}, function() {
-			$(this).children("div.menu").hide();
-		}
-	);
+				$slider.nivoSlider({
+					effect: "random",
+					animSpeed: 1000,
+					pauseTime: 6000,
+					controlNav: true,
+					keyboardNav: false,
+					captionOpacity: 0.4
+				});
 
-	$slider.nivoSlider({
-		effect: "random",
-		animSpeed: 1000,
-		pauseTime: 6000,
-		controlNav: true,
-		keyboardNav: false,
-		captionOpacity: 0.4
-	});
+				$newArticleTab.tabs("ul.tabContent", {
+					tabs: "li",
+					event: "mouseover"
+				});
 
-	$newArticleTab.tabs("ul.tabContent", {
-		tabs: "li",
-		event: "mouseover"
-	});
+			});
 
-	
+			$().ready(function() {
 
+				var gdd = $('.goods_title_r dd');
+				cartRole = "retail";
+				gdd.hover(function() {
 
+					$(this).addClass('one').siblings().removeClass('one');
+					$(this).parents('.hotGoods').find('.list').addClass('ul_one').siblings().removeClass('one');
+					$(this).parents('.hotGoods').find('.list').hide();
+					$(this).parents('.hotGoods').find('.list').eq($(this).index()).show();
 
-});
+					/*$(this).parent('.goods_title_r').parent('dl').next('div').next('ul')*/
+					/*.eq($(this).index()).show().siblings()*/ /*.hide();*/
+					//$(this).parent('.goods_title_r').parent('dl').next('div').next('ul').eq($(this).index()).show().siblings().hide();
 
+				});
 
+			});
+		</script>
+	</head>
 
-$().ready(function(){
+	<body>
 
-	var gdd = $('.goods_title_r dd');
-	cartRole = "retail";
-	gdd.hover(function(){
-
-
-	$(this).addClass('one').siblings().removeClass('one');
-	$(this).parents('.hotGoods').find('.list').addClass('ul_one').siblings().removeClass('one');
-	$(this).parents('.hotGoods').find('.list').hide();
-	$(this).parents('.hotGoods').find('.list').eq($(this).index()).show();
-
-
-
-	/*$(this).parent('.goods_title_r').parent('dl').next('div').next('ul')*//*.eq($(this).index()).show().siblings()*//*.hide();*/
-	 //$(this).parent('.goods_title_r').parent('dl').next('div').next('ul').eq($(this).index()).show().siblings().hide();
-
-
-
-
-	});
-
-});
-</script>
-</head><body>
-
-
-
-
-<div class="header" style="height:152px;">
-	<iframe src="widget/header.html" width="100%" height="23px"></iframe>
-	<div class="container">
-		<div class="row">
-			<div class="span3">
-				<a href="#">
-					<img src="img/logo.jpg" alt="帮模网" />
-				</a>
-			</div>
-			<div class="span6">
-				<div class="search">
-					<form id="goodsSearchForm" action="/goods/search.jhtml" method="get">
-						<input name="keyword" class="keyword" placeholder="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
-						<button type="submit">搜索</button>
-					</form>
-				</div>
-				<div class="hotSearch">
-						热门产品:
+		<div class="header" style="height:152px;">
+			<iframe src="widget/header.html" width="100%" height="23px"></iframe>
+			<div class="container">
+				<div class="row">
+					<div class="span3">
+						<a href="#">
+							<img src="img/logo.jpg" alt="帮模网" />
+						</a>
+					</div>
+					<div class="span6">
+						<div class="search">
+							<form id="goodsSearchForm" action="/goods/search.jhtml" method="get">
+								<input name="keyword" class="keyword" placeholder="商品搜索" autocomplete="off" x-webkit-speech="x-webkit-speech" x-webkit-grammar="builtin:search" maxlength="30" />
+								<button type="submit">搜索</button>
+							</form>
+						</div>
+						<div class="hotSearch">
+							热门产品:
 							<a href="javascript:void(0)" rel="nofollow">S50C</a>
 							<a href="javascript:void(0)" rel="nofollow">P20</a>
 							<a href="javascript:void(0)" rel="nofollow">718</a>
@@ -120,29 +111,29 @@ $().ready(function(){
 							<a href="javascript:void(0)" rel="nofollow">Cr12MoV</a>
 							<a href="javascript:void(0)" rel="nofollow">Cr12</a>
 							<a href="javascript:void(0)" rel="nofollow">O1</a>
+						</div>
+					</div>
+
+					<div class="span3">
+						<div class="phone_box">
+							<img class="phone" src="images/phone.png" /><span>400-133-8806</span>
+
+						</div>
+						<div class="shopCar">
+							<a href="javascript:void(0)" class="car_icon">购物车</a>
+						</div>
+					</div>
 				</div>
-			</div>
-			
-			<div class="span3">
-				<div class="phone_box" >
-				<img class="phone" src="images/phone.png" /><span>400-133-8806</span>
-			
-				</div>
-				<div class="shopCar">
-			 		<a href="javascript:void(0)" class="car_icon">购物车</a>
-		      </div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="span12">
-				<dl class="mainNav">
-					<dt style="position:relative;">
+				<div class="row">
+					<div class="span12">
+						<dl class="mainNav">
+							<dt style="position:relative;">
 						<a href="javascript:void(0)">所有商品分类</a>
 					</dt>
 							<dd>
 								<a href="javascript:void(0)"><b>首页</b></a>
 							</dd>
-							
+
 							<dd>
 								<a href="javascript:void(0)"><b>找加工</b></a>
 							</dd>
@@ -158,781 +149,1280 @@ $().ready(function(){
 							<dd>
 								<a href="javascript:void(0)"><b>行业信息</b></a>
 							</dd>
-							
-				</dl>
 
-               	<div class="index_kd">
-               		<a href="javascript:void(0)" target="_blank" >快速询价</a>
-               	</div>
-		 </div>
+						</dl>
+
+						<div class="index_kd">
+							<a href="javascript:void(0)" target="_blank">快速询价</a>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
 
+		<div class="container index">
+			<div class="category_left">
+				<div class="span2">
+					<div id="productCategoryMenu" class="productCategoryMenu">
+						<ul>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">国产模具钢</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 塑料模具钢 定制规格 </a>
 
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">塑料模具钢 定制规格</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="S50C" href="javascript:void(0)" target="_blank">S50C</a>
+										</dd>
+										<dd> |
+											<a title="S48C（宝钢）" href="javascript:void(0)" target="_blank">S48C（宝钢）</a>
+										</dd>
+										<dd> |
+											<a title="P20" href="javascript:void(0)" target="_blank">P20</a>
+										</dd>
+										<dd> |
+											<a title="P20H" href="javascript:void(0)" target="_blank">P20H</a>
+										</dd>
+										<dd> |
+											<a title="718" href="javascript:void(0)" target="_blank">718</a>
+										</dd>
+										<dd> |
+											<a title="718H" href="javascript:void(0)" target="_blank">718H</a>
+										</dd>
+										<dd> |
+											<a title="738H模块(抚钢)" href="javascript:void(0)" target="_blank">738H模块(抚钢)</a>
+										</dd>
+										<dd> |
+											<a title="738H模块(天工)" href="javascript:void(0)" target="_blank">738H模块(天工)</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="/goods/list/268.jhtml" target="_blank">冷作模具钢 定制规格</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="A3" href="javascript:void(0)" target="_blank">A3</a>
+										</dd>
+										<dd> |
+											<a title="O1" href="javascript:void(0)" target="_blank">O1</a>
+										</dd>
+										<dd> |
+											<a title="Cr8(D3M)" href="javascript:void(0)" target="_blank">Cr8(D3M)</a>
+										</dd>
+										<dd> |
+											<a title="Cr12" href="javascript:void(0)" target="_blank">Cr12</a>
+										</dd>
+										<dd> |
+											<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a>
+										</dd>
+										<dd> |
+											<a title="Cr12(Cr&gt;7.5%)" href="javascript:void(0)" target="_blank">Cr12(Cr&gt;7.5%)</a>
+										</dd>
+										<dd> |
+											<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a>
+										</dd>
+										<dd> |
+											<a title="D2" href="javascript:void(0)" target="_blank">D2</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">热作模具钢 定制规格</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="H13" href="javascript:void(0)" target="_blank">H13</a>
+										</dd>
+										<dd> |
+											<a title="H13 ESR(FS413)" href="javascript:void(0)" target="_blank">H13 ESR(FS413)</a>
+										</dd>
+										<dd> |
+											<a title="1.2714" href="javascript:void(0)" target="_blank">1.2714</a>
+										</dd>
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">标准规格模具钢</a> </dt>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">内模件</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">冲模板</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">冲子料</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">夹具料</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">标准磨光扁</a>
+										</dd>
+										<!--是否能够显示更多按钮-->
+										<dd> |
+											<a title="S50C标准磨光扁" href="javascript:void(0)" target="_blank">S50C标准磨光扁</a>
+										</dd>
+										<dd> |
+											<a title="M2标准冲子料" href="javascript:void(0)" target="_blank">M2标准冲子料</a>
+										</dd>
+										<dd> |
+											<a title="P20标准内模件" href="javascript:void(0)" target="_blank">P20标准内模件</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">进口模具钢</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 阿赛洛 </a>
 
+									<a href="javascript:void(0)" target="_blank"> 瑞典STEEL </a>
 
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="SP2738mod." href="javascript:void(0)" target="_blank">SP2738mod.</a>
+										</dd>
+										<dd> |
+											<a title="SP2738mod.HH" href="javascript:void(0)" target="_blank">SP2738mod.HH</a>
+										</dd>
+										<dd> |
+											<a title="SP400" href="javascript:void(0)" target="_blank">SP400</a>
+										</dd>
+										<dd> |
+											<a title="TENASteel" href="javascript:void(0)" target="_blank">TENASteel</a>
+										</dd>
+										<dd> |
+											<a title="SP_Stainless(SPS)" href="javascript:void(0)" target="_blank">SP_Stainless(SPS)</a>
+										</dd>
+										<dd> |
+											<a title="SP300" href="javascript:void(0)" target="_blank">SP300</a>
+										</dd>
+										<dd> |
+											<a title="SP350" href="javascript:void(0)" target="_blank">SP350</a>
+										</dd>
+										<dd> |
+											<a title="HP370" href="javascript:void(0)" target="_blank">HP370</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="/javascript:void(0)" target="_blank">瑞典STEEL</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="PM-23板材（预硬料）" href="javascript:void(0)" target="_blank">PM-23板材（预硬料）</a>
+										</dd>
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">标准模架</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 大水口模架 </a>
 
+									<a href="javascript:void(0)" target="_blank"> 细水口模架 </a>
 
+									<a href="javascript:void(0)" target="_blank"> 简化细水口模架 </a>
 
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">大水口模架</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="CI" href="javascript:void(0)" target="_blank">CI</a>
+										</dd>
+										<dd> |
+											<a title="AI" href="javascript:void(0)" target="_blank">AI</a>
+										</dd>
+										<dd> |
+											<a title="CH" href="javascript:void(0)" target="_blank">CH</a>
+										</dd>
+										<dd> |
+											<a title="BI" href="javascript:void(0)" target="_blank">BI</a>
+										</dd>
+										<dd> |
+											<a title="BH" href="javascript:void(0)" target="_blank">BH</a>
+										</dd>
+										<dd> |
+											<a title="DH" href="javascript:void(0)" target="_blank">DH</a>
+										</dd>
+										<dd> |
+											<a title="DI" href="javascript:void(0)" target="_blank">DI</a>
+										</dd>
+										<dd> |
+											<a title="AT" href="javascript:void(0)" target="_blank">AT</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="/goods/list/255.jhtml" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">细水口模架</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="DAH" href="javascript:void(0)" target="_blank">DAH</a>
+										</dd>
+										<dd> |
+											<a title="DBH" href="javascript:void(0)" target="_blank">DBH</a>
+										</dd>
+										<dd> |
+											<a title="DCH" href="javascript:void(0)" target="_blank">DCH</a>
+										</dd>
+										<dd> |
+											<a title="DDH" href="javascript:void(0)" target="_blank">DDH</a>
+										</dd>
+										<dd> |
+											<a title="DAI" href="javascript:void(0)" target="_blank">DAI</a>
+										</dd>
+										<dd> |
+											<a title="DBI" href="javascript:void(0)" target="_blank">DBI</a>
+										</dd>
+										<dd> |
+											<a title="DCI" href="javascript:void(0)" target="_blank">DCI</a>
+										</dd>
+										<dd> |
+											<a title="DDI" href="javascript:void(0)" target="_blank">DDI</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">简化细水口模架</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="GCI" href="javascript:void(0)" target="_blank">GCI</a>
+										</dd>
+										<dd> |
+											<a title="FCH" href="javascript:void(0)" target="_blank">FCH</a>
+										</dd>
+										<dd> |
+											<a title="FCI" href="javascript:void(0)" target="_blank">FCI</a>
+										</dd>
+										<dd> |
+											<a title="FAH" href="javascript:void(0)" target="_blank">FAH</a>
+										</dd>
+										<dd> |
+											<a title="FAI" href="javascript:void(0)" target="_blank">FAI</a>
+										</dd>
+										<dd> |
+											<a title="GAH" href="javascript:void(0)" target="_blank">GAH</a>
+										</dd>
+										<dd> |
+											<a title="GCH" href="javascript:void(0)" target="_blank">GCH</a>
+										</dd>
+										<dd> |
+											<a title="GAI" href="javascript:void(0)" target="_blank">GAI</a>
+										</dd>
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">模具配件</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 导向系列 </a>
 
+									<a href="javascript:void(0)" target="_blank"> 精定位系列 </a>
 
+									<a href="javascript:void(0)" target="_blank"> 顶出系列 </a>
 
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">导向系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="直司套" href="javascript:void(0)" target="_blank">直司套</a>
+										</dd>
+										<dd> |
+											<a title="托司套" href="javascript:void(0)" target="_blank">托司套</a>
+										</dd>
+										<dd> |
+											<a title="中托司" href="javascript:void(0)" target="_blank">中托司</a>
+										</dd>
+										<dd> |
+											<a title="中导柱（GP）" href="javascript:void(0)" target="_blank">中导柱（GP）</a>
+										</dd>
+										<dd> |
+											<a title="拉杆" href="javascript:void(0)" target="_blank">拉杆</a>
+										</dd>
+										<dd> |
+											<a title="导柱" href="javascript:void(0)" target="_blank">导柱</a>
+										</dd>
+										<dd> |
+											<a title="回针(复位杆)" href="javascript:void(0)" target="_blank">回针(复位杆)</a>
+										</dd>
+										<dd> |
+											<a title="自润中托司" href="javascript:void(0)" target="_blank">自润中托司</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">精定位系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="涂层边锁" href="javascript:void(0)" target="_blank">涂层边锁</a>
+										</dd>
+										<dd> |
+											<a title="边锁" href="javascript:void(0)" target="_blank">边锁</a>
+										</dd>
+										<dd> |
+											<a title="顶锁" href="javascript:void(0)" target="_blank">顶锁</a>
+										</dd>
+										<dd> |
+											<a title="自润边锁" href="javascript:void(0)" target="_blank">自润边锁</a>
+										</dd>
+										<dd> |
+											<a title="斜导位辅助器" href="javascript:void(0)" target="_blank">斜导位辅助器</a>
+										</dd>
+										<dd> |
+											<a title="导柱辅助器（圆形斜度锁）" href="javascript:void(0)" target="_blank">导柱辅助器（圆形斜度锁）</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="/goods/list/260.jhtml" target="_blank">顶出系列</a> </dt>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">顶针</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">托针</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">司筒</a>
+										</dd>
+										<!--是否能够显示更多按钮-->
+										<dd> |
+											<a title="国产SKD61顶针" href="javascript:void(0)" target="_blank">国产SKD61顶针</a>
+										</dd>
+										<dd> |
+											<a title="SKD61顶针" href="javascript:void(0)" target="_blank">SKD61顶针</a>
+										</dd>
+										<dd> |
+											<a title="台湾Y·F精品SKD61顶针" href="javascript:void(0)" target="_blank">台湾Y·F精品SKD61顶针</a>
+										</dd>
+										<dd> |
+											<a title="65Mn顶针" href="javascript:void(0)" target="_blank">65Mn顶针</a>
+										</dd>
+										<dd> |
+											<a title="国产SKD61司筒" href="javascript:void(0)" target="_blank">国产SKD61司筒</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">冷却系列</a> </dt>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">HASCO组件</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">DME组件</a>
+										</dd>
+										<!--是否能够显示更多按钮-->
+										<dd> |
+											<a title="HASCO-Z801接头" href="javascript:void(0)" target="_blank">HASCO-Z801接头</a>
+										</dd>
+										<dd> |
+											<a title="HASCO-Z80接头" href="javascript:void(0)" target="_blank">HASCO-Z80接头</a>
+										</dd>
+										<dd> |
+											<a title="HASCO-Z81接头" href="javascript:void(0)" target="_blank">HASCO-Z81接头</a>
+										</dd>
+										<dd> |
+											<a title="DME-JP接头" href="javascript:void(0)" target="_blank">DME-JP接头</a>
+										</dd>
+										<dd> |
+											<a title="DME-JS接头" href="javascript:void(0)" target="_blank">DME-JS接头</a>
+										</dd>
+										<dd> |
+											<a title="HASCO-Z811" href="javascript:void(0)" target="_blank">HASCO-Z811</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">浇口套系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="A型浇口套" href="javascript:void(0)" target="_blank">A型浇口套</a>
+										</dd>
+										<dd> |
+											<a title="B型浇口套" href="javascript:void(0)" target="_blank">B型浇口套</a>
+										</dd>
+										<dd> |
+											<a title="C型浇口套" href="javascript:void(0)" target="_blank">C型浇口套</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">锁模扣系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="锁模扣Z171" href="javascript:void(0)" target="_blank">锁模扣Z171</a>
+										</dd>
+										<dd> |
+											<a title="锁模扣Z170" href="javascript:void(0)" target="_blank">锁模扣Z170</a>
+										</dd>
+										<dd> |
+											<a title="锁模扣Z174" href="javascript:void(0)" target="_blank">锁模扣Z174</a>
+										</dd>
+										<dd> |
+											<a title="锁模扣L050" href="javascript:void(0)" target="_blank">锁模扣L050</a>
+										</dd>
+										<dd> |
+											<a title="锁模扣PLS/M/L" href="javascript:void(0)" target="_blank">锁模扣PLS/M/L</a>
+										</dd>
+										<dd> |
+											<a title="T型锁模扣Z5-0/1" href="javascript:void(0)" target="_blank">T型锁模扣Z5-0/1</a>
+										</dd>
+										<dd> |
+											<a title="加速顶出机构AEP" href="javascript:void(0)" target="_blank">加速顶出机构AEP</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">限位夹系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="限位夹Z5140" href="javascript:void(0)" target="_blank">限位夹Z5140</a>
+										</dd>
+										<dd> |
+											<a title="限位夹Z5135" href="javascript:void(0)" target="_blank">限位夹Z5135</a>
+										</dd>
+										<dd> |
+											<a title="限位夹RC." href="javascript:void(0)" target="_blank">限位夹RC.</a>
+										</dd>
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">冲头系列</a> </dt>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">T冲</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">A冲</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">引导冲</a>| </dd>
+										<dd>
+											<a href="javascript:void(0)" target="_blank" style="font-weight:bold;">衬套</a>
+										</dd>
+										<!--是否能够显示更多按钮-->
+										<dd> |
+											<a title="SKD11T冲" href="javascript:void(0)" target="_blank">SKD11T冲</a>
+										</dd>
+										<dd> |
+											<a title="SKH51T冲" href="javascript:void(0)" target="_blank">SKH51T冲</a>
+										</dd>
+										<dd> |
+											<a title="Cr12MoVA冲" href="javascript:void(0)" target="_blank">Cr12MoVA冲</a>
+										</dd>
+										<dd> |
+											<a title="DC53A冲" href="javascript:void(0)" target="_blank">DC53A冲</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">圆钢大全</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 模配精光圆 </a>
 
-    <div class="container index">
-  <div class="category_left" >
-        <div class="span2">
-      <div id="productCategoryMenu" class="productCategoryMenu">
-            <ul>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">国产模具钢</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 塑料模具钢 定制规格 </a>
+									<a href="javascript:void(0)" target="_blank"> 通用圆钢 </a>
 
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">塑料模具钢 定制规格</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="S50C" href="javascript:void(0)" target="_blank">S50C</a> </dd>
-			                    	<dd> |<a title="S48C（宝钢）" href="javascript:void(0)" target="_blank">S48C（宝钢）</a> </dd>
-			                    	<dd> |<a title="P20" href="javascript:void(0)" target="_blank">P20</a> </dd>
-			                    	<dd> |<a title="P20H" href="javascript:void(0)" target="_blank">P20H</a> </dd>
-			                    	<dd> |<a title="718" href="javascript:void(0)" target="_blank">718</a> </dd>
-			                    	<dd> |<a title="718H" href="javascript:void(0)" target="_blank">718H</a> </dd>
-			                    	<dd> |<a title="738H模块(抚钢)" href="javascript:void(0)" target="_blank">738H模块(抚钢)</a> </dd>
-			                    	<dd> |<a title="738H模块(天工)" href="javascript:void(0)" target="_blank">738H模块(天工)</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="/goods/list/268.jhtml" target="_blank">冷作模具钢 定制规格</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="A3" href="javascript:void(0)" target="_blank">A3</a> </dd>
-			                    	<dd> |<a title="O1" href="javascript:void(0)" target="_blank">O1</a> </dd>
-			                    	<dd> |<a title="Cr8(D3M)" href="javascript:void(0)" target="_blank">Cr8(D3M)</a> </dd>
-			                    	<dd> |<a title="Cr12" href="javascript:void(0)" target="_blank">Cr12</a> </dd>
-			                    	<dd> |<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a> </dd>
-			                    	<dd> |<a title="Cr12(Cr&gt;7.5%)" href="javascript:void(0)" target="_blank">Cr12(Cr&gt;7.5%)</a> </dd>
-			                    	<dd> |<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a> </dd>
-			                    	<dd> |<a title="D2" href="javascript:void(0)" target="_blank">D2</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">热作模具钢 定制规格</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="H13" href="javascript:void(0)" target="_blank">H13</a> </dd>
-			                    	<dd> |<a title="H13 ESR(FS413)" href="javascript:void(0)" target="_blank">H13 ESR(FS413)</a> </dd>
-			                    	<dd> |<a title="1.2714" href="javascript:void(0)" target="_blank">1.2714</a> </dd>
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">标准规格模具钢</a> </dt>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">内模件</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">冲模板</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">冲子料</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">夹具料</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">标准磨光扁</a> </dd>
-<!--是否能够显示更多按钮-->
-			                    	<dd> |<a title="S50C标准磨光扁" href="javascript:void(0)" target="_blank">S50C标准磨光扁</a> </dd>
-			                    	<dd> |<a title="M2标准冲子料" href="javascript:void(0)" target="_blank">M2标准冲子料</a> </dd>
-			                    	<dd> |<a title="P20标准内模件" href="javascript:void(0)" target="_blank">P20标准内模件</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              <div class="auxiliary">
+									<a href="javascript:void(0)" target="_blank"> 粉末高速钢圆 </a>
+
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">模配精光圆</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="M2" href="javascript:void(0)" target="_blank">M2</a>
+										</dd>
+										<dd> |
+											<a title="DC53" href="javascript:void(0)" target="_blank">DC53</a>
+										</dd>
+										<dd> |
+											<a title="D2" href="javascript:void(0)" target="_blank">D2</a>
+										</dd>
+										<dd> |
+											<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a>
+										</dd>
+										<dd> |
+											<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a>
+										</dd>
+										<dd> |
+											<a title="O1" href="javascript:void(0)" target="_blank">O1</a>
+										</dd>
+										<dd> |
+											<a title="SKD61" href="javascript:void(0)" target="_blank">SKD61</a>
+										</dd>
+										<dd> |
+											<a title="SUS420" href="javascript:void(0)" target="_blank">SUS420</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">通用圆钢</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="H13" href="javascript:void(0)" target="_blank">H13</a>
+										</dd>
+										<dd> |
+											<a title="M2" href="javascript:void(0)" target="_blank">M2</a>
+										</dd>
+										<dd> |
+											<a title="DC53" href="javascript:void(0)" target="_blank">DC53</a>
+										</dd>
+										<dd> |
+											<a title="D2" href="javascript:void(0)" target="_blank">D2</a>
+										</dd>
+										<dd> |
+											<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a>
+										</dd>
+										<dd> |
+											<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a>
+										</dd>
+										<dd> |
+											<a title="O1" href="javascript:void(0)" target="_blank">O1</a>
+										</dd>
+										<dd> |
+											<a title="4Cr13（S136）" href="javascript:void(0)" target="_blank">4Cr13（S136）</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">粉末高速钢圆</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="PM-23圆棒" href="javascript:void(0)" target="_blank">PM-23圆棒</a>
+										</dd>
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">热流道专区</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> VNM系列热咀 </a>
+
+									<a href="javascript:void(0)" target="_blank"> 单点针阀系列 </a>
+
+									<a href="javascript:void(0)" target="_blank"> VNS/D系列热咀 </a>
+
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">VNM系列热咀</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="VNM23/32/40/50/60PF" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PF</a>
+										</dd>
+										<dd> |
+											<a title="VNM23/32/40/50/60PE" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PE</a>
+										</dd>
+										<dd> |
+											<a title="VNM23/32/PL" href="javascript:void(0)" target="_blank">VNM23/32/PL</a>
+										</dd>
+										<dd> |
+											<a title="VNM23/32/40/50/60GF" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60GF</a>
+										</dd>
+										<dd> |
+											<a title="VNM32/40PH" href="javascript:void(0)" target="_blank">VNM32/40PH</a>
+										</dd>
+										<dd> |
+											<a title="VNM23/32/40/50/60PET" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PET</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="/goods/list/383.jhtml" target="_blank">单点针阀系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="VVG32" href="javascript:void(0)" target="_blank">VVG32</a>
+										</dd>
+										<dd> |
+											<a title="VVG40" href="javascript:void(0)" target="_blank">VVG40</a>
+										</dd>
+										<dd> |
+											<a title="VVG50" href="javascript:void(0)" target="_blank">VVG50</a>
+										</dd>
+										<dd> |
+											<a title="VVG60" href="javascript:void(0)" target="_blank">VVG60</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">VNS/D系列热咀</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="VNS32/40/50/60PF" href="javascript:void(0)" target="_blank">VNS32/40/50/60PF</a>
+										</dd>
+										<dd> |
+											<a title="VNS32/40/50/60PE" href="javascript:void(0)" target="_blank">VNS32/40/50/60PE</a>
+										</dd>
+										<dd> |
+											<a title="VNS32/40/50/60SE" href="javascript:void(0)" target="_blank">VNS32/40/50/60SE</a>
+										</dd>
+										<dd> |
+											<a title="VND23/32/40/50/60PF" href="javascript:void(0)" target="_blank">VND23/32/40/50/60PF</a>
+										</dd>
+										<dd> |
+											<a title="VND23/32/40/50/60PE" href="javascript:void(0)" target="_blank">VND23/32/40/50/60PE</a>
+										</dd>
+										<dd> |
+											<a title="VND23/32/40/50/60SE" href="javascript:void(0)" target="_blank">VND23/32/40/50/60SE</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">分流板用钢</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="4Cr13H" href="javascript:void(0)" target="_blank">4Cr13H</a>
+										</dd>
+										<dd> |
+											<a title="1.2085" href="javascript:void(0)" target="_blank">1.2085</a>
+										</dd>
+										<dd> |
+											<a title="1.2316" href="javascript:void(0)" target="_blank">1.2316</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">气缸系列</a> </dt>
+										<!--是否能够显示更多按钮-->
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">其他配件</a> </dt>
+										<!--是否能够显示更多按钮-->
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+							<li>
+								<p>
+									<a href="javascript:void(0)" target="_blank">模具夹治具</a>
+								</p>
+								<div class="item last">
+									<a href="javascript:void(0)" target="_blank"> 不锈钢夹头 </a>
+
+									<a href="javascript:void(0)" target="_blank"> 铝合金夹头 </a>
+
+									<a href="javascript:void(0)" target="_blank"> 黄铜夹头 </a>
+
+								</div>
+								<div class="menu">
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">不锈钢夹头</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="TY-JT0009U15槽型鋁合金夾頭" href="javascript:void(0)" target="_blank">TY-JT0009U15槽型鋁合金夾頭</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0016U15槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0016U15槽型不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0017U20槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0017U20槽型不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0018U25槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0018U25槽型不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0019U30槽头不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0019U30槽头不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0020S15方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0020S15方形不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0021S20方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0021S20方形不锈钢夹头</a>
+										</dd>
+										<dd> |
+											<a title="TY-JT0022S25方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0022S25方形不锈钢夹头</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">铝合金夹头</a> </dt>
+										<!--是否能够显示更多按钮-->
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">黄铜夹头</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="U15槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U15槽型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="U20槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U20槽型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="U25槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U25槽型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="51x51平面黃銅夾頭" href="javascript:void(0)" target="_blank">51x51平面黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="S15方型黃銅夾頭" href="javascript:void(0)" target="_blank">S15方型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="S20方型黃銅夾頭" href="javascript:void(0)" target="_blank">S20方型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="S25方型黃銅夾頭" href="javascript:void(0)" target="_blank">S25方型黃銅夾頭</a>
+										</dd>
+										<dd> |
+											<a title="51x81平面黃銅夾頭" href="javascript:void(0)" target="_blank">51x81平面黃銅夾頭</a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">气动卡盘</a> </dt>
+										<!--是否能够显示更多按钮-->
+										<dd>
+											<a title="D100 CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 CNC气动卡盘</a>
+										</dd>
+										<dd> |
+											<a title="D100 EDM气动卡盘" href="javascript:void(0)" target="_blank">D100 EDM气动卡盘</a>
+										</dd>
+										<dd> |
+											<a title="D100 气动卡盘(配多用途底板）" href="javascript:void(0)" target="_blank">D100 气动卡盘(配多用途底板）</a>
+										</dd>
+										<dd> |
+											<a title="D100 2头CNC气动卡盘(配多用途底板）" href="javascript:void(0)" target="_blank">D100 2头CNC气动卡盘(配多用途底板）</a>
+										</dd>
+										<dd> |
+											<a title="D100 3头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 3头CNC气动卡盘</a>
+										</dd>
+										<dd> |
+											<a title="D100 4头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 4头CNC气动卡盘</a>
+										</dd>
+										<dd> |
+											<a title="D100 6头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 6头CNC气动卡盘</a>
+										</dd>
+										<dd> |
+											<a title="D100 9头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 9头CNC气动卡盘</a>
+										</dd>
+										<dd>&nbsp;&nbsp;
+											<a href="javascript:void(0)" target="_blank">更多>></a>
+										</dd>
+									</dl>
+									<dl class="clearfix">
+										<dt> <a href="javascript:void(0)" target="_blank">手动卡盘</a> </dt>
+										<!--是否能够显示更多按钮-->
+									</dl>
+									<dl class="clearfix last">
+										<dt> <a href="javascript:void(0)" target="_blank">卡盘面板底座</a> </dt>
+										<!--是否能够显示更多按钮-->
+									</dl>
+									<div class="auxiliary">
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="span10 index_banner">
+					<div class='small_box1'></div>
+					<div class='small_box2'>
+						<div class="jiao"></div>
+						<div class="box2_box">
+							<textarea class="small_box_text" placeholder="写下你的真实需求"></textarea>
+							<button>你找找</button>
+						</div>
+					</div>
+					<div class="big_box">
+						<h1 class="box_top">您的委托采购需求</h1>
+						<textarea class="box_content" placeholder="写下你的真实感受"></textarea>
+						<div class="box_bottom">
+							<button>确认发布</button>
+						</div>
+					</div>
+
+				</div>
+				<div class="dynamic">
+
+					<h2 class="dynamic_content">上传你的BOM，收到后我们会立刻给你回电确认，剩下的就交给我们吧。</h2>
+
+					<h3>上传 BOM</h3>
+
+					<form class="characteristic" method="get">
+						<input type="button" class="characteristic_btn" value="浏览..." /><span></span>
+
+						<button>上传</button>
+					</form>
+				</div>
 			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">进口模具钢</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 阿赛洛 </a>
 
-                		<a href="javascript:void(0)" target="_blank"> 瑞典STEEL </a>
+			<div class="row" id="row_">
 
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="SP2738mod." href="javascript:void(0)" target="_blank">SP2738mod.</a> </dd>
-			                    	<dd> |<a title="SP2738mod.HH" href="javascript:void(0)" target="_blank">SP2738mod.HH</a> </dd>
-			                    	<dd> |<a title="SP400" href="javascript:void(0)" target="_blank">SP400</a> </dd>
-			                    	<dd> |<a title="TENASteel" href="javascript:void(0)" target="_blank">TENASteel</a> </dd>
-			                    	<dd> |<a title="SP_Stainless(SPS)" href="javascript:void(0)" target="_blank">SP_Stainless(SPS)</a> </dd>
-			                    	<dd> |<a title="SP300" href="javascript:void(0)" target="_blank">SP300</a> </dd>
-			                    	<dd> |<a title="SP350" href="javascript:void(0)" target="_blank">SP350</a> </dd>
-			                    	<dd> |<a title="HP370" href="javascript:void(0)" target="_blank">HP370</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="/javascript:void(0)" target="_blank">瑞典STEEL</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="PM-23板材（预硬料）" href="javascript:void(0)" target="_blank">PM-23板材（预硬料）</a> </dd>
-                  </dl>
-              <div class="auxiliary">
+				<div class="span12">
+					<div class="hotGoods">
+						<dl class="title1">
+							<div class="goods_title_l">
+								<dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
+							</div>
+							<div class="goods_title_r">
+								<dd class="one">
+									<a href="javascript:void(0)" target="_blank">阿赛洛</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0)" target="_blank">瑞典 STEEL</a>
+								</dd>
+
+							</div>
+						</dl>
+						<div class="title_img">
+							<img src="" alt="模具钢" title="国产模具钢" />
+						</div>
+
+						<ul class="ul_one list">
+							<div class="icon_left"></div>
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+							<div class="icon_right"></div>
+							<div class="icon_left"></div>
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+							<div class="icon_right"></div>
+
+						</ul>
+						<ul class="list">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="span12">
+					<div class="hotGoods">
+						<dl class="title1">
+							<div class="goods_title_l">
+								<dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
+							</div>
+							<div class="goods_title_r">
+								<dd class="one">
+									<a href="javascript:void(0)" target="_blank">阿赛洛</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0)" target="_blank">瑞典 STEEL</a>
+								</dd>
+
+							</div>
+						</dl>
+						<div class="title_img">
+							<img src="" alt="模具钢" title="国产模具钢" />
+						</div>
+
+						<ul class="ul_one list">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+
+						</ul>
+						<ul class="list">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+				<div class="span12">
+					<div class="hotGoods">
+						<dl class="title1">
+							<div class="goods_title_l">
+								<dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
+							</div>
+							<div class="goods_title_r">
+								<dd class="one">
+									<a href="javascript:void(0)" target="_blank">阿赛洛</a>
+								</dd>
+								<dd>
+									<a href="javascript:void(0)" target="_blank">瑞典 STEEL</a>
+								</dd>
+
+							</div>
+						</dl>
+						<div class="title_img">
+							<img src="" alt="模具钢" title="国产模具钢" />
+						</div>
+
+						<ul class="ul_one list">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+
+						</ul>
+						<ul class="list">
+							<ul>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+								<li>
+									<a href="javascript:void(0)" title="sq2738" target="_blank">
+										<div class="goods_img"><img src="img/product.jpg" /></div>
+										<div> <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em> </div>
+										<strong>￥29.00</strong> </a>
+								</li>
+							</ul>
+
+						</ul>
+
+					</div>
+
+				</div>
+
 			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">标准模架</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 大水口模架 </a>
+		</div>
+		</div>
 
-                		<a href="javascript:void(0)" target="_blank"> 细水口模架 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 简化细水口模架 </a>
-
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">大水口模架</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="CI" href="javascript:void(0)" target="_blank">CI</a> </dd>
-			                    	<dd> |<a title="AI" href="javascript:void(0)" target="_blank">AI</a> </dd>
-			                    	<dd> |<a title="CH" href="javascript:void(0)" target="_blank">CH</a> </dd>
-			                    	<dd> |<a title="BI" href="javascript:void(0)" target="_blank">BI</a> </dd>
-			                    	<dd> |<a title="BH" href="javascript:void(0)" target="_blank">BH</a> </dd>
-			                    	<dd> |<a title="DH" href="javascript:void(0)" target="_blank">DH</a> </dd>
-			                    	<dd> |<a title="DI" href="javascript:void(0)" target="_blank">DI</a> </dd>
-			                    	<dd> |<a title="AT" href="javascript:void(0)" target="_blank">AT</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="/goods/list/255.jhtml" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">细水口模架</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="DAH" href="javascript:void(0)" target="_blank">DAH</a> </dd>
-			                    	<dd> |<a title="DBH" href="javascript:void(0)" target="_blank">DBH</a> </dd>
-			                    	<dd> |<a title="DCH" href="javascript:void(0)" target="_blank">DCH</a> </dd>
-			                    	<dd> |<a title="DDH" href="javascript:void(0)" target="_blank">DDH</a> </dd>
-			                    	<dd> |<a title="DAI" href="javascript:void(0)" target="_blank">DAI</a> </dd>
-			                    	<dd> |<a title="DBI" href="javascript:void(0)" target="_blank">DBI</a> </dd>
-			                    	<dd> |<a title="DCI" href="javascript:void(0)" target="_blank">DCI</a> </dd>
-			                    	<dd> |<a title="DDI" href="javascript:void(0)" target="_blank">DDI</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">简化细水口模架</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="GCI" href="javascript:void(0)" target="_blank">GCI</a> </dd>
-			                    	<dd> |<a title="FCH" href="javascript:void(0)" target="_blank">FCH</a> </dd>
-			                    	<dd> |<a title="FCI" href="javascript:void(0)" target="_blank">FCI</a> </dd>
-			                    	<dd> |<a title="FAH" href="javascript:void(0)" target="_blank">FAH</a> </dd>
-			                    	<dd> |<a title="FAI" href="javascript:void(0)" target="_blank">FAI</a> </dd>
-			                    	<dd> |<a title="GAH" href="javascript:void(0)" target="_blank">GAH</a> </dd>
-			                    	<dd> |<a title="GCH" href="javascript:void(0)" target="_blank">GCH</a> </dd>
-			                    	<dd> |<a title="GAI" href="javascript:void(0)" target="_blank">GAI</a> </dd>
-                  </dl>
-              <div class="auxiliary">
+		<iframe src="widget/footer.html" width="100%" height="600px" scrolling="no" style="border: none;"></iframe>
+		</div>
+		
+		<div class="slider">
+			<div class="slider_chirld">
+				<div class="slider_chirld_span">
+					<i class="icon iconfont icon-gouwuche-" style="float: right;font-size: 20px;margin-right: 12px;"></i>	
+				</div>
 			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">模具配件</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 导向系列 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 精定位系列 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 顶出系列 </a>
-
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">导向系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="直司套" href="javascript:void(0)" target="_blank">直司套</a> </dd>
-			                    	<dd> |<a title="托司套" href="javascript:void(0)" target="_blank">托司套</a> </dd>
-			                    	<dd> |<a title="中托司" href="javascript:void(0)" target="_blank">中托司</a> </dd>
-			                    	<dd> |<a title="中导柱（GP）" href="javascript:void(0)" target="_blank">中导柱（GP）</a> </dd>
-			                    	<dd> |<a title="拉杆" href="javascript:void(0)" target="_blank">拉杆</a> </dd>
-			                    	<dd> |<a title="导柱" href="javascript:void(0)" target="_blank">导柱</a> </dd>
-			                    	<dd> |<a title="回针(复位杆)" href="javascript:void(0)" target="_blank">回针(复位杆)</a> </dd>
-			                    	<dd> |<a title="自润中托司" href="javascript:void(0)" target="_blank">自润中托司</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">精定位系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="涂层边锁" href="javascript:void(0)" target="_blank">涂层边锁</a> </dd>
-			                    	<dd> |<a title="边锁" href="javascript:void(0)" target="_blank">边锁</a> </dd>
-			                    	<dd> |<a title="顶锁" href="javascript:void(0)" target="_blank">顶锁</a> </dd>
-			                    	<dd> |<a title="自润边锁" href="javascript:void(0)" target="_blank">自润边锁</a> </dd>
-			                    	<dd> |<a title="斜导位辅助器" href="javascript:void(0)" target="_blank">斜导位辅助器</a> </dd>
-			                    	<dd> |<a title="导柱辅助器（圆形斜度锁）" href="javascript:void(0)" target="_blank">导柱辅助器（圆形斜度锁）</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="/goods/list/260.jhtml" target="_blank">顶出系列</a> </dt>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">顶针</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">托针</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">司筒</a> </dd>
-<!--是否能够显示更多按钮-->
-			                    	<dd> |<a title="国产SKD61顶针" href="javascript:void(0)" target="_blank">国产SKD61顶针</a> </dd>
-			                    	<dd> |<a title="SKD61顶针" href="javascript:void(0)" target="_blank">SKD61顶针</a> </dd>
-			                    	<dd> |<a title="台湾Y·F精品SKD61顶针" href="javascript:void(0)" target="_blank">台湾Y·F精品SKD61顶针</a> </dd>
-			                    	<dd> |<a title="65Mn顶针" href="javascript:void(0)" target="_blank">65Mn顶针</a> </dd>
-			                    	<dd> |<a title="国产SKD61司筒" href="javascript:void(0)" target="_blank">国产SKD61司筒</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">冷却系列</a> </dt>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">HASCO组件</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">DME组件</a> </dd>
-<!--是否能够显示更多按钮-->
-			                    	<dd> |<a title="HASCO-Z801接头" href="javascript:void(0)" target="_blank">HASCO-Z801接头</a> </dd>
-			                    	<dd> |<a title="HASCO-Z80接头" href="javascript:void(0)" target="_blank">HASCO-Z80接头</a> </dd>
-			                    	<dd> |<a title="HASCO-Z81接头" href="javascript:void(0)" target="_blank">HASCO-Z81接头</a> </dd>
-			                    	<dd> |<a title="DME-JP接头" href="javascript:void(0)" target="_blank">DME-JP接头</a> </dd>
-			                    	<dd> |<a title="DME-JS接头" href="javascript:void(0)" target="_blank">DME-JS接头</a> </dd>
-			                    	<dd> |<a title="HASCO-Z811" href="javascript:void(0)" target="_blank">HASCO-Z811</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">浇口套系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="A型浇口套" href="javascript:void(0)" target="_blank">A型浇口套</a> </dd>
-			                    	<dd> |<a title="B型浇口套" href="javascript:void(0)" target="_blank">B型浇口套</a> </dd>
-			                    	<dd> |<a title="C型浇口套" href="javascript:void(0)" target="_blank">C型浇口套</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">锁模扣系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="锁模扣Z171" href="javascript:void(0)" target="_blank">锁模扣Z171</a> </dd>
-			                    	<dd> |<a title="锁模扣Z170" href="javascript:void(0)" target="_blank">锁模扣Z170</a> </dd>
-			                    	<dd> |<a title="锁模扣Z174" href="javascript:void(0)" target="_blank">锁模扣Z174</a> </dd>
-			                    	<dd> |<a title="锁模扣L050" href="javascript:void(0)" target="_blank">锁模扣L050</a> </dd>
-			                    	<dd> |<a title="锁模扣PLS/M/L" href="javascript:void(0)" target="_blank">锁模扣PLS/M/L</a> </dd>
-			                    	<dd> |<a title="T型锁模扣Z5-0/1" href="javascript:void(0)" target="_blank">T型锁模扣Z5-0/1</a> </dd>
-			                    	<dd> |<a title="加速顶出机构AEP" href="javascript:void(0)" target="_blank">加速顶出机构AEP</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">限位夹系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="限位夹Z5140" href="javascript:void(0)" target="_blank">限位夹Z5140</a> </dd>
-			                    	<dd> |<a title="限位夹Z5135" href="javascript:void(0)" target="_blank">限位夹Z5135</a> </dd>
-			                    	<dd> |<a title="限位夹RC." href="javascript:void(0)" target="_blank">限位夹RC.</a> </dd>
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">冲头系列</a> </dt>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">T冲</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">A冲</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">引导冲</a>| </dd>
-	                    	<dd> <a href="javascript:void(0)" target="_blank" style="font-weight:bold;">衬套</a> </dd>
-<!--是否能够显示更多按钮-->
-			                    	<dd> |<a title="SKD11T冲" href="javascript:void(0)" target="_blank">SKD11T冲</a> </dd>
-			                    	<dd> |<a title="SKH51T冲" href="javascript:void(0)" target="_blank">SKH51T冲</a> </dd>
-			                    	<dd> |<a title="Cr12MoVA冲" href="javascript:void(0)" target="_blank">Cr12MoVA冲</a> </dd>
-			                    	<dd> |<a title="DC53A冲" href="javascript:void(0)" target="_blank">DC53A冲</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              <div class="auxiliary">
+			<div class="slider_chirld">
+				<div class="slider_chirld_span">
+					<i class="icon iconfont icon-xinxing" style="float: right;font-size: 20px;margin-right: 12px;"></i>	
+				</div>
 			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">圆钢大全</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 模配精光圆 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 通用圆钢 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 粉末高速钢圆 </a>
-
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">模配精光圆</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="M2" href="javascript:void(0)" target="_blank">M2</a> </dd>
-			                    	<dd> |<a title="DC53" href="javascript:void(0)" target="_blank">DC53</a> </dd>
-			                    	<dd> |<a title="D2" href="javascript:void(0)" target="_blank">D2</a> </dd>
-			                    	<dd> |<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a> </dd>
-			                    	<dd> |<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a> </dd>
-			                    	<dd> |<a title="O1" href="javascript:void(0)" target="_blank">O1</a> </dd>
-			                    	<dd> |<a title="SKD61" href="javascript:void(0)" target="_blank">SKD61</a> </dd>
-			                    	<dd> |<a title="SUS420" href="javascript:void(0)" target="_blank">SUS420</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">通用圆钢</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="H13" href="javascript:void(0)" target="_blank">H13</a> </dd>
-			                    	<dd> |<a title="M2" href="javascript:void(0)" target="_blank">M2</a> </dd>
-			                    	<dd> |<a title="DC53" href="javascript:void(0)" target="_blank">DC53</a> </dd>
-			                    	<dd> |<a title="D2" href="javascript:void(0)" target="_blank">D2</a> </dd>
-			                    	<dd> |<a title="SKD11" href="javascript:void(0)" target="_blank">SKD11</a> </dd>
-			                    	<dd> |<a title="Cr12MoV" href="javascript:void(0)" target="_blank">Cr12MoV</a> </dd>
-			                    	<dd> |<a title="O1" href="javascript:void(0)" target="_blank">O1</a> </dd>
-			                    	<dd> |<a title="4Cr13（S136）" href="javascript:void(0)" target="_blank">4Cr13（S136）</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">粉末高速钢圆</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="PM-23圆棒" href="javascript:void(0)" target="_blank">PM-23圆棒</a> </dd>
-                  </dl>
-              <div class="auxiliary">
+			<div class="slider_red">
+				在线客服<i class="icon iconfont icon-meirong-heicopy" style="float: right;font-size: 20px;margin-right: 12px;"></i>
 			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">热流道专区</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> VNM系列热咀 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 单点针阀系列 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> VNS/D系列热咀 </a>
-
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">VNM系列热咀</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="VNM23/32/40/50/60PF" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PF</a> </dd>
-			                    	<dd> |<a title="VNM23/32/40/50/60PE" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PE</a> </dd>
-			                    	<dd> |<a title="VNM23/32/PL" href="javascript:void(0)" target="_blank">VNM23/32/PL</a> </dd>
-			                    	<dd> |<a title="VNM23/32/40/50/60GF" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60GF</a> </dd>
-			                    	<dd> |<a title="VNM32/40PH" href="javascript:void(0)" target="_blank">VNM32/40PH</a> </dd>
-			                    	<dd> |<a title="VNM23/32/40/50/60PET" href="javascript:void(0)" target="_blank">VNM23/32/40/50/60PET</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="/goods/list/383.jhtml" target="_blank">单点针阀系列</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="VVG32" href="javascript:void(0)" target="_blank">VVG32</a> </dd>
-			                    	<dd> |<a title="VVG40" href="javascript:void(0)" target="_blank">VVG40</a> </dd>
-			                    	<dd> |<a title="VVG50" href="javascript:void(0)" target="_blank">VVG50</a> </dd>
-			                    	<dd> |<a title="VVG60" href="javascript:void(0)" target="_blank">VVG60</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">VNS/D系列热咀</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="VNS32/40/50/60PF" href="javascript:void(0)" target="_blank">VNS32/40/50/60PF</a> </dd>
-			                    	<dd> |<a title="VNS32/40/50/60PE" href="javascript:void(0)" target="_blank">VNS32/40/50/60PE</a> </dd>
-			                    	<dd> |<a title="VNS32/40/50/60SE" href="javascript:void(0)" target="_blank">VNS32/40/50/60SE</a> </dd>
-			                    	<dd> |<a title="VND23/32/40/50/60PF" href="javascript:void(0)" target="_blank">VND23/32/40/50/60PF</a> </dd>
-			                    	<dd> |<a title="VND23/32/40/50/60PE" href="javascript:void(0)" target="_blank">VND23/32/40/50/60PE</a> </dd>
-			                    	<dd> |<a title="VND23/32/40/50/60SE" href="javascript:void(0)" target="_blank">VND23/32/40/50/60SE</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">分流板用钢</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="4Cr13H" href="javascript:void(0)" target="_blank">4Cr13H</a> </dd>
-			                    	<dd> |<a title="1.2085" href="javascript:void(0)" target="_blank">1.2085</a> </dd>
-			                    	<dd> |<a title="1.2316" href="javascript:void(0)" target="_blank">1.2316</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">气缸系列</a> </dt>
-<!--是否能够显示更多按钮-->
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">其他配件</a> </dt>
-<!--是否能够显示更多按钮-->
-                  </dl>
-              <div class="auxiliary">
-			</div>
-            </div>
-             </li>
-          <li>
-                <p><a href="javascript:void(0)" target="_blank">模具夹治具</a></p>
-                <div class="item last">
-                		<a href="javascript:void(0)" target="_blank"> 不锈钢夹头 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 铝合金夹头 </a>
-
-                		<a href="javascript:void(0)" target="_blank"> 黄铜夹头 </a>
-
-		              </div>
-                <div class="menu">
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">不锈钢夹头</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="TY-JT0009U15槽型鋁合金夾頭" href="javascript:void(0)" target="_blank">TY-JT0009U15槽型鋁合金夾頭</a> </dd>
-			                    	<dd> |<a title="TY-JT0016U15槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0016U15槽型不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0017U20槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0017U20槽型不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0018U25槽型不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0018U25槽型不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0019U30槽头不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0019U30槽头不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0020S15方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0020S15方形不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0021S20方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0021S20方形不锈钢夹头</a> </dd>
-			                    	<dd> |<a title="TY-JT0022S25方形不锈钢夹头" href="javascript:void(0)" target="_blank">TY-JT0022S25方形不锈钢夹头</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">铝合金夹头</a> </dt>
-<!--是否能够显示更多按钮-->
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">黄铜夹头</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="U15槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U15槽型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="U20槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U20槽型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="U25槽型黃銅夾頭" href="javascript:void(0)" target="_blank">U25槽型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="51x51平面黃銅夾頭" href="javascript:void(0)" target="_blank">51x51平面黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="S15方型黃銅夾頭" href="javascript:void(0)" target="_blank">S15方型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="S20方型黃銅夾頭" href="javascript:void(0)" target="_blank">S20方型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="S25方型黃銅夾頭" href="javascript:void(0)" target="_blank">S25方型黃銅夾頭</a> </dd>
-			                    	<dd> |<a title="51x81平面黃銅夾頭" href="javascript:void(0)" target="_blank">51x81平面黃銅夾頭</a> </dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">气动卡盘</a> </dt>
-<!--是否能够显示更多按钮-->
-			                    	<dd> <a title="D100 CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 CNC气动卡盘</a> </dd>
-			                    	<dd> |<a title="D100 EDM气动卡盘" href="javascript:void(0)" target="_blank">D100 EDM气动卡盘</a> </dd>
-			                    	<dd> |<a title="D100 气动卡盘(配多用途底板）" href="javascript:void(0)" target="_blank">D100 气动卡盘(配多用途底板）</a> </dd>
-			                    	<dd> |<a title="D100 2头CNC气动卡盘(配多用途底板）" href="javascript:void(0)" target="_blank">D100 2头CNC气动卡盘(配多用途底板）</a> </dd>
-			                    	<dd> |<a title="D100 3头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 3头CNC气动卡盘</a> </dd>
-			                    	<dd> |<a title="D100 4头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 4头CNC气动卡盘</a> </dd>
-			                    	<dd> |<a title="D100 6头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 6头CNC气动卡盘</a> </dd>
-			                    	<dd> |<a title="D100 9头CNC气动卡盘" href="javascript:void(0)" target="_blank">D100 9头CNC气动卡盘</a> </dd>
-		                    <dd>&nbsp;&nbsp;<a href="javascript:void(0)" target="_blank">更多>></a></dd>
-                  </dl>
-              	<dl class="clearfix">
-                    <dt> <a href="javascript:void(0)" target="_blank">手动卡盘</a> </dt>
-<!--是否能够显示更多按钮-->
-                  </dl>
-              	<dl class="clearfix last">
-                    <dt> <a href="javascript:void(0)" target="_blank">卡盘面板底座</a> </dt>
-<!--是否能够显示更多按钮-->
-                  </dl>
-              <div class="auxiliary">
-			</div>
-            </div>
-             </li>
-        </ul>
-      </div>
-       </div>
-        <div class="span10 index_banner">
-        			<div class='small_box1'></div>
-        			<div class='small_box2'>
-        				<div class="jiao"></div>
-        				<div class="box2_box">
-        				<textarea class="small_box_text" placeholder="写下你的真实需求"></textarea>
-        				<button>你找找</button>
-        				</div>
-        			</div>
-        			<div class="big_box">
-        				<h1 class="box_top">您的委托采购需求</h1>
-        				<textarea class="box_content" placeholder="写下你的真实感受"></textarea>
-        				<div class="box_bottom">
-        					<button>确认发布</button>
-        				</div>
-        			</div>
-        	
-        	
-        	</div>
-        <div class="dynamic">
-
-		      
-		    <h2 class="dynamic_content">上传你的BOM，收到后我们会立刻给你回电确认，剩下的就交给我们吧。</h2>
-
-	      <h3>上传 BOM</h3>
-
-	      <form class="characteristic" method="get">
-	    		<input type="button" class="characteristic_btn"  value="浏览..." /><span></span>
-
-	    		<button>上传</button>
-	      </form>
-	    </div>
-      </div>
- 
-
-
-
-
-
-
-
-  	<div class="row" id="row_">
-       
-       
-       <div class="span12">
-      <div class="hotGoods">
-            <dl class="title1">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
-               
-          </div>
-        </dl>
-            <div class="title_img">
-           <img src="" alt="模具钢" title="国产模具钢" />
-           </div>
-
-          <ul  class="ul_one list" >
-          	<div	 class="icon_left"></div>
-					<ul>
-						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-					</ul>
-					<div	 class="icon_right"></div>
-					<div	 class="icon_left"></div>
-				        <ul>
-				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        </ul>
-					<div	 class="icon_right"></div>	
-				          
-          </ul>
-          <ul class="list">
-          	<ul>
-          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-          	</ul>
+			
+		</div>
+		<style>
+			.slider{
+				width: 130px;
+				height: 200px;
+				position: fixed;
+				top: 400px;
+				right: 0px;
+				z-index: 100000;
+			}
+			.slider_red{
+				width: 120px;
+				height: 43px;
+				line-height: 43px;
+				font-size: 13px;
+				color: white;
+				padding-left: 10px;
+				background-image: url(img/sider.png);
+			}
+			.slider .slider_chirld{
+				color: #ADADAD;
+				width: 130px;
+				height: 43px;
+				
+			}
+			.slider_chirld_span{
+				text-align: center;
+				border-top: 1px solid #CCCCCC;
+				border-left: 1px solid #CCCCCC;
+				font-size: 15px;
+				width: 42px;
+				height: 42px;
+				float: right;
+				line-height: 42px;
+			}
+			.slider_chirld_span{
 					
-				     
-          </ul>
-      
+			}
+			.close{
+				transform:rotate(-90deg);
+				-ms-transform:rotate(-90deg); 	/* IE 9 */
+				-moz-transform:rotate(-90deg); 	/* Firefox */
+				-webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+				-o-transform:rotate(-90deg); 
+			}
+			
+			
+		</style>
 
-          </div>
-
-    </div>
-  	
-  	
-  	      <div class="span12">
-      <div class="hotGoods">
-            <dl class="title1">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
-               
-          </div>
-        </dl>
-            <div class="title_img">
-           <img src="" alt="模具钢" title="国产模具钢" />
-           </div>
-
-          <ul  class="ul_one list" >
-					<ul>
-						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-					</ul>
-				        <ul>
-				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        </ul>
-
-				          
-          </ul>
-          <ul class="list">
-          	<ul>
-          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-          	</ul>
-					
-				     
-          </ul>
-      
-
-          </div>
-
-    </div>
-    
-    
-          <div class="span12">
-      <div class="hotGoods">
-            <dl class="title1">
-          <div class="goods_title_l">
-                <dt> <a href="javascript:void(0)" target="_blank">国产模具钢</a> </dt>
-              </div>
-          <div class="goods_title_r">
-                <dd  class="one" > <a href="javascript:void(0)" target="_blank">阿赛洛</a> </dd>
-                <dd > <a href="javascript:void(0)" target="_blank">瑞典 STEEL</a> </dd>
-               
-          </div>
-        </dl>
-            <div class="title_img">
-           <img src="" alt="模具钢" title="国产模具钢" />
-           </div>
-
-          <ul  class="ul_one list" >
-					<ul>
-						<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-					</ul>
-				        <ul>
-				        	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            	<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				         <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-				        </ul>
-
-				          
-          </ul>
-          <ul class="list">
-          	<ul>
-          			<li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-			            <li> <a href="javascript:void(0)" title="sq2738" target="_blank">
-				            <div class="goods_img"><img src="img/product.jpg"  /></div>
-				            <div>  <span title="sq2738">sq2738</span> <em title="">专利成分蚀纹抛光优于273</em>      </div>
-				            <strong>￥29.00</strong> </a> </li>
-          	</ul>
-					
-				     
-          </ul>
-      
-
-          </div>
-
-    </div>
- 
-    
-    
-    
-      </div>
-</div>
- </div>
- 
-<iframe src="widget/footer.html" width="100%" height="600px" scrolling="no" style="border: none;"></iframe>
- </div>
-
-</body>
+	</body>
 
 </html>

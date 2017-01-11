@@ -275,7 +275,7 @@ iframe {
 }
 
 .login_banner {
-	width: 100%;
+	width: 1200px;
 	min-width: 1200px;
 	height: auto;
 	background: url(../images/ad111.jpg) center 0 no-repeat;
@@ -287,6 +287,7 @@ iframe {
 
 .login_input {
 	float: right;
+	margin-right: 50px;
 	width: 315px;
 	height: 315px;
 	background-image: url(../img/img_back.png);
@@ -441,4 +442,10 @@ a:hover {
 	width: 270px;
 	color: #9c9c9c;
 	font-size: 9px;
+}
+.input_peope_icon{
+	position: relative;
+	right: 20px;
+	top: 2px;
+	font-size: 16px;
 }

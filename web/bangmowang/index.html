@@ -27,7 +27,17 @@
 		</style>
 		<script type="text/javascript">
 			$().ready(function() {
-
+			$(".back_top").hide()
+					$('html,body').scroll(function(){
+						alert(1)
+						var top = $(document).scrollTop()
+						if (top>100) {
+							$(".back_top").show()
+						}else{
+								$(".back_top").hide()
+						}
+						
+					})
 				var $productCategoryMenuItem = $("#productCategoryMenu li");
 				var $slider = $("#slider");
 				var $newArticleTab = $("#newArticle ul.tab");
@@ -72,7 +82,9 @@
 					/*$(this).parent('.goods_title_r').parent('dl').next('div').next('ul')*/
 					/*.eq($(this).index()).show().siblings()*/ /*.hide();*/
 					//$(this).parent('.goods_title_r').parent('dl').next('div').next('ul').eq($(this).index()).show().siblings().hide();
-
+				
+				
+				
 				});
 
 			});
@@ -81,8 +93,8 @@
 
 	<body>
 
-		<div class="header" style="height:152px;" id="top_head">
-			<iframe src="widget/header.html" width="100%" height="23px"></iframe>
+		<div class="header" style="height:148px;" id="top_head">
+			<iframe src="widget/header.html" width="100%" height="23px" style="border: none;"></iframe>
 			<div class="container">
 				<div class="row">
 					<div class="span3">
@@ -1443,6 +1455,7 @@
 					
 			}
 			.close{
+
 				transform:rotate(-90deg);
 				-ms-transform:rotate(-90deg); 	/* IE 9 */
 				-moz-transform:rotate(-90deg); 	/* Firefox */

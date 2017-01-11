@@ -854,7 +854,7 @@ span.loadingBar {
 /* ---------- Header ---------- */
 
 .header {
-	margin-bottom: 10px;
+	
 	border-bottom: 2px solid #b1191a;
 }
 
@@ -995,7 +995,7 @@ span.loadingBar {
 	    margin-right: 5px;}
 
 .header .mainNav {
-	height: 40px;
+	height: 30px;
 	line-height: 40px;
 	background-color: none;
 	z-index:30;

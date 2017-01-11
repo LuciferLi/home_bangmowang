@@ -379,9 +379,11 @@
 .index .hotGoods li span {
 	height: 21px;
 	display: block;
-	font-size: 8px;
+	font-size: 10px;
 	overflow: hidden;
 	color:#333;
+	-webkit-transform:scale(0.8);
+	
 }
 
 .index .hotGoods li em {

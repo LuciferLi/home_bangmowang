@@ -200,7 +200,7 @@ iframe {
 }
 
 .foot_banner_content_item {
-	width: 25%;
+	width: 20%;
 	font-size: 18px;
 	float: left;
 	text-align: center;
@@ -275,14 +275,14 @@ iframe {
 }
 
 .login_banner {
-	width: 100%;
+	width: 1200px;
 	min-width: 1200px;
-	height: auto;
 	background: url(../images/ad111.jpg) center 0 no-repeat;
 	background-size: 100% 470px;
 	position: relative;
 	height: 470px;
 	text-align: left;
+	
 }
 
 .login_input {
@@ -292,11 +292,13 @@ iframe {
 	background-image: url(../img/img_back.png);
 	padding: 30px;
 	margin-top: 60px;
+	margin-right: 50px;
 }
 
 .login_input_border {
 	border: 1px solid #CCCCCC;
 	margin-bottom: 5px;
+	line-height: 30px;
 }
 
 .login_input p {
@@ -382,8 +384,8 @@ a:hover {
 	height: 28px;
 	width: 83px;
 	position: relative;
-	top: -2px;
 	margin-right: 5px;
+	vertical-align: top;
 }
 
 .phonecode {
